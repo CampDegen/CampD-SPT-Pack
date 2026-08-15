@@ -56,15 +56,15 @@ Sync **wipes** host `spt-pack/`. Chrome/identity work belongs **in this repo**.
 
 Same facility chrome as the homepage; still a tool page.
 
-1. Logo `assets/CampD_Logo_White.png` (already in assets, unused). Masthead closer to host `.site-header` / `.site-nav`. Brand → `https://campdegen.com/`. Pack-local Mods / Pack Settings **plus** `/#about`, `/spt-pack/`, `/#connect`.
-2. Skip link + `main#main-content`.
-3. Favicon: website `/assets/favicon.png` or ship the same PNG.
+1. **Masthead** — Host logo + `CampD`, no Overview / SPT Pack / Communications tabs. Pack-local Mods / Pack Settings live under the header (`.pack-nav`). Brand → `https://campdegen.com/`.
+2. Skip link + `main#main-content` — done.
+3. Favicon: `assets/favicon.png` (same file as host).
 4. OG/Twitter: `og:url` = `https://campdegen.com/spt-pack/`, image = host logo URL.
 5. Fonts: facility pages = Bebas/Rajdhani/Share Tech Mono only (inventory theme may keep extras).
 6. Classification: PUBLIC or SYSTEMS unless CampD wants INTERNAL.
 7. Footer closer to host `.site-footer`.
 8. No extra Safety Orange CTA (Discord on `/` is the one). Update yellow + hazard tape OK.
-9. Token drift: `facility.css` duplicates host tokens; update from `colors.md` when host changes. Do not `@import` live host `styles.css` (class names differ: `.top` vs `.site-header`).
+9. Token drift: `facility.css` now copies host aged hex from `css/styles.css`. When host tokens change, copy them again. Do not `@import` live host `styles.css` (class names for catalog still differ).
 
 ## Adding another project page (same pattern)
 

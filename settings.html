@@ -5,41 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CampD SPT Pack — Pack Settings</title>
     <meta name="description" content="CampD SPT pack settings: SVM overrides, ReSHADE, and extra folder data." />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Source+Sans+3:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
-    <header class="top">
-      <a class="brand" href="https://campdegen.com/">
-        <span class="brand-mark" aria-hidden="true">CD</span>
-        <span class="brand-text">
-          <span class="brand-kicker">CampD</span>
-          <span class="brand-name">SPT Pack</span>
-        </span>
-      </a>
-      <nav class="nav">
-        <a class="nav-link" href="index.html">Mods</a>
-        <a class="nav-link is-active" href="settings.html">Pack Settings</a>
-      </nav>
-      <div class="top-meta">
-        <span class="classification classification--internal">Internal</span>
-        <span class="chip" id="spt-chip">SPT —</span>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="https://campdegen.com/">
+          <img class="brand-logo" src="assets/CampD_Logo_White.png" alt="" width="44" height="44" />
+          <span class="brand__name">CampD</span>
+        </a>
       </div>
       <p class="header-meta doc-meta">
         <span>CD-SPT-PACK</span>
         <span>Pack settings</span>
-        <span>Rev 1.0</span>
+        <span id="spt-chip">SPT —</span>
       </p>
     </header>
 
-    <main class="page">
+    <main class="page" id="main-content">
+      <nav class="pack-nav" aria-label="Pack">
+        <a href="index.html">Mods</a>
+        <a class="is-active" href="settings.html">Pack Settings</a>
+      </nav>
+
       <section class="hero">
         <p class="eyebrow">Overrides</p>
         <h1>Pack settings</h1>
@@ -53,7 +50,7 @@
 
     <footer class="foot">
       <p class="foot-meta doc-meta">
-        <span>Classification: Internal</span>
+        <span>Classification: Public</span>
         <span>Issue 2026-08</span>
       </p>
       <p>Edit <code>data/pack-settings.json</code> to fill these in. Per-mod notes still live on the <a href="index.html">mod list</a>.</p>

@@ -25,7 +25,7 @@ Then visit `http://localhost:8080`.
 
 ## Theme
 
-Active look is the CampD facility bulletin theme (`css/themes/facility.css`), switched from [`css/style.css`](css/style.css).
+Active look is the CampD facility theme (`css/themes/facility.css`), using the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings sit in a pack-local nav under the header.
 
 To restore the original Tarkov inventory look, change that file to:
 
