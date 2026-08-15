@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CampD SPT Pack — Mods</title>
+    <meta name="description" content="CampD SPT server mod list: installed versions vs Forge, plus what each mod does." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="top">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">CD</span>
+        <span class="brand-text">
+          <span class="brand-kicker">CampD</span>
+          <span class="brand-name">SPT Pack</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a class="nav-link is-active" href="index.html">Mods</a>
+        <a class="nav-link" href="settings.html">Pack Settings</a>
+      </nav>
+      <div class="top-meta" id="top-meta">
+        <span class="classification classification--internal">Internal</span>
+        <span class="chip" id="spt-chip">SPT —</span>
+      </div>
+      <p class="header-meta doc-meta">
+        <span>CD-SPT-PACK</span>
+        <span>Mod catalog</span>
+        <span>Rev 1.0</span>
+      </p>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Installed loadout</p>
+        <h1>What is on the server</h1>
+        <p class="lede" id="lede">
+          Custom notes for each mod, plus installed version versus whatever Forge currently lists.
+        </p>
+        <p class="checked" id="checked">Forge versions have not been checked yet.</p>
+      </section>
+
+      <section class="stats" id="stats" aria-label="Version summary">
+        <div class="stat">
+          <span class="stat-value" id="stat-total">—</span>
+          <span class="stat-label">Installed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value is-ok" id="stat-current">—</span>
+          <span class="stat-label">Up to date</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value is-warn" id="stat-update">—</span>
+          <span class="stat-label">Updates</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value is-muted" id="stat-unknown">—</span>
+          <span class="stat-label">Unknown</span>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Filter mods">
+        <label class="search">
+          <span class="sr-only">Search mods</span>
+          <input id="search" type="search" placeholder="Search name, description, notes…" autocomplete="off" />
+        </label>
+        <div class="filters" id="filters" role="tablist" aria-label="Mod side">
+          <button type="button" class="filter is-active" data-side="all">All</button>
+          <button type="button" class="filter" data-side="server">Server</button>
+          <button type="button" class="filter" data-side="both">Both</button>
+          <button type="button" class="filter" data-side="client">Client</button>
+          <button type="button" class="filter" data-side="special">Special</button>
+        </div>
+      </section>
+
+      <p class="result-count" id="result-count"></p>
+
+      <section id="catalog" class="catalog" aria-live="polite"></section>
+    </main>
+
+    <footer class="foot">
+      <p class="foot-meta doc-meta">
+        <span>Classification: Internal</span>
+        <span>Issue 2026-08</span>
+      </p>
+      <p>Versions come from the Forge API at <a href="https://sp-mod.com">sp-mod.com</a>. Descriptions are CampD’s, not the Forge listing text.</p>
+    </footer>
+
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,726 @@
+{
+  "checkedAt": "2026-08-15T14:13:51.821Z",
+  "missing": [],
+  "mods": {
+    "236": {
+      "name": "Server Value Modifier [SVM]",
+      "slug": "server-value-modifier-svm",
+      "latestVersion": "2.2.1",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/236/server-value-modifier-svm",
+      "thumbnail": "https://files.sp-mod.com/mods/379.png"
+    },
+    "526": {
+      "name": "All The Clothes",
+      "slug": "all-the-clothes",
+      "latestVersion": "3.2.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/526/all-the-clothes",
+      "thumbnail": "https://files.sp-mod.com/mods/740.png"
+    },
+    "592": {
+      "name": "Amands's Graphics",
+      "slug": "amandss-graphics",
+      "latestVersion": "1.8.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/592/amandss-graphics",
+      "thumbnail": "https://files.sp-mod.com/mods/813.png"
+    },
+    "820": {
+      "name": "Door Randomizer",
+      "slug": "door-randomizer",
+      "latestVersion": "1.8.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/820/door-randomizer",
+      "thumbnail": "https://files.sp-mod.com/mods/1107.png"
+    },
+    "824": {
+      "name": "Task List Fixes",
+      "slug": "task-list-fixes",
+      "latestVersion": "1.8.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/824/task-list-fixes",
+      "thumbnail": "https://files.sp-mod.com/mods/1114.png"
+    },
+    "827": {
+      "name": "Waypoints - Expanded Navmesh",
+      "slug": "waypoints-expanded-navmesh",
+      "latestVersion": "1.9.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/827/waypoints-expanded-navmesh",
+      "thumbnail": "https://files.sp-mod.com/mods/1119.png"
+    },
+    "865": {
+      "name": "Gilded Key Storage",
+      "slug": "gilded-key-storage",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1.1",
+      "detailUrl": "https://sp-mod.com/mod/865/gilded-key-storage",
+      "thumbnail": "https://files.sp-mod.com/mods/1166.png"
+    },
+    "902": {
+      "name": "BigBrain",
+      "slug": "bigbrain",
+      "latestVersion": "1.5.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/902/bigbrain",
+      "thumbnail": null
+    },
+    "933": {
+      "name": "Use Loose Loot",
+      "slug": "use-loose-loot",
+      "latestVersion": "1.6.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/933/use-loose-loot",
+      "thumbnail": "https://files.sp-mod.com/mods/1264.png"
+    },
+    "934": {
+      "name": "Search Open Containers",
+      "slug": "search-open-containers",
+      "latestVersion": "1.5.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/934/search-open-containers",
+      "thumbnail": "https://files.sp-mod.com/mods/1265.png"
+    },
+    "1089": {
+      "name": "Kaeno-TraderScrolling",
+      "slug": "kaeno-traderscrolling",
+      "latestVersion": "4.0.0",
+      "sptConstraint": "~4",
+      "detailUrl": "https://sp-mod.com/mod/1089/kaeno-traderscrolling",
+      "thumbnail": "https://files.sp-mod.com/mods/1508.png"
+    },
+    "1140": {
+      "name": "Quest Tracker",
+      "slug": "quest-tracker",
+      "latestVersion": "1.7.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1140/quest-tracker",
+      "thumbnail": "https://files.sp-mod.com/mods/1574.png"
+    },
+    "1249": {
+      "name": "Exfil Flare Notification",
+      "slug": "exfil-flare-notification",
+      "latestVersion": "1.0.6",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1249/exfil-flare-notification",
+      "thumbnail": "https://files.sp-mod.com/mods/1739.png"
+    },
+    "1277": {
+      "name": "WTT - Head and Voice Selector",
+      "slug": "wtt-head-and-voice-selector",
+      "latestVersion": "1.0.8",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1277/wtt-head-and-voice-selector",
+      "thumbnail": "https://files.sp-mod.com/mods/1788.png"
+    },
+    "1298": {
+      "name": "HandsAreNotBusy",
+      "slug": "handsarenotbusy",
+      "latestVersion": "1.7.0",
+      "sptConstraint": ">=4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1298/handsarenotbusy",
+      "thumbnail": "https://files.sp-mod.com/mods/1810.png"
+    },
+    "1341": {
+      "name": "Quick Move To Containers",
+      "slug": "quick-move-to-containers",
+      "latestVersion": "1.5.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1341/quick-move-to-containers",
+      "thumbnail": "https://files.sp-mod.com/mods/1859.png"
+    },
+    "1342": {
+      "name": "UI Fixes",
+      "slug": "ui-fixes",
+      "latestVersion": "6.0.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1342/ui-fixes",
+      "thumbnail": "https://files.sp-mod.com/mods/1860.png"
+    },
+    "1348": {
+      "name": "Scorpion",
+      "slug": "scorpion",
+      "latestVersion": "1.1.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1348/scorpion",
+      "thumbnail": "https://files.sp-mod.com/mods/1869.jpg"
+    },
+    "1358": {
+      "name": "BrightLasers",
+      "slug": "brightlasers",
+      "latestVersion": "3.0.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1358/brightlasers",
+      "thumbnail": "https://files.sp-mod.com/mods/1880.png"
+    },
+    "1374": {
+      "name": "Player Encumbrance Bar",
+      "slug": "player-encumbrance-bar",
+      "latestVersion": "1.3.0",
+      "sptConstraint": ">=4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1374/player-encumbrance-bar",
+      "thumbnail": "https://files.sp-mod.com/mods/1898.png"
+    },
+    "1416": {
+      "name": "Default Fire Mode Fixer",
+      "slug": "default-fire-mode-fixer",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1416/default-fire-mode-fixer",
+      "thumbnail": "https://files.sp-mod.com/mods/1962.png"
+    },
+    "1431": {
+      "name": "Dynamic Maps",
+      "slug": "dynamic-maps",
+      "latestVersion": "1.2.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1431/dynamic-maps",
+      "thumbnail": "https://files.sp-mod.com/mods/1981.png"
+    },
+    "1469": {
+      "name": "AutoDeposit",
+      "slug": "autodeposit",
+      "latestVersion": "6.0.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1469/autodeposit",
+      "thumbnail": "https://files.sp-mod.com/mods/2027.png"
+    },
+    "1477": {
+      "name": "AutoRun",
+      "slug": "autorun",
+      "latestVersion": "6.0.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1477/autorun",
+      "thumbnail": "https://files.sp-mod.com/mods/2035.png"
+    },
+    "1533": {
+      "name": "More Tag Colours",
+      "slug": "more-tag-colours",
+      "latestVersion": "1.5.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1533/more-tag-colours",
+      "thumbnail": "https://files.sp-mod.com/mods/2100.png"
+    },
+    "1538": {
+      "name": "Ref - SPT Friendly Quests",
+      "slug": "ref-spt-friendly-quests",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1538/ref-spt-friendly-quests",
+      "thumbnail": "https://files.sp-mod.com/mods/2108.png"
+    },
+    "1539": {
+      "name": "Bosses Have Lega Medals",
+      "slug": "bosses-have-lega-medals",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1539/bosses-have-lega-medals",
+      "thumbnail": "https://files.sp-mod.com/mods/2109.png"
+    },
+    "1594": {
+      "name": "APBS - Acid's Progressive Bot System",
+      "slug": "apbs-acids-progressive-bot-system",
+      "latestVersion": "2.3.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1594/apbs-acids-progressive-bot-system",
+      "thumbnail": "https://files.sp-mod.com/mods/2180.png"
+    },
+    "1657": {
+      "name": "MergeConsumables",
+      "slug": "mergeconsumables",
+      "latestVersion": "1.6.1",
+      "sptConstraint": ">=4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1657/mergeconsumables",
+      "thumbnail": "https://files.sp-mod.com/mods/2262.png"
+    },
+    "1745": {
+      "name": "Discarder",
+      "slug": "discarder",
+      "latestVersion": "5.0.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1745/discarder",
+      "thumbnail": "https://files.sp-mod.com/mods/2378.png"
+    },
+    "1853": {
+      "name": "StatTrack",
+      "slug": "stattrack",
+      "latestVersion": "2.1.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1853/stattrack",
+      "thumbnail": "https://files.sp-mod.com/mods/2501.png"
+    },
+    "1873": {
+      "name": "Bot Callsigns - Reloaded",
+      "slug": "bot-callsigns-reloaded",
+      "latestVersion": "2.0.5",
+      "sptConstraint": "~4.1.1",
+      "detailUrl": "https://sp-mod.com/mod/1873/bot-callsigns-reloaded",
+      "thumbnail": "https://files.sp-mod.com/mods/feW2ZQR7gjKA49b4EMnKnRiSQfGibyK2TCe9WYKs.png"
+    },
+    "1884": {
+      "name": "Continuous Healing",
+      "slug": "continuous-healing",
+      "latestVersion": "1.6.0",
+      "sptConstraint": ">=4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1884/continuous-healing",
+      "thumbnail": "https://files.sp-mod.com/mods/2546.png"
+    },
+    "1925": {
+      "name": "NerfBotGrenades",
+      "slug": "nerfbotgrenades",
+      "latestVersion": "1.3.0",
+      "sptConstraint": ">=4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/1925/nerfbotgrenades",
+      "thumbnail": "https://files.sp-mod.com/mods/2596.png"
+    },
+    "1937": {
+      "name": "Dev Balaclava Fix",
+      "slug": "dev-balaclava-fix",
+      "latestVersion": "1.2.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1937/dev-balaclava-fix",
+      "thumbnail": "https://files.sp-mod.com/mods/2609.png"
+    },
+    "2049": {
+      "name": "Add Secret Exfil Notes to Caches",
+      "slug": "add-secret-exfil-notes-to-caches",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2049/add-secret-exfil-notes-to-caches",
+      "thumbnail": "https://files.sp-mod.com/mods/2732.png"
+    },
+    "2097": {
+      "name": "ABPS - Acid's Bot Placement System",
+      "slug": "abps-acids-bot-placement-system",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2097/abps-acids-bot-placement-system",
+      "thumbnail": "https://files.sp-mod.com/mods/2782.png"
+    },
+    "2173": {
+      "name": "VRAM Cleaner",
+      "slug": "vram-cleaner",
+      "latestVersion": "1.0.3",
+      "sptConstraint": "4.1.2",
+      "detailUrl": "https://sp-mod.com/mod/2173/vram-cleaner",
+      "thumbnail": "https://files.sp-mod.com/mods/2876.png"
+    },
+    "2207": {
+      "name": "Fast Sell In Flea",
+      "slug": "fast-sell-in-flea",
+      "latestVersion": "1.3.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2207/fast-sell-in-flea",
+      "thumbnail": "https://files.sp-mod.com/mods/2910.png"
+    },
+    "2221": {
+      "name": "BALL - Better Ammo Loading List",
+      "slug": "ball-better-ammo-loading-list",
+      "latestVersion": "1.1.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2221/ball-better-ammo-loading-list",
+      "thumbnail": "https://files.sp-mod.com/mods/2924.png"
+    },
+    "2235": {
+      "name": "Sharper Tushonka Better Life",
+      "slug": "sharper-tushonka-better-life",
+      "latestVersion": "1.1.3",
+      "sptConstraint": "*",
+      "detailUrl": "https://sp-mod.com/mod/2235/sharper-tushonka-better-life",
+      "thumbnail": "https://files.sp-mod.com/mods/2938.png"
+    },
+    "2240": {
+      "name": "LET ME OUT",
+      "slug": "let-me-out",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2240/let-me-out",
+      "thumbnail": "https://files.sp-mod.com/mods/2944.png"
+    },
+    "2310": {
+      "name": "WTT - CommonLib",
+      "slug": "wtt-commonlib",
+      "latestVersion": "3.0.4",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2310/wtt-commonlib",
+      "thumbnail": "https://files.sp-mod.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png"
+    },
+    "2314": {
+      "name": "Season Rotator",
+      "slug": "season-rotator",
+      "latestVersion": "2.0.1",
+      "sptConstraint": "~4.1.2",
+      "detailUrl": "https://sp-mod.com/mod/2314/season-rotator",
+      "thumbnail": "https://files.sp-mod.com/mods/Q6cdWWZz218XBB4wGhXtyDDc7wPihWS6vUeGAwMc.jpg"
+    },
+    "2339": {
+      "name": "Preview Sizer",
+      "slug": "preview-sizer",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2339/preview-sizer",
+      "thumbnail": "https://files.sp-mod.com/mods/Pidu179c2KNZq23FqafCqyoXbHfRQ8XatisK1VZw.png"
+    },
+    "2344": {
+      "name": "Dynamic Item Weights",
+      "slug": "dynamic-item-weights",
+      "latestVersion": "1.2.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2344/dynamic-item-weights",
+      "thumbnail": "https://files.sp-mod.com/mods/PLjwUyUmevBYgQMwXLisG0tVuMgjDLR2xXjkoYTN.png"
+    },
+    "2371": {
+      "name": "FIR Fence Purchases",
+      "slug": "fir-fence-purchases",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2371/fir-fence-purchases",
+      "thumbnail": "https://files.sp-mod.com/mods/TDO94P3WaJ2xSw8QudPZPYINLY1rkUQShE8LAIjk.png"
+    },
+    "2405": {
+      "name": "LetMeRightClick",
+      "slug": "letmerightclick",
+      "latestVersion": "1.1.0",
+      "sptConstraint": ">=4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2405/letmerightclick",
+      "thumbnail": "https://files.sp-mod.com/mods/6zLllXtIZ2qbTCJtba4FWy0amAstYp8nHwtXD5Fz.png"
+    },
+    "2415": {
+      "name": "Canted Aiming",
+      "slug": "canted-aiming",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2415/canted-aiming",
+      "thumbnail": "https://files.sp-mod.com/mods/gi9iw2VlhJrw0TGjw67s2wpjoUH8MUFZWjWkwuyb.png"
+    },
+    "2480": {
+      "name": "BarterItemsStacks",
+      "slug": "barteritemsstacks",
+      "latestVersion": "1.4.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2480/barteritemsstacks",
+      "thumbnail": "https://files.sp-mod.com/mods/TnF3r4yN7ZOq6jYyUVv6NuzLvXTVKXqP9ctvMsVj.jpg"
+    },
+    "2481": {
+      "name": "Crates In Airdrop",
+      "slug": "crates-in-airdrop",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2481/crates-in-airdrop",
+      "thumbnail": null
+    },
+    "2502": {
+      "name": "EOTech Fix",
+      "slug": "eotech-fix",
+      "latestVersion": "1.0.2",
+      "sptConstraint": "4.1.2",
+      "detailUrl": "https://sp-mod.com/mod/2502/eotech-fix",
+      "thumbnail": "https://files.sp-mod.com/mods/DMi3xaXvUw8AsGb7CObNOpg0VKr5GuSub8W2lKkU.png"
+    },
+    "2506": {
+      "name": "Funtar",
+      "slug": "funtar",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2506/funtar",
+      "thumbnail": "https://files.sp-mod.com/mods/puT92kA3ktRp1JIDvTR5I5O7WITwsesCKKf9h9PN.png"
+    },
+    "2512": {
+      "name": "WTT - Content Backport",
+      "slug": "wtt-content-backport",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.1",
+      "detailUrl": "https://sp-mod.com/mod/2512/wtt-content-backport",
+      "thumbnail": "https://files.sp-mod.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg"
+    },
+    "2521": {
+      "name": "Amands' Sense - Updated",
+      "slug": "amands-sense-updated",
+      "latestVersion": "3.1.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2521/amands-sense-updated",
+      "thumbnail": "https://files.sp-mod.com/mods/9Wf52P2s2vmf2WRrkSl5ziP1b84VounUoLLX4nsg.png"
+    },
+    "2523": {
+      "name": "Bosses Have Gp Coins",
+      "slug": "bosses-have-gp-coins",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2523/bosses-have-gp-coins",
+      "thumbnail": "https://files.sp-mod.com/mods/oLo38uiIG222atjYaUllSWh3em3f6dcGxfXwPVcN.png"
+    },
+    "2524": {
+      "name": "Item Limits Begone!",
+      "slug": "item-limits-begone",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2524/item-limits-begone",
+      "thumbnail": "https://files.sp-mod.com/mods/Z91e56Wcl719FVcqGvuxqb456RGxa1zflt79ycVO.png"
+    },
+    "2526": {
+      "name": "Advanced Flea Simulator",
+      "slug": "advanced-flea-simulator",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2526/advanced-flea-simulator",
+      "thumbnail": "https://files.sp-mod.com/mods/aonR9PhKNP6EBzHrr2l6k1DZ9lFV76N93PHRKER1.png"
+    },
+    "2530": {
+      "name": "Vertical Hideout",
+      "slug": "vertical-hideout",
+      "latestVersion": "1.1.1",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2530/vertical-hideout",
+      "thumbnail": "https://files.sp-mod.com/mods/gjcap917z9lackUaqg0C57HzpPU2QeJTzL2HWhso.png"
+    },
+    "2540": {
+      "name": "Content Backport - Prestiges",
+      "slug": "content-backport-prestiges",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2540/content-backport-prestiges",
+      "thumbnail": "https://files.sp-mod.com/mods/02FamlPSR77flyRjs60H1s4OfaPmyqiVooJSU8ed.png"
+    },
+    "2552": {
+      "name": "No Version Label in Raid",
+      "slug": "no-version-label-in-raid",
+      "latestVersion": "1.0.0",
+      "sptConstraint": "~4.",
+      "detailUrl": "https://sp-mod.com/mod/2552/no-version-label-in-raid",
+      "thumbnail": "https://files.sp-mod.com/mods/j4N7BgKaKicEZSS1twroFXUaaSlC06KOMh4SVFqd.png"
+    },
+    "2553": {
+      "name": "Chamber Ammo Info",
+      "slug": "chamber-ammo-info",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2553/chamber-ammo-info",
+      "thumbnail": "https://files.sp-mod.com/mods/f2tk9Blhbhl8ffcvnoIznlyn6eaXOwDCFj6y42zV.png"
+    },
+    "2639": {
+      "name": "Auto Shoulder Swap",
+      "slug": "auto-shoulder-swap",
+      "latestVersion": "1.1.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2639/auto-shoulder-swap",
+      "thumbnail": "https://files.sp-mod.com/mods/PTaUXehk53O1vXxNfCuDqUzyn1rdKDpLOn0GWRD0.png"
+    },
+    "2657": {
+      "name": "Cultist Circle Improvements",
+      "slug": "cultist-circle-improvements",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2657/cultist-circle-improvements",
+      "thumbnail": "https://files.sp-mod.com/mods/lMwkyPstHL9BZ7OB4e7UycUYQtGuoSzgW1LvRo2f.png"
+    },
+    "2679": {
+      "name": "LootNET",
+      "slug": "lootnet",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2679/lootnet",
+      "thumbnail": "https://files.sp-mod.com/mods/TwjsGlZRtCLqYVNjHSwsJBGG2qbvFeBPThrlgccS.jpg"
+    },
+    "2689": {
+      "name": "Item Property Backport",
+      "slug": "item-property-backport",
+      "latestVersion": "1.5.1",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2689/item-property-backport",
+      "thumbnail": null
+    },
+    "2700": {
+      "name": "knife sprint",
+      "slug": "knife-sprint",
+      "latestVersion": "1.0.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2700/knife-sprint",
+      "thumbnail": "https://files.sp-mod.com/mods/mzJ2VfTFygumgsAzm2VN7NeBCFTb3l3A51HeBKYy.jpg"
+    },
+    "2729": {
+      "name": "NotificationFilter",
+      "slug": "notificationfilter",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2729/notificationfilter",
+      "thumbnail": "https://files.sp-mod.com/mods/lDKM4wTNULJR7fMAPSfQkYDOMPEMXzqFtNiqOFIz.png"
+    },
+    "2731": {
+      "name": "LinkedSearchInStash",
+      "slug": "linkedsearchinstash",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2731/linkedsearchinstash",
+      "thumbnail": "https://files.sp-mod.com/mods/NZO9yYI0xVs4YASttr7v4r8MxbfDig5c3idSyKfX.png"
+    },
+    "2733": {
+      "name": "RaidMenuCleanupFix",
+      "slug": "raidmenucleanupfix",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2733/raidmenucleanupfix",
+      "thumbnail": "https://files.sp-mod.com/mods/BI4Ltp5mxo0cEXVJHQozOUYZH4OwuuYxAaEp4exK.png"
+    },
+    "2735": {
+      "name": "ScopeRangefinder",
+      "slug": "scoperangefinder",
+      "latestVersion": "3.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2735/scoperangefinder",
+      "thumbnail": "https://files.sp-mod.com/mods/xqkKdJqmh2oBSQcyuD8VaX9ukNMwBy331IZTN7RC.png"
+    },
+    "2747": {
+      "name": "Weekend Drops",
+      "slug": "weekend-drops",
+      "latestVersion": "1.0.5",
+      "sptConstraint": "4.1.2",
+      "detailUrl": "https://sp-mod.com/mod/2747/weekend-drops",
+      "thumbnail": "https://files.sp-mod.com/mods/a7n7YT3Vnizy5JsMIhzP3OBJRr9bmobnEsicYmuh.jpg"
+    },
+    "2776": {
+      "name": "Parmesan - Partizan Rework",
+      "slug": "parmesan-partizan-rework",
+      "latestVersion": "1.0.1",
+      "sptConstraint": "4.1.2",
+      "detailUrl": "https://sp-mod.com/mod/2776/parmesan-partizan-rework",
+      "thumbnail": "https://files.sp-mod.com/mods/4NUVzTC282nQjFKfZl4OBMvKYIYI2NXhTUIbNqYf.jpg"
+    },
+    "2780": {
+      "name": "No Barrel Shadow",
+      "slug": "no-barrel-shadow",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2780/no-barrel-shadow",
+      "thumbnail": "https://files.sp-mod.com/mods/h27meExYcmtVbdECnvmerhg3ke1ctQXDuQjH3Lwa.png"
+    },
+    "2785": {
+      "name": "ReceiveAllChats",
+      "slug": "receiveallchats",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2785/receiveallchats",
+      "thumbnail": "https://files.sp-mod.com/mods/WOKQ76NIK0UxecMhFZPqqKpeXSREnVaS8TwJqAyk.png"
+    },
+    "2790": {
+      "name": "EasyMounting",
+      "slug": "easymounting",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2790/easymounting",
+      "thumbnail": "https://files.sp-mod.com/mods/Wf6T09iWt3fNhzWGhzqZDR4BwITGxIeOSyuufVtn.png"
+    },
+    "2824": {
+      "name": "TraderSearch",
+      "slug": "tradersearch",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2824/tradersearch",
+      "thumbnail": "https://files.sp-mod.com/mods/B9P1W7jbjyYD40bTkrDcvO7vpaZOmwmA9ROkkdSc.png"
+    },
+    "2831": {
+      "name": "Transits Count",
+      "slug": "transits-count",
+      "latestVersion": "1.1.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2831/transits-count",
+      "thumbnail": "https://files.sp-mod.com/mods/lo7PsodQHCVXu7ug5Ngj7BXGbUfLmKyQYYJJtmxj.png"
+    },
+    "2843": {
+      "name": "Blackout",
+      "slug": "blackout",
+      "latestVersion": "4.0.0",
+      "sptConstraint": "4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2843/blackout",
+      "thumbnail": "https://files.sp-mod.com/mods/TUbFUbxJ2fMDesjdhv96XyJvUvXlGEoLpy4tF64F.png"
+    },
+    "2851": {
+      "name": "SPT Mod Manager",
+      "slug": "spt-mod-manager",
+      "latestVersion": "0.5.1",
+      "sptConstraint": "4.1.x",
+      "detailUrl": "https://sp-mod.com/mod/2851/spt-mod-manager",
+      "thumbnail": "https://files.sp-mod.com/mods/vrJPEuHFoXvwoCAoMn5Zzo9JM3ekLGPqfjOjeZ4a.png"
+    },
+    "2861": {
+      "name": "[REDACTED] Redactor",
+      "slug": "redacted-redactor",
+      "latestVersion": "1.0.2",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2861/redacted-redactor",
+      "thumbnail": "https://files.sp-mod.com/mods/HrTDsvbWOQC9MFootg87SDknbhX4XyVxXnFaXCsJ.png"
+    },
+    "2874": {
+      "name": "Adaptive Bot Culling",
+      "slug": "adaptive-bot-culling",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1.0 ",
+      "detailUrl": "https://sp-mod.com/mod/2874/adaptive-bot-culling",
+      "thumbnail": "https://files.sp-mod.com/mods/U69LKHdaWZAKIa1emEfDp71yNMvUI0mNwVFz5CuS.png"
+    },
+    "2881": {
+      "name": "AutoKeycard for Labs",
+      "slug": "autokeycard-for-labs",
+      "latestVersion": "1.0.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2881/autokeycard-for-labs",
+      "thumbnail": null
+    },
+    "2886": {
+      "name": "Operator Traits",
+      "slug": "operator-traits",
+      "latestVersion": "1.0.0",
+      "sptConstraint": "~4.1.0 ",
+      "detailUrl": "https://sp-mod.com/mod/2886/operator-traits",
+      "thumbnail": "https://files.sp-mod.com/mods/q7U3FFUJnXdkAQyyihqUtEIGjvKjMyWBuexZ0AYK.png"
+    },
+    "2903": {
+      "name": "Raids Are Infinite",
+      "slug": "raids-are-infinite",
+      "latestVersion": "1.0.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2903/raids-are-infinite",
+      "thumbnail": "https://files.sp-mod.com/mods/qWAPqeIXyrtholIgtnxG9eLEWOI6zm4p3xZHyjri.jpg"
+    },
+    "2905": {
+      "name": "Ragdoll Kinetics",
+      "slug": "ragdoll-kinetics",
+      "latestVersion": "1.2.0",
+      "sptConstraint": "~4.1.0 ",
+      "detailUrl": "https://sp-mod.com/mod/2905/ragdoll-kinetics",
+      "thumbnail": "https://files.sp-mod.com/mods/P6PIITVsZP58duQiQJvnGZn5Cm1IFxj1cGh2qjkO.png"
+    },
+    "2907": {
+      "name": "StashFilter",
+      "slug": "stashfilter",
+      "latestVersion": "1.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2907/stashfilter",
+      "thumbnail": "https://files.sp-mod.com/mods/9Pwp4dUCvQvemdlwKGa5Weji2gSJ4eOU3kz8mbPs.png"
+    },
+    "2908": {
+      "name": "Tarkin's Hideout Cat",
+      "slug": "tarkins-hideout-cat",
+      "latestVersion": "1.1.1",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2908/tarkins-hideout-cat",
+      "thumbnail": "https://files.sp-mod.com/mods/fns8qFbEJIWaw6dY8NvHatwS8QOUfA14D7zWPv8l.png"
+    },
+    "2909": {
+      "name": "Task Search",
+      "slug": "task-search",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2909/task-search",
+      "thumbnail": "https://files.sp-mod.com/mods/E6kSkHR6VmOiHy726hGUY4WUdEur4lkhbthRoocM.png"
+    },
+    "2910": {
+      "name": "PMC Spawn Toggle",
+      "slug": "pmc-spawn-toggle",
+      "latestVersion": "1.0.1",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2910/pmc-spawn-toggle",
+      "thumbnail": "https://files.sp-mod.com/mods/pScV7bKM2LsKXC7An61H29NFYz80GjGTRsOYIe23.png"
+    }
+  }
+}

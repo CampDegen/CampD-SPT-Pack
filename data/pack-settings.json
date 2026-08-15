@@ -1,0 +1,86 @@
+{
+  "intro": "Pack-wide settings that are not tied to a single mod card. Fill these in as CampD documents SVM, ReSHADE, and extra folder data.",
+  "sections": [
+    {
+      "id": "svm",
+      "title": "Server Value Modifier",
+      "blurb": "SVM is the all-in-one server config tool. Document CampD overrides here so players know what is vanilla vs pack-tuned.",
+      "groups": [
+        {
+          "id": "player",
+          "title": "Player / PMC",
+          "notes": ""
+        },
+        {
+          "id": "hideout",
+          "title": "Hideout",
+          "notes": ""
+        },
+        {
+          "id": "traders",
+          "title": "Traders / Flea",
+          "notes": ""
+        },
+        {
+          "id": "raid",
+          "title": "Raid / Time / Extracts",
+          "notes": ""
+        },
+        {
+          "id": "bots",
+          "title": "Bots / AI",
+          "notes": ""
+        },
+        {
+          "id": "loot",
+          "title": "Loot / Insurance",
+          "notes": ""
+        },
+        {
+          "id": "items",
+          "title": "Items / Inventory",
+          "notes": ""
+        },
+        {
+          "id": "quests",
+          "title": "Quests / Progression",
+          "notes": ""
+        },
+        {
+          "id": "maps",
+          "title": "Weather / Maps",
+          "notes": ""
+        },
+        {
+          "id": "misc",
+          "title": "Misc",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "reshade",
+      "title": "ReSHADE",
+      "blurb": "Visual preset dropped into the SPT root, used alongside Amands's Graphics.",
+      "groups": [
+        {
+          "id": "sharper",
+          "title": "Sharper Tushonka Better Life",
+          "notes": "ReSHADE preset with ReSHADE preinstalled. Drop into root. Works with Amands's Graphics. Turn off sharpen in EFT settings."
+        }
+      ]
+    },
+    {
+      "id": "extra",
+      "title": "Extra pack data",
+      "blurb": "Files or folders that ship with the pack but are not a normal Forge mod install.",
+      "groups": [
+        {
+          "id": "dynamic-maps",
+          "title": "Dynamic Maps",
+          "notes": "Special non-mod folder data ships with this pack in addition to the Forge mod."
+        }
+      ]
+    }
+  ]
+}
