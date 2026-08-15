@@ -842,9 +842,9 @@
       "name": "Project Fika - Server",
       "slug": "project-fika-server",
       "side": "server",
-      "installedVersion": "2.4.1",
+      "installedVersion": "2.4.0",
       "description": "Co-op server package that hosts Fika sessions for the client.",
-      "settingsNotes": "Pairs with Project Fika (client). Keep both on 2.4.1."
+      "settingsNotes": "Pairs with Project Fika (client)."
     },
     {
       "id": 2235,
