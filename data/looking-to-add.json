@@ -14,15 +14,7 @@
       "slug": "fikasync",
       "oldName": "Battle Ambience (Fika Sync)",
       "description": "Fika helper that keeps ambience and similar client audio mods in sync during co-op.",
-      "notes": "No separate 'Battle Ambience (Fika Sync)' Forge page. Closest current listing is FikaSync. Only relevant if we bring Fika back."
-    },
-    {
-      "id": 1090,
-      "name": "Color Converter API",
-      "slug": "color-converter-api",
-      "oldName": "ColorConverterAPI",
-      "description": "Shared color-conversion library other client UI mods depend on. Not useful by itself.",
-      "notes": "We already run More Tag Colours, which historically needed this API. Confirm whether 4.1.2 still requires it as a separate install."
+      "notes": "No separate 'Battle Ambience (Fika Sync)' Forge page; this is the closest listing. Fika is now on the pack, but the latest FikaSync listing still targets SPT 4.0, not 4.1.2."
     },
     {
       "id": 2617,
@@ -105,26 +97,12 @@
       "notes": "Latest Forge listing is SPT 4.0, not 4.1. Heavy overlap with other bot mods — check SAIN/APBS compatibility before adding."
     },
     {
-      "id": 1619,
-      "name": "Lots of Loot Redux",
-      "slug": "lots-of-loot-redux",
-      "description": "Turns up loose loot and container density across maps.",
-      "notes": "Forge has a 4.1-compatible listing."
-    },
-    {
       "id": 861,
       "name": "MoreCheckmarks",
       "slug": "morecheckmarks",
       "oldName": "More Checkmarks",
       "description": "Extra quest/hideout/handbook checkmarks so you can see what you still need.",
       "notes": "Latest Forge listing is SPT 4.0, not 4.1."
-    },
-    {
-      "id": 1688,
-      "name": "More Energy Drinks",
-      "slug": "more-energy-drinks",
-      "description": "Adds extra energy-drink items into loot and traders.",
-      "notes": "Forge listing shows SPT 4.1.x."
     },
     {
       "id": 2584,
@@ -139,14 +117,7 @@
       "slug": "narconet-mod-sync",
       "oldName": "NarcoNet",
       "description": "Fika sync helper for NARCONet / stim-related client mods.",
-      "notes": "The old name was just NarcoNet. Current Forge hit is the Fika sync package, which needs 4.0 and Fika. Original overlay may be gone or renamed."
-    },
-    {
-      "id": 2326,
-      "name": "Project Fika",
-      "slug": "project-fika",
-      "description": "Co-op client for playing SPT raids with other people.",
-      "notes": "Client package. The matching server package is Project Fika - Server (id 2357). This is a co-op stack, not a drop-in for the current dedicated SPT server."
+      "notes": "The old name was just NarcoNet. Current Forge hit is the Fika sync package. Fika is now on the pack; this still waits on a 4.1.2 listing, and the original overlay may be gone or renamed."
     },
     {
       "id": 2106,
@@ -154,7 +125,7 @@
       "slug": "completed-fika-quests-extended",
       "oldName": "Quests Extended",
       "description": "Extra / restored quests, including Fika-friendly completed-state handling.",
-      "notes": "Closest current Forge listing for 'Quests Extended'. Targets SPT 4.0 and is Fika-oriented."
+      "notes": "Closest current Forge listing for 'Quests Extended'. Fika is now on the pack, but this listing still targets SPT 4.0."
     },
     {
       "id": 791,

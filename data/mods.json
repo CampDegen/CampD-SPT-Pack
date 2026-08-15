@@ -376,7 +376,7 @@
       "side": "client",
       "installedVersion": "1.5.0",
       "description": "Extra item tag colors for stash organization.",
-      "settingsNotes": ""
+      "settingsNotes": "Needs Color Converter API installed with it."
     },
     {
       "id": 2405,
@@ -800,6 +800,51 @@
       "installedVersion": "2.2.1",
       "description": "All-in-one server config tool (raid time, loot, bots, traders, and more). CampD overrides are documented on the Pack Settings page.",
       "settingsNotes": "See Pack Settings for SVM category notes as we fill them in."
+    },
+    {
+      "id": 1619,
+      "name": "Lots of Loot Redux",
+      "slug": "lots-of-loot-redux",
+      "side": "server",
+      "installedVersion": "4.2.0",
+      "description": "Increases loose loot and container density across maps so raids have more to pick through.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1688,
+      "name": "More Energy Drinks",
+      "slug": "more-energy-drinks",
+      "side": "server",
+      "installedVersion": "1.3.0",
+      "description": "Adds extra energy-drink items to loot and traders so hydration/energy options are not just the vanilla few.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1090,
+      "name": "Color Converter API",
+      "slug": "color-converter-api",
+      "side": "client",
+      "installedVersion": "1.1.1",
+      "description": "Shared color-conversion library used by More Tag Colours. Leave it installed even though it has no UI of its own.",
+      "settingsNotes": "Required by More Tag Colours. Do not remove it on its own."
+    },
+    {
+      "id": 2326,
+      "name": "Project Fika",
+      "slug": "project-fika",
+      "side": "client",
+      "installedVersion": "2.4.1",
+      "description": "Co-op client so players can run SPT raids together instead of solo.",
+      "settingsNotes": "Pairs with Project Fika - Server. Both pieces need to stay on the same version."
+    },
+    {
+      "id": 2357,
+      "name": "Project Fika - Server",
+      "slug": "project-fika-server",
+      "side": "server",
+      "installedVersion": "2.4.1",
+      "description": "Co-op server package that hosts Fika sessions for the client.",
+      "settingsNotes": "Pairs with Project Fika (client). Keep both on 2.4.1."
     },
     {
       "id": 2235,
