@@ -45,12 +45,13 @@ Sync **wipes** host `spt-pack/`. Chrome/identity work belongs **in this repo**.
 - `data/mods.json`: `id,name,slug,side,installedVersion,description,settingsNotes`. Custom blurbs only; never Forge description/teaser.
 - `data/pack-settings.json`: SVM / ReSHADE / extra (SVM groups mostly empty).
 - `data/site.json`: name, SPT `4.1.2`.
-- `data/forge-status.json`: generated. `GET https://sp-mod.com/api/v0/mods?filter[id]=…&include=versions&per_page=50`. Do not pass `fields=` (strips nested `spt_version_constraint`). Send `User-Agent`. Newest = max semver, not blindly `versions[0]`.
+- `data/forge-status.json`: generated. `GET https://sp-mod.com/api/v0/mods?filter[id]=…&include=versions&per_page=50`. Do not pass `fields=` (strips nested `spt_version_constraint`). Send `User-Agent`. Newest = max semver, not blindly `versions[0]`. Keep Forge `thumbnail`; catalog uses it as the mod icon.
 - `scripts/update-forge-status.mjs` (Node 18+). Keep here. UA path may be stale; optional fix to CampDegen/CampD-SPT-Pack.
 - `.github/workflows/update-forge.yml` — Actions **write** so it can commit status.
 - Theme: `css/style.css` `@import` `themes/facility.css`. Revert look: `themes/inventory.css` (keep).
 - `reference_data/Modlist.md` original list, not read by the site.
 - Relative URLs inside the pack (`css/style.css`). Host-wide links: `https://campdegen.com/`, `/spt-pack/`, `/#about`, `/#connect`. Never `/css/styles.css` from pack pages (wrong file at site root).
+- Catalog display controls: 1/2/3 columns (default 2) and grouped/strict-alpha sorting (default side order `server`, `both`, `client`, `special`, then mod name). Preferences use local storage. Below 720px the grid is always one column. DOM order remains row-major, never CSS columns or column-major reordering. Missing/broken Forge thumbnails use a letter placeholder.
 
 ## Chrome still to do (in this repo, then sync)
 

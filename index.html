@@ -65,7 +65,7 @@
         </div>
       </section>
 
-      <section class="toolbar" aria-label="Filter mods">
+      <section class="toolbar" aria-label="Filter and display mods">
         <label class="search">
           <span class="sr-only">Search mods</span>
           <input id="search" type="search" placeholder="Search name, description, notes…" autocomplete="off" />
@@ -77,11 +77,28 @@
           <button type="button" class="filter" data-side="client">Client</button>
           <button type="button" class="filter" data-side="special">Special</button>
         </div>
+        <div class="view-options">
+          <label class="view-option">
+            <span>Columns</span>
+            <select id="columns">
+              <option value="1">Single</option>
+              <option value="2" selected>Dual</option>
+              <option value="3">Triple</option>
+            </select>
+          </label>
+          <label class="view-option">
+            <span>Sort</span>
+            <select id="sort">
+              <option value="grouped" selected>Type + A–Z</option>
+              <option value="alphabetical">A–Z only</option>
+            </select>
+          </label>
+        </div>
       </section>
 
       <p class="result-count" id="result-count"></p>
 
-      <section id="catalog" class="catalog" aria-live="polite"></section>
+      <section id="catalog" class="catalog" data-columns="2" aria-live="polite"></section>
     </main>
 
     <footer class="foot">

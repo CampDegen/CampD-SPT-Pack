@@ -7,12 +7,41 @@ const SIDE_LABELS = {
   special: "Special",
 };
 
+const SIDE_ORDER = {
+  server: 0,
+  both: 1,
+  client: 2,
+  special: 3,
+};
+
 const STATUS_LABELS = {
   current: "Up to date",
   update: "Update",
   ahead: "Ahead",
   unknown: "Unknown",
 };
+
+const PREFERENCE_KEYS = {
+  columns: "campd-spt-pack-columns",
+  sort: "campd-spt-pack-sort",
+};
+
+function readPreference(key, allowed, fallback) {
+  try {
+    const value = localStorage.getItem(key);
+    return allowed.includes(value) ? value : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function writePreference(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    // The controls still work when storage is unavailable.
+  }
+}
 
 function formatCheckedAt(iso) {
   if (!iso) {
@@ -27,6 +56,33 @@ function forgeUrl(mod, status) {
   return status?.detailUrl || `https://sp-mod.com/mod/${mod.id}/${mod.slug}`;
 }
 
+function iconInitial(name) {
+  const letter = String(name ?? "").trim().charAt(0);
+  return letter || "?";
+}
+
+function compareMods(left, right) {
+  const sideDiff = (SIDE_ORDER[left.side] ?? 99) - (SIDE_ORDER[right.side] ?? 99);
+  if (sideDiff !== 0) return sideDiff;
+  return compareModNames(left, right);
+}
+
+function compareModNames(left, right) {
+  return left.name.localeCompare(right.name, "en", {
+    sensitivity: "base",
+    numeric: true,
+  });
+}
+
+function iconHtml(mod, forge) {
+  const initial = escapeHtml(iconInitial(mod.name));
+  const src = (forge?.thumbnail || "").trim();
+  if (!src) {
+    return `<span class="mod-icon is-missing" data-initial="${initial}" aria-hidden="true"><span class="mod-icon-fallback">${initial}</span></span>`;
+  }
+  return `<span class="mod-icon" data-initial="${initial}"><img src="${escapeHtml(src)}" alt="" width="144" height="144" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>`;
+}
+
 function renderMod(mod, forge) {
   const latest = forge?.latestVersion ?? "";
   const status = statusOf(mod.installedVersion, latest);
@@ -39,14 +95,19 @@ function renderMod(mod, forge) {
   return `
     <article class="mod is-${status}" data-id="${mod.id}" data-side="${mod.side}" data-status="${status}">
       <button class="mod-head" type="button" aria-expanded="false" aria-controls="${openId}">
-        <span class="side side-${mod.side}">${SIDE_LABELS[mod.side] ?? mod.side}</span>
-        <span class="mod-name">${escapeHtml(mod.name)}</span>
-        <span class="versions">
-          <span class="ver-installed">${escapeHtml(mod.installedVersion)}</span>
-          <span class="ver-arrow" aria-hidden="true">→</span>
-          <span class="ver-latest">${escapeHtml(latest || "—")}</span>
+        ${iconHtml(mod, forge)}
+        <span class="mod-copy">
+          <span class="mod-name">${escapeHtml(mod.name)}</span>
+          <span class="mod-head-row">
+            <span class="side side-${mod.side}">${SIDE_LABELS[mod.side] ?? mod.side}</span>
+            <span class="badge badge-${status}">${STATUS_LABELS[status]}</span>
+          </span>
+          <span class="versions">
+            <span class="ver-installed">${escapeHtml(mod.installedVersion)}</span>
+            <span class="ver-arrow" aria-hidden="true">→</span>
+            <span class="ver-latest">${escapeHtml(latest || "—")}</span>
+          </span>
         </span>
-        <span class="badge badge-${status}">${STATUS_LABELS[status]}</span>
       </button>
       <div class="mod-body" id="${openId}">
         <p>${escapeHtml(mod.description)}</p>
@@ -79,7 +140,30 @@ function applyFilter(state) {
   state.countEl.textContent = `${visible} shown`;
 }
 
+function renderCatalog(state) {
+  const compare = state.sortMode === "alphabetical" ? compareModNames : compareMods;
+  const sorted = [...state.mods].sort(compare);
+  state.catalog.innerHTML = sorted.map((mod) => renderMod(mod, state.forgeMap[mod.id])).join("");
+  applyFilter(state);
+}
+
 function bindCatalog(state) {
+  state.catalog.addEventListener(
+    "error",
+    (event) => {
+      const img = event.target;
+      if (!(img instanceof HTMLImageElement)) return;
+      const wrap = img.closest(".mod-icon");
+      if (!wrap) return;
+      wrap.classList.add("is-missing");
+      const fallback = document.createElement("span");
+      fallback.className = "mod-icon-fallback";
+      fallback.textContent = wrap.dataset.initial || "?";
+      img.replaceWith(fallback);
+    },
+    true,
+  );
+
   state.catalog.addEventListener("click", (event) => {
     const button = event.target.closest(".mod-head");
     if (!button) return;
@@ -101,6 +185,18 @@ function bindCatalog(state) {
       filter.classList.toggle("is-active", filter === button);
     }
     applyFilter(state);
+  });
+
+  state.columnsEl.addEventListener("change", () => {
+    state.columns = state.columnsEl.value;
+    state.catalog.dataset.columns = state.columns;
+    writePreference(PREFERENCE_KEYS.columns, state.columns);
+  });
+
+  state.sortEl.addEventListener("change", () => {
+    state.sortMode = state.sortEl.value;
+    writePreference(PREFERENCE_KEYS.sort, state.sortMode);
+    renderCatalog(state);
   });
 }
 
@@ -129,19 +225,29 @@ async function init() {
   document.getElementById("stat-unknown").textContent = String(counts.unknown);
 
   const catalogEl = document.getElementById("catalog");
-  catalogEl.innerHTML = mods.map((mod) => renderMod(mod, forgeMap[mod.id])).join("");
+  const columns = readPreference(PREFERENCE_KEYS.columns, ["1", "2", "3"], "2");
+  const sortMode = readPreference(PREFERENCE_KEYS.sort, ["grouped", "alphabetical"], "grouped");
 
   const state = {
     catalog: catalogEl,
     searchEl: document.getElementById("search"),
     filtersEl: document.getElementById("filters"),
+    columnsEl: document.getElementById("columns"),
+    sortEl: document.getElementById("sort"),
     countEl: document.getElementById("result-count"),
     modById: new Map(mods.map((mod) => [mod.id, mod])),
+    mods,
+    forgeMap,
     query: "",
     side: "all",
+    columns,
+    sortMode,
   };
+  state.columnsEl.value = columns;
+  state.sortEl.value = sortMode;
+  state.catalog.dataset.columns = columns;
   bindCatalog(state);
-  applyFilter(state);
+  renderCatalog(state);
 }
 
 init().catch((error) => {

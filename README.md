@@ -10,7 +10,7 @@ Agent notes: [SPT_MERGE_KNOWLEDGE.md](SPT_MERGE_KNOWLEDGE.md), [SPT_AGENT_HANDOF
 
 | Page | What it is |
 | --- | --- |
-| `index.html` | Mod catalog, search, Server / Both / Client / Special filters, version badges |
+| `index.html` | Two-column mod tile catalog, Forge icons, search, side filters, version badges |
 | `settings.html` | Pack-wide SVM, ReSHADE, and extra data notes |
 
 ## Local preview
@@ -77,6 +77,10 @@ Site title / SPT version: `data/site.json`.
 ## Forge version checks
 
 `scripts/update-forge-status.mjs` calls `GET https://sp-mod.com/api/v0/mods?include=versions` in chunks of 50 ids and writes `data/forge-status.json`.
+
+The generated status also stores each Forge `thumbnail`. Catalog tiles load those 144×144 mod icons directly from `files.sp-mod.com`; a letter placeholder is shown when Forge has no icon or an image fails.
+
+Display controls let visitors choose Single, Dual (default), or Triple columns and either Type + A–Z (default: Server, Both, Client, Special, then name) or strict A–Z sorting. Choices persist in browser local storage. Tiles always flow left-to-right across rows and collapse to one column below 720px.
 
 ```bash
 node scripts/update-forge-status.mjs
