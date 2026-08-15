@@ -4,7 +4,7 @@ Static GitHub Pages site for the mods installed on CampD’s SPT server. It list
 
 Forge listing text is not used. Edit the JSON in `data/` instead.
 
-Agent merge notes: [SPT_MERGE_KNOWLEDGE.md](SPT_MERGE_KNOWLEDGE.md) (same file on CampD-Website). **This repo is temporary.** After the pack is integrated into CampD-Website/`spt-pack/`, delete CampD-SPT-Pack. Next agent should work from the CampD-Website project root.
+Agent notes: [SPT_MERGE_KNOWLEDGE.md](SPT_MERGE_KNOWLEDGE.md), [SPT_AGENT_HANDOFF.md](SPT_AGENT_HANDOFF.md). This repo is the **permanent source** for the pack. CampD-Website only mirrors public files to `https://campdegen.com/spt-pack/`. Do not delete this repo. Website README: [CampDegen/CampD-Website](https://github.com/CampDegen/CampD-Website).
 
 ## Pages
 
@@ -39,9 +39,9 @@ Fonts for the inventory theme are Source Sans 3 / Rajdhani / IBM Plex Mono; the 
 
 Public URL: https://campdegen.com/spt-pack/
 
-**Temporary donor repo.** CampD-Website currently copies public files into `spt-pack/` (daily after the Forge check, and via **Sync SPT Pack**). After full merge, this repo goes away and the host folder is the only source. Staging mirror until then: https://campdegen.github.io/CampD-SPT-Pack/
+This repo is the source. CampD-Website copies public files into `spt-pack/` daily after the Forge check, and via **Sync SPT Pack**. Do not hand-edit the website’s `spt-pack/` folder. Staging: https://campdegen.github.io/CampD-SPT-Pack/
 
-Repo (to delete post-merge): https://github.com/CampDegen/CampD-SPT-Pack
+Repo: https://github.com/CampDegen/CampD-SPT-Pack
 
 Actions needs **Read and write** workflow permissions so the daily Forge updater can commit `data/forge-status.json`.
 
