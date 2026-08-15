@@ -35,11 +35,13 @@ Fonts for the inventory theme are Source Sans 3 / Rajdhani / IBM Plex Mono; the 
 
 ## GitHub Pages
 
-Live site: https://campdegen.github.io/CampD-SPT-Pack/
+Public URL: https://campdegen.com/spt-pack/
+
+This repo is the source of truth. CampD-Website copies the public files into `spt-pack/` (daily after the Forge check, and via **Sync SPT Pack** workflow dispatch). Staging mirror: https://campdegen.github.io/CampD-SPT-Pack/
 
 Repo: https://github.com/CampDegen/CampD-SPT-Pack
 
-Pages is served from `main` `/`. Actions needs **Read and write** workflow permissions so the daily Forge updater can commit `data/forge-status.json`.
+Actions needs **Read and write** workflow permissions so the daily Forge updater can commit `data/forge-status.json`.
 
 ## Editing the catalog
 
