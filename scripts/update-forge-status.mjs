@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MODS_PATH = join(ROOT, "data", "mods.json");
+const LOOKING_PATH = join(ROOT, "data", "looking-to-add.json");
 const STATUS_PATH = join(ROOT, "data", "forge-status.json");
 const API = "https://sp-mod.com/api/v0/mods";
 const USER_AGENT = "CampD-SPT-Pack/1.0 (https://github.com/CampD/spt-pack; forge-version-check)";
@@ -74,7 +75,13 @@ async function fetchChunk(ids) {
 
 async function main() {
   const catalog = JSON.parse(await readFile(MODS_PATH, "utf8"));
-  const ids = [...new Set((catalog.mods ?? []).map((mod) => mod.id))];
+  const looking = JSON.parse(await readFile(LOOKING_PATH, "utf8"));
+  const ids = [
+    ...new Set([
+      ...(catalog.mods ?? []).map((mod) => mod.id),
+      ...(looking.mods ?? []).map((mod) => mod.id).filter(Boolean),
+    ]),
+  ];
   const mods = {};
   const missing = [];
 

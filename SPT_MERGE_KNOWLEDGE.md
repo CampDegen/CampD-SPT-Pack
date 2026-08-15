@@ -26,7 +26,7 @@ GitHub Pages                              →  https://campdegen.com/spt-pack/
 
 Website workflow: `.github/workflows/sync-spt-pack.yml` (on the **website** repo).
 
-Copied: `index.html`, `settings.html`, `css/`, `js/`, `data/`, `assets/`  
+Copied: `index.html`, `settings.html`, `looking.html`, `css/`, `js/`, `data/`, `assets/`
 Stay here: `.github/`, `scripts/`, `reference_data/`, README, knowledge/handoff files.
 
 `GITHUB_TOKEN` cannot push the other repo. No PAT. Forge stays here. After pack `main` push: wait for Forge (if `mods.json` changed) then website sync, or run **Update Forge status** here and **Sync SPT Pack** on the website.
@@ -51,13 +51,15 @@ Sync **wipes** host `spt-pack/`. Chrome/identity work belongs **in this repo**.
 - Theme: `css/style.css` `@import` `themes/facility.css`. Revert look: `themes/inventory.css` (keep).
 - `reference_data/Modlist.md` original list, not read by the site.
 - Relative URLs inside the pack (`css/style.css`). Host-wide links: `https://campdegen.com/`, `/spt-pack/`, `/#about`, `/#connect`. Never `/css/styles.css` from pack pages (wrong file at site root).
+- `data/looking-to-add.json`: old-server leftovers not on the current pack. `id` may be null when Forge had no listing. Custom blurbs + match notes, never Forge description text.
 - Catalog display controls: 1/2/3 columns (default 2) and grouped/strict-alpha sorting (default side order `server`, `both`, `client`, `special`, then mod name). Preferences use local storage. Below 720px the grid is always one column. DOM order remains row-major, never CSS columns or column-major reordering. Missing/broken Forge thumbnails use a letter placeholder.
+- Looking-to-add page: `looking.html` / `js/looking.js`. Same tiles/columns. Forge updater also fetches those ids. Badge compares fixed `data/site.json` SPT version with latest Forge `sptConstraint`: Ready / Waiting / Unknown. Daily Forge data can change the badge; it never changes the installed SPT version.
 
 ## Chrome still to do (in this repo, then sync)
 
 Same facility chrome as the homepage; still a tool page.
 
-1. **Masthead** — Host logo + `CampD`, no Overview / SPT Pack / Communications tabs. Pack-local Mods / Pack Settings live under the header (`.pack-nav`). Brand → `https://campdegen.com/`.
+1. **Masthead** — Host logo + `CampD`, no Overview / SPT Pack / Communications tabs. Pack-local Mods / Pack Settings / Looking to add live under the header (`.pack-nav`). Brand → `https://campdegen.com/`.
 2. Skip link + `main#main-content` — done.
 3. Favicon: `assets/favicon.png` (same file as host).
 4. OG/Twitter: `og:url` = `https://campdegen.com/spt-pack/`, image = host logo URL.

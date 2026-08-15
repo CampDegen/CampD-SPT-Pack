@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CampD SPT Pack — Mods</title>
-    <meta name="description" content="CampD SPT server mod list: installed versions vs Forge, plus what each mod does." />
+    <title>CampD SPT Pack — Looking to add</title>
+    <meta name="description" content="Old CampD SPT mods that are not on the current 4.1.2 pack, matched against Forge." />
     <link rel="icon" href="assets/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,39 +26,38 @@
       </div>
       <p class="header-meta doc-meta">
         <span>CD-SPT-PACK</span>
-        <span>Mod catalog</span>
+        <span>Looking to add</span>
         <span id="spt-chip">SPT —</span>
       </p>
     </header>
 
     <main class="page" id="main-content">
       <nav class="pack-nav" aria-label="Pack">
-        <a class="is-active" href="index.html">Mods</a>
+        <a href="index.html">Mods</a>
         <a href="settings.html">Pack Settings</a>
-        <a href="looking.html">Looking to add</a>
+        <a class="is-active" href="looking.html">Looking to add</a>
       </nav>
 
       <section class="hero">
-        <p class="eyebrow">Installed loadout</p>
-        <h1>What is on the server</h1>
+        <p class="eyebrow">Old server leftovers</p>
+        <h1>Looking to add</h1>
         <p class="lede" id="lede">
-          Custom notes for each mod, plus installed version versus whatever Forge currently lists.
+          Mods from the previous CampD server that are not on the current pack. Forge names were checked against the old list.
         </p>
-        <p class="checked" id="checked">Forge versions have not been checked yet.</p>
       </section>
 
-      <section class="stats" id="stats" aria-label="Version summary">
+      <section class="stats" id="stats" aria-label="Looking-to-add summary">
         <div class="stat">
           <span class="stat-value" id="stat-total">—</span>
-          <span class="stat-label">Installed</span>
+          <span class="stat-label">Candidates</span>
         </div>
         <div class="stat">
-          <span class="stat-value is-ok" id="stat-current">—</span>
-          <span class="stat-label">Up to date</span>
+          <span class="stat-value is-ok" id="stat-compatible">—</span>
+          <span class="stat-label">Ready for 4.1.2</span>
         </div>
         <div class="stat">
-          <span class="stat-value is-warn" id="stat-update">—</span>
-          <span class="stat-label">Updates</span>
+          <span class="stat-value is-warn" id="stat-waiting">—</span>
+          <span class="stat-label">Waiting for 4.1.2</span>
         </div>
         <div class="stat">
           <span class="stat-value is-muted" id="stat-unknown">—</span>
@@ -66,18 +65,11 @@
         </div>
       </section>
 
-      <section class="toolbar" aria-label="Filter and display mods">
+      <section class="toolbar" aria-label="Filter looking-to-add mods">
         <label class="search">
-          <span class="sr-only">Search mods</span>
-          <input id="search" type="search" placeholder="Search name, description, notes…" autocomplete="off" />
+          <span class="sr-only">Search looking-to-add mods</span>
+          <input id="search" type="search" placeholder="Search name, old name, notes…" autocomplete="off" />
         </label>
-        <div class="filters" id="filters" role="tablist" aria-label="Mod side">
-          <button type="button" class="filter is-active" data-side="all">All</button>
-          <button type="button" class="filter" data-side="server">Server</button>
-          <button type="button" class="filter" data-side="both">Both</button>
-          <button type="button" class="filter" data-side="client">Client</button>
-          <button type="button" class="filter" data-side="special">Special</button>
-        </div>
         <div class="view-options">
           <label class="view-option">
             <span>Columns</span>
@@ -85,13 +77,6 @@
               <option value="1">Single</option>
               <option value="2" selected>Dual</option>
               <option value="3">Triple</option>
-            </select>
-          </label>
-          <label class="view-option">
-            <span>Sort</span>
-            <select id="sort">
-              <option value="grouped" selected>Type + A–Z</option>
-              <option value="alphabetical">A–Z only</option>
             </select>
           </label>
         </div>
@@ -107,9 +92,9 @@
         <span>Classification: Public</span>
         <span>Issue 2026-08</span>
       </p>
-      <p>Versions come from the Forge API at <a href="https://sp-mod.com">sp-mod.com</a>. Descriptions are CampD’s, not the Forge listing text.</p>
+      <p>This is a wishlist from the old server, not what is installed now. Current pack is on the <a href="index.html">mod list</a>.</p>
     </footer>
 
-    <script src="js/app.js" type="module"></script>
+    <script src="js/looking.js" type="module"></script>
   </body>
 </html>

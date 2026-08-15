@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - data/mods.json
+      - data/looking-to-add.json
       - scripts/update-forge-status.mjs
       - .github/workflows/update-forge.yml
 

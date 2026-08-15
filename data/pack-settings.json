@@ -39,7 +39,7 @@
         {
           "id": "items",
           "title": "Items / Inventory",
-          "notes": ""
+          "notes": "Keys are configured as unbreakable through SVM; no separate Unbreakable Keys mod is needed."
         },
         {
           "id": "quests",

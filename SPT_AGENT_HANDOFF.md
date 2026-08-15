@@ -41,7 +41,7 @@ GitHub Pages                              →  https://campdegen.com/spt-pack/
 
 Sync workflow on the website: `.github/workflows/sync-spt-pack.yml`. It copies only:
 
-`index.html`, `settings.html`, `css/`, `js/`, `data/`, `assets/`
+`index.html`, `settings.html`, `looking.html`, `css/`, `js/`, `data/`, `assets/`
 
 Not copied (stay in this pack repo): `.github/`, `scripts/`, `reference_data/`, README, knowledge files.
 

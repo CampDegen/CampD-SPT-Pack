@@ -12,6 +12,7 @@ Agent notes: [SPT_MERGE_KNOWLEDGE.md](SPT_MERGE_KNOWLEDGE.md), [SPT_AGENT_HANDOF
 | --- | --- |
 | `index.html` | Two-column mod tile catalog, Forge icons, search, side filters, version badges |
 | `settings.html` | Pack-wide SVM, ReSHADE, and extra data notes |
+| `looking.html` | Old-server candidates with automatic compatibility status for the installed SPT version |
 
 ## Local preview
 
@@ -25,7 +26,7 @@ Then visit `http://localhost:8080`.
 
 ## Theme
 
-Active look is the CampD facility theme (`css/themes/facility.css`), using the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings sit in a pack-local nav under the header.
+Active look is the CampD facility theme (`css/themes/facility.css`), using the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings / Looking to add sit in a pack-local nav under the header.
 
 To restore the original Tarkov inventory look, change that file to:
 
@@ -72,6 +73,10 @@ After adding or bumping a version, run the updater (or push `data/mods.json` to 
 
 Pack-wide notes: `data/pack-settings.json`. Empty SVM groups render as “Not documented yet.”
 
+Old-server leftovers: `data/looking-to-add.json`. `id` / `slug` come from Forge after name matching. Leave `id` as `null` if there is no current Forge page. `oldName` is the label from the old list when it differs. `notes` are match / compatibility caveats, not Forge listing text.
+
+The Looking to add badge compares `data/site.json`’s installed SPT version against the latest Forge release’s `spt_version_constraint`. It shows **Ready for 4.1.2**, **Waiting for 4.1.2**, or **Compatibility unknown** and changes automatically when the daily Forge refresh finds a newly compatible release. It does not change the installed SPT version.
+
 Site title / SPT version: `data/site.json`.
 
 ## Forge version checks
@@ -86,7 +91,7 @@ Display controls let visitors choose Single, Dual (default), or Triple columns a
 node scripts/update-forge-status.mjs
 ```
 
-Needs Node 18+. The GitHub Action `.github/workflows/update-forge.yml` runs that script daily at 06:00 UTC, on `workflow_dispatch`, and when `data/mods.json` changes on `main`.
+Needs Node 18+. The GitHub Action `.github/workflows/update-forge.yml` runs that script daily at 06:00 UTC, on `workflow_dispatch`, and when `data/mods.json` or `data/looking-to-add.json` changes on `main`. It fetches every Forge id from both files.
 
 Badges:
 

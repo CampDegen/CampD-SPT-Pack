@@ -1,0 +1,222 @@
+{
+  "intro": "Mods from the old CampD server that are not on the current 4.1.2 pack. Names were matched against Forge.",
+  "mods": [
+    {
+      "id": 2264,
+      "name": "Battle Ambience",
+      "slug": "battle-ambience",
+      "description": "Adds distant gunfire and combat atmosphere so maps do not feel empty between fights.",
+      "notes": "Old list name matched Forge exactly. Latest Forge listing still targets SPT 4.0."
+    },
+    {
+      "id": 2510,
+      "name": "FikaSync",
+      "slug": "fikasync",
+      "oldName": "Battle Ambience (Fika Sync)",
+      "description": "Fika helper that keeps ambience and similar client audio mods in sync during co-op.",
+      "notes": "No separate 'Battle Ambience (Fika Sync)' Forge page. Closest current listing is FikaSync. Only relevant if we bring Fika back."
+    },
+    {
+      "id": 1090,
+      "name": "Color Converter API",
+      "slug": "color-converter-api",
+      "oldName": "ColorConverterAPI",
+      "description": "Shared color-conversion library other client UI mods depend on. Not useful by itself.",
+      "notes": "We already run More Tag Colours, which historically needed this API. Confirm whether 4.1.2 still requires it as a separate install."
+    },
+    {
+      "id": 2617,
+      "name": "Don't Shoot The Bus",
+      "slug": "dont-shoot-the-bus",
+      "description": "Stops bots from lighting up the Ground Zero bus / extract vehicle.",
+      "notes": "Latest Forge listing targets SPT 4.0.x."
+    },
+    {
+      "id": 2153,
+      "name": "Expanded Task Text (ETT)",
+      "slug": "expanded-task-text-ett",
+      "oldName": "Expanded Task Text",
+      "description": "Puts the full quest description and extra task text on the tasks screen instead of truncated blurbs.",
+      "notes": "Latest Forge listing still shows SPT 3.11. May not have a 4.1.2 build yet."
+    },
+    {
+      "id": 1582,
+      "name": "Headshot Darkness",
+      "slug": "headshot-darkness",
+      "description": "Darkens the screen on a headshot so that kill feedback is obvious.",
+      "notes": "Latest Forge listing is SPT 4.0, not 4.1."
+    },
+    {
+      "id": 1618,
+      "name": "Hide Beta Rework",
+      "slug": "hide-beta-rework",
+      "description": "Reworks hideout hide-beta / stash-hide presentation so that UI is less noisy.",
+      "notes": "Latest Forge listing is SPT 4.0, not 4.1."
+    },
+    {
+      "id": 1530,
+      "name": "Hide Top Glow",
+      "slug": "hide-top-glow",
+      "description": "Removes the bright UI glow along the top of the screen.",
+      "notes": "Latest Forge listing is SPT 4.0, not 4.1."
+    },
+    {
+      "id": 1575,
+      "name": "Increase Climb Height",
+      "slug": "increase-climb-height",
+      "description": "Lets you vault / climb slightly higher ledges than vanilla SPT.",
+      "notes": "Latest Forge listing is SPT 4.0, not 4.1."
+    },
+    {
+      "id": 2206,
+      "name": "Item Preview QoL + screenshots",
+      "slug": "item-preview-qol-screenshots",
+      "oldName": "Item Preview QoL",
+      "description": "Improves inspect previews and lets you grab cleaner item screenshots.",
+      "notes": "Separate from Preview Sizer, which is already installed. Latest listing targets SPT 4.0.x."
+    },
+    {
+      "id": 2685,
+      "name": "Knight Mask Fix (4.0+)",
+      "slug": "knight-mask-fix-40",
+      "oldName": "Knight Mask Fix",
+      "description": "Fixes Death Knight mask clipping / visor issues on current SPT faces.",
+      "notes": "Picked the 4.0+ listing over the older 3.11 'Death Knight Mask Fix'."
+    },
+    {
+      "id": 922,
+      "name": "Less Restricting Headwear",
+      "slug": "less-restricting-headwear",
+      "description": "Relaxes helmet / headset / face-cover combo rules so more kits actually equip together.",
+      "notes": "Latest Forge listing targets SPT 4.0."
+    },
+    {
+      "id": 2438,
+      "name": "Level Endurance and Strength",
+      "slug": "level-endurance-and-strength",
+      "description": "Lets endurance and strength level without the usual vanilla grind gates.",
+      "notes": "Latest Forge listing targets SPT 4.0.13."
+    },
+    {
+      "id": 812,
+      "name": "Looting Bots",
+      "slug": "looting-bots",
+      "description": "Bots loot corpses and containers instead of standing on piles of gear.",
+      "notes": "Latest Forge listing is SPT 4.0, not 4.1. Heavy overlap with other bot mods — check SAIN/APBS compatibility before adding."
+    },
+    {
+      "id": 1619,
+      "name": "Lots of Loot Redux",
+      "slug": "lots-of-loot-redux",
+      "description": "Turns up loose loot and container density across maps.",
+      "notes": "Forge has a 4.1-compatible listing."
+    },
+    {
+      "id": 861,
+      "name": "MoreCheckmarks",
+      "slug": "morecheckmarks",
+      "oldName": "More Checkmarks",
+      "description": "Extra quest/hideout/handbook checkmarks so you can see what you still need.",
+      "notes": "Latest Forge listing is SPT 4.0, not 4.1."
+    },
+    {
+      "id": 1688,
+      "name": "More Energy Drinks",
+      "slug": "more-energy-drinks",
+      "description": "Adds extra energy-drink items into loot and traders.",
+      "notes": "Forge listing shows SPT 4.1.x."
+    },
+    {
+      "id": 2584,
+      "name": "Mortar Strikes",
+      "slug": "mortar-strikes",
+      "description": "Random or event mortar barrages during raids.",
+      "notes": "Latest Forge listing targets SPT 4.0.x."
+    },
+    {
+      "id": 2441,
+      "name": "NARCONet - Mod Sync",
+      "slug": "narconet-mod-sync",
+      "oldName": "NarcoNet",
+      "description": "Fika sync helper for NARCONet / stim-related client mods.",
+      "notes": "The old name was just NarcoNet. Current Forge hit is the Fika sync package, which needs 4.0 and Fika. Original overlay may be gone or renamed."
+    },
+    {
+      "id": 2326,
+      "name": "Project Fika",
+      "slug": "project-fika",
+      "description": "Co-op client for playing SPT raids with other people.",
+      "notes": "Client package. The matching server package is Project Fika - Server (id 2357). This is a co-op stack, not a drop-in for the current dedicated SPT server."
+    },
+    {
+      "id": 2106,
+      "name": "(Completed + FIKA) Quests Extended",
+      "slug": "completed-fika-quests-extended",
+      "oldName": "Quests Extended",
+      "description": "Extra / restored quests, including Fika-friendly completed-state handling.",
+      "notes": "Closest current Forge listing for 'Quests Extended'. Targets SPT 4.0 and is Fika-oriented."
+    },
+    {
+      "id": 791,
+      "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+      "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+      "oldName": "SAIN",
+      "description": "Replaces vanilla bot combat brains: peeks, nades, holds, and push logic.",
+      "notes": "Huge stack. Latest listing still shows SPT 4.0. Conflicts / overlaps with the APBS + ABPS setup we already run — do not add blindly."
+    },
+    {
+      "id": 2299,
+      "name": "Show Me The Money (Item Pricing)",
+      "slug": "show-me-the-money-item-pricing",
+      "oldName": "Show Me The Money",
+      "description": "Shows flee / trader prices on items in stash and raid so you know what loot is worth.",
+      "notes": "Overlaps LootNET, which is already installed. Latest listing targets SPT 4.0.x."
+    },
+    {
+      "id": 2635,
+      "name": "Smooth Talker",
+      "slug": "smooth-talker",
+      "description": "Smooths trader / dialogue UI so conversations are less clunky.",
+      "notes": "Latest Forge listing is SPT 4.0, not 4.1."
+    },
+    {
+      "id": 1525,
+      "name": "Temporary Fixes",
+      "slug": "temporary-fixes",
+      "description": "Bundle of short-term client/server bug workarounds for a specific SPT patch.",
+      "notes": "Latest listing is gated to SPT 4.0.0–4.0.13. Probably obsolete on 4.1.2."
+    },
+    {
+      "id": 2615,
+      "name": "Updated collector quest and streamer case (EFT 1.0 Backport)",
+      "slug": "updated-collector-quest-and-streamer-case-eft-10-backport",
+      "oldName": "Updated Collector Quest",
+      "description": "Brings the live-wipe Collector / streamer-case quest changes into SPT.",
+      "notes": "Closest Forge match for the old name. Listing is SPT 4.0.13."
+    },
+    {
+      "id": 2499,
+      "name": "WikiLinks",
+      "slug": "wikilinks",
+      "oldName": "Wiki Links",
+      "description": "Adds tarkov.help / wiki links on item inspect so you can look up quests and barters quickly.",
+      "notes": "Latest Forge listing targets SPT 4.0."
+    },
+    {
+      "id": 1274,
+      "name": "Healing Autocancel",
+      "slug": "healing-autocancel",
+      "oldName": "Healing Auto Cancel",
+      "description": "Cancels the heal animation when you move or take damage so you are not locked in place.",
+      "notes": "Forge page is Healing Autocancel. Latest listing targets SPT 4.0."
+    },
+    {
+      "id": 2063,
+      "name": "UnderFire - An Adrenaline Effect",
+      "slug": "underfire-an-adrenaline-effect",
+      "oldName": "Under Fire",
+      "description": "Adds an adrenaline / incoming-fire effect when you are being shot at.",
+      "notes": "Forge page is UnderFire - An Adrenaline Effect. Latest listing targets SPT 4.0."
+    }
+  ]
+}
