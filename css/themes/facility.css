@@ -1,5 +1,5 @@
-/* CampD facility theme — tokens from reference_data/colors.md / campdegen.com
-   Revert: in css/style.css, import themes/inventory.css instead. */
+/* CampD facility theme — tokens from reference_data/colors.md / campdegen.com.
+   Pack HTML links this file directly to avoid an @import request chain. */
 
 :root {
   /* Match campdegen.com css/styles.css aged palette (not the digital-native colors.md table). */

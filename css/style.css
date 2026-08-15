@@ -1,1 +1,3 @@
+/* Legacy compatibility entrypoint for cached HTML.
+   Current pages link themes/facility.css directly. */
 @import url("themes/facility.css");

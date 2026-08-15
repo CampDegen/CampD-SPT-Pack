@@ -26,13 +26,13 @@ Then visit `http://localhost:8080`.
 
 ## Theme
 
-Active look is the CampD facility theme (`css/themes/facility.css`), using the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings / Looking to add sit in a pack-local nav under the header.
+Active look is the CampD facility theme (`css/themes/facility.css`), linked **directly** by all three HTML pages. Do not put the live theme behind a CSS `@import`; the extra request previously allowed persistent unstyled loads when the import failed. Relative URLs work on both campdegen.com and the GitHub project Pages staging URL.
 
-To restore the original Tarkov inventory look, change that file to:
+`css/style.css` remains only as a compatibility entrypoint for cached older HTML. New pages must not reference it.
 
-```css
-@import url("themes/inventory.css");
-```
+To restore the original Tarkov inventory look, change the stylesheet `href` in `index.html`, `settings.html`, and `looking.html` from `css/themes/facility.css` to `css/themes/inventory.css`.
+
+The facility theme uses the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings / Looking to add sit in a pack-local nav under the header.
 
 Fonts for the inventory theme are Source Sans 3 / Rajdhani / IBM Plex Mono; the facility theme uses Bebas Neue / Rajdhani / Share Tech Mono (already loaded in the HTML). Tokens come from [reference_data/colors.md](reference_data/colors.md).
 

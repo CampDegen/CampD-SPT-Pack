@@ -48,9 +48,9 @@ Sync **wipes** host `spt-pack/`. Chrome/identity work belongs **in this repo**.
 - `data/forge-status.json`: generated. `GET https://sp-mod.com/api/v0/mods?filter[id]=…&include=versions&per_page=50`. Do not pass `fields=` (strips nested `spt_version_constraint`). Send `User-Agent`. Newest = max semver, not blindly `versions[0]`. Keep Forge `thumbnail`; catalog uses it as the mod icon.
 - `scripts/update-forge-status.mjs` (Node 18+). Keep here. UA path may be stale; optional fix to CampDegen/CampD-SPT-Pack.
 - `.github/workflows/update-forge.yml` — Actions **write** so it can commit status.
-- Theme: `css/style.css` `@import` `themes/facility.css`. Revert look: `themes/inventory.css` (keep).
+- Theme: all pack HTML links `css/themes/facility.css` directly. `css/style.css` is legacy compatibility for cached HTML only; new pages must not reference it. Revert look by linking `themes/inventory.css` directly (keep).
 - `reference_data/Modlist.md` original list, not read by the site.
-- Relative URLs inside the pack (`css/style.css`). Host-wide links: `https://campdegen.com/`, `/spt-pack/`, `/#about`, `/#connect`. Never `/css/styles.css` from pack pages (wrong file at site root).
+- Use relative pack asset URLs (`css/themes/facility.css`) so production and GitHub project Pages both work. Host-wide links: `https://campdegen.com/`, `/spt-pack/`, `/#about`, `/#connect`. Never `/css/styles.css` from pack pages (wrong file at site root).
 - `data/looking-to-add.json`: old-server leftovers not on the current pack. `id` may be null when Forge had no listing. Custom blurbs + match notes, never Forge description text.
 - Catalog display controls: 1/2/3 columns (default 2) and grouped/strict-alpha sorting (default side order `server`, `both`, `client`, `special`, then mod name). Preferences use local storage. Below 720px the grid is always one column. DOM order remains row-major, never CSS columns or column-major reordering. Missing/broken Forge thumbnails use a letter placeholder.
 - Looking-to-add page: `looking.html` / `js/looking.js`. Same tiles/columns. Forge updater also fetches those ids. Badge compares fixed `data/site.json` SPT version with latest Forge `sptConstraint`: Ready / Waiting / Unknown. Daily Forge data can change the badge; it never changes the installed SPT version.
