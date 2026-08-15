@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-15T17:14:49.412Z",
+  "checkedAt": "2026-08-15T19:00:15.294Z",
   "missing": [],
   "mods": {
     "236": {
@@ -529,6 +529,14 @@
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2344/dynamic-item-weights",
       "thumbnail": "https://files.sp-mod.com/mods/PLjwUyUmevBYgQMwXLisG0tVuMgjDLR2xXjkoYTN.png"
+    },
+    "2357": {
+      "name": "Project Fika - Server",
+      "slug": "project-fika-server",
+      "latestVersion": "2.4.0",
+      "sptConstraint": ">=4.1.1",
+      "detailUrl": "https://sp-mod.com/mod/2357/project-fika-server",
+      "thumbnail": "https://files.sp-mod.com/mods/TyZYkymyyncPYhtym6yzksKglj9ppqaby4VkxGn0.png"
     },
     "2371": {
       "name": "FIR Fence Purchases",
