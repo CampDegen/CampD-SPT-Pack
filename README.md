@@ -32,7 +32,7 @@ Active look is the CampD facility theme (`css/themes/facility.css`), linked **di
 
 To restore the original Tarkov inventory look, change the stylesheet `href` in `index.html`, `settings.html`, and `looking.html` from `css/themes/facility.css` to `css/themes/inventory.css`.
 
-The facility theme uses the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings / Looking to add sit in a pack-local nav under the header.
+The facility theme uses the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings / Looking to add sit in a pack-local nav under the header. Film grain and vignette use real DOM overlays (`.film-grain`, `.vignette`) and `assets/grain.png`, not SVG `feTurbulence` data-URIs, so Chromium paints the aged look on first load.
 
 Fonts for the inventory theme are Source Sans 3 / Rajdhani / IBM Plex Mono; the facility theme uses Bebas Neue / Rajdhani / Share Tech Mono (already loaded in the HTML). Tokens come from [reference_data/colors.md](reference_data/colors.md).
 

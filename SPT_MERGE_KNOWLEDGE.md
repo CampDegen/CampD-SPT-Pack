@@ -26,7 +26,7 @@ GitHub Pages                              →  https://campdegen.com/spt-pack/
 
 Website workflow: `.github/workflows/sync-spt-pack.yml` (on the **website** repo).
 
-Copied: `index.html`, `settings.html`, `looking.html`, `css/`, `js/`, `data/`, `assets/`
+Copied: `index.html`, `settings.html`, `looking.html`, `css/`, `js/`, `data/`, `assets/` (includes `grain.png` for facility theme overlays)
 Stay here: `.github/`, `scripts/`, `reference_data/`, README, knowledge/handoff files.
 
 `GITHUB_TOKEN` cannot push the other repo. No PAT. Forge stays here. After pack `main` push: wait for Forge (if `mods.json` changed) then website sync, or run **Update Forge status** here and **Sync SPT Pack** on the website.
@@ -68,6 +68,7 @@ Same facility chrome as the homepage; still a tool page.
 7. Footer closer to host `.site-footer`.
 8. No extra Safety Orange CTA (Discord on `/` is the one). Update yellow + hazard tape OK.
 9. Token drift: `facility.css` now copies host aged hex from `css/styles.css`. When host tokens change, copy them again. Do not `@import` live host `styles.css` (class names for catalog still differ).
+10. Grain/vignette: same as homepage — `.film-grain` / `.vignette` nodes in HTML + `assets/grain.png`. Do not use SVG `feTurbulence` data-URI overlays (Chromium first-paint bug).
 
 ## Adding another project page (same pattern)
 

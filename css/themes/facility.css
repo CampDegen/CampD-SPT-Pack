@@ -38,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -52,24 +53,31 @@ body {
   background-image: linear-gradient(180deg, #1a1714 0%, var(--bg-base) 12%, #151310 100%);
 }
 
-body::before,
-body::after {
-  content: "";
+/* Film grain + vignette (analog wear).
+   Real overlay nodes + a PNG tile — SVG feTurbulence in a data-URI
+   often skips first paint in Chromium, leaving a cooler/bluer page
+   until refresh. Do not restore that SVG filter overlay. */
+.film-grain,
+.vignette {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
 }
 
-body::before {
+.film-grain {
   opacity: 0.07;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("../../assets/grain.png");
   background-repeat: repeat;
   background-size: 180px 180px;
 }
 
-body::after {
-  background: radial-gradient(ellipse 90% 80% at 50% 45%, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+.vignette {
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 45%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
   opacity: 0.65;
 }
 
@@ -801,5 +809,15 @@ code {
 @media (max-width: 800px) {
   .stats {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .film-grain {
+    opacity: 0.03;
   }
 }
