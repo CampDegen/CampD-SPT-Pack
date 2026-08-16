@@ -1,16 +1,11 @@
 {
-  "checkedAt": "2026-08-16T06:52:58.192Z",
-  "missing": [
-    2747,
-    2679,
-    2700,
-    2776
-  ],
+  "checkedAt": "2026-08-16T17:53:16.274Z",
+  "missing": [],
   "mods": {
     "236": {
       "name": "Server Value Modifier [SVM]",
       "slug": "server-value-modifier-svm",
-      "latestVersion": "2.2.1",
+      "latestVersion": "2.2.2",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/236/server-value-modifier-svm",
       "thumbnail": "https://files.sp-mod.com/mods/379.png"
@@ -586,7 +581,7 @@
     "2480": {
       "name": "BarterItemsStacks",
       "slug": "barteritemsstacks",
-      "latestVersion": "1.4.0",
+      "latestVersion": "1.4.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2480/barteritemsstacks",
       "thumbnail": "https://files.sp-mod.com/mods/TnF3r4yN7ZOq6jYyUVv6NuzLvXTVKXqP9ctvMsVj.jpg"
