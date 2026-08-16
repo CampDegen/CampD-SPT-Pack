@@ -112,14 +112,6 @@
       "notes": "Latest Forge listing targets SPT 4.0.x."
     },
     {
-      "id": 2441,
-      "name": "NARCONet - Mod Sync",
-      "slug": "narconet-mod-sync",
-      "oldName": "NarcoNet",
-      "description": "Fika sync helper for NARCONet / stim-related client mods.",
-      "notes": "The old name was just NarcoNet. Current Forge hit is the Fika sync package. Fika is now on the pack; this still waits on a 4.1.2 listing, and the original overlay may be gone or renamed."
-    },
-    {
       "id": 2106,
       "name": "(Completed + FIKA) Quests Extended",
       "slug": "completed-fika-quests-extended",
