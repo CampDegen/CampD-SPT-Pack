@@ -1,6 +1,11 @@
 {
-  "checkedAt": "2026-08-16T01:49:23.746Z",
-  "missing": [],
+  "checkedAt": "2026-08-16T06:38:51.447Z",
+  "missing": [
+    2679,
+    2747,
+    2700,
+    2776
+  ],
   "mods": {
     "236": {
       "name": "Server Value Modifier [SVM]",
@@ -746,14 +751,6 @@
       "detailUrl": "https://sp-mod.com/mod/2657/cultist-circle-improvements",
       "thumbnail": "https://files.sp-mod.com/mods/lMwkyPstHL9BZ7OB4e7UycUYQtGuoSzgW1LvRo2f.png"
     },
-    "2679": {
-      "name": "LootNET",
-      "slug": "lootnet",
-      "latestVersion": "1.1.0",
-      "sptConstraint": "~4.1",
-      "detailUrl": "https://sp-mod.com/mod/2679/lootnet",
-      "thumbnail": "https://files.sp-mod.com/mods/TwjsGlZRtCLqYVNjHSwsJBGG2qbvFeBPThrlgccS.jpg"
-    },
     "2685": {
       "name": "Knight Mask Fix (4.0+)",
       "slug": "knight-mask-fix-40",
@@ -769,14 +766,6 @@
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2689/item-property-backport",
       "thumbnail": null
-    },
-    "2700": {
-      "name": "knife sprint",
-      "slug": "knife-sprint",
-      "latestVersion": "1.0.1",
-      "sptConstraint": "~4.1",
-      "detailUrl": "https://sp-mod.com/mod/2700/knife-sprint",
-      "thumbnail": "https://files.sp-mod.com/mods/mzJ2VfTFygumgsAzm2VN7NeBCFTb3l3A51HeBKYy.jpg"
     },
     "2729": {
       "name": "NotificationFilter",
@@ -809,22 +798,6 @@
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2735/scoperangefinder",
       "thumbnail": "https://files.sp-mod.com/mods/xqkKdJqmh2oBSQcyuD8VaX9ukNMwBy331IZTN7RC.png"
-    },
-    "2747": {
-      "name": "Weekend Drops",
-      "slug": "weekend-drops",
-      "latestVersion": "1.0.5",
-      "sptConstraint": "4.1.2",
-      "detailUrl": "https://sp-mod.com/mod/2747/weekend-drops",
-      "thumbnail": "https://files.sp-mod.com/mods/a7n7YT3Vnizy5JsMIhzP3OBJRr9bmobnEsicYmuh.jpg"
-    },
-    "2776": {
-      "name": "Parmesan - Partizan Rework",
-      "slug": "parmesan-partizan-rework",
-      "latestVersion": "1.0.1",
-      "sptConstraint": "4.1.2",
-      "detailUrl": "https://sp-mod.com/mod/2776/parmesan-partizan-rework",
-      "thumbnail": "https://files.sp-mod.com/mods/4NUVzTC282nQjFKfZl4OBMvKYIYI2NXhTUIbNqYf.jpg"
     },
     "2780": {
       "name": "No Barrel Shadow",
