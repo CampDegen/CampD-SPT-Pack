@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-15T19:05:51.546Z",
+  "checkedAt": "2026-08-16T01:49:23.746Z",
   "missing": [],
   "mods": {
     "236": {
@@ -573,8 +573,8 @@
     "2441": {
       "name": "NARCONet - Mod Sync",
       "slug": "narconet-mod-sync",
-      "latestVersion": "1.0.16",
-      "sptConstraint": "~4.0 <4.1.0",
+      "latestVersion": "1.2.1",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2441/narconet-mod-sync",
       "thumbnail": "https://files.sp-mod.com/mods/4NouoXA6ejwVZ8WpJra6nUljkYLdGCCVcHCHYUir.png"
     },
@@ -873,14 +873,6 @@
       "sptConstraint": "4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2843/blackout",
       "thumbnail": "https://files.sp-mod.com/mods/TUbFUbxJ2fMDesjdhv96XyJvUvXlGEoLpy4tF64F.png"
-    },
-    "2851": {
-      "name": "SPT Mod Manager",
-      "slug": "spt-mod-manager",
-      "latestVersion": "0.5.1",
-      "sptConstraint": "4.1.x",
-      "detailUrl": "https://sp-mod.com/mod/2851/spt-mod-manager",
-      "thumbnail": "https://files.sp-mod.com/mods/vrJPEuHFoXvwoCAoMn5Zzo9JM3ekLGPqfjOjeZ4a.png"
     },
     "2861": {
       "name": "[REDACTED] Redactor",
