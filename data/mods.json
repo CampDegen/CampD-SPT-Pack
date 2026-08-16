@@ -19,12 +19,30 @@
       "settingsNotes": ""
     },
     {
+      "id": 1775,
+      "name": "WTT - Menu Overhaul",
+      "slug": "wtt-menu-overhaul",
+      "side": "client",
+      "installedVersion": "1.3.0",
+      "description": "",
+      "settingsNotes": ""
+    },
+    {
       "id": 1342,
       "name": "UI Fixes",
       "slug": "ui-fixes",
       "side": "both",
       "installedVersion": "6.0.1",
       "description": "Bundle of stash, inspect, and menu QoL fixes. Several other client mods plug into this.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2121,
+      "name": "Increase Look Direction",
+      "slug": "increase-look-direction",
+      "side": "client",
+      "installedVersion": "1.1.0",
+      "description": "",
       "settingsNotes": ""
     },
     {
@@ -91,6 +109,15 @@
       "settingsNotes": ""
     },
     {
+      "id": 2210,
+      "name": "Live Like Boss Spawn Chances",
+      "slug": "live-like-boss-spawn-chances",
+      "side": "server",
+      "installedVersion": "2.1.0",
+      "description": "",
+      "settingsNotes": ""
+    }
+    {
       "id": 1688,
       "name": "More Energy Drinks",
       "slug": "more-energy-drinks",
@@ -140,7 +167,7 @@
       "name": "Server Value Modifier",
       "slug": "server-value-modifier-svm",
       "side": "special",
-      "installedVersion": "2.2.1",
+      "installedVersion": "2.2.2",
       "description": "All-in-one server config tool (raid time, loot, bots, traders, and more). CampD overrides are documented on the Pack Settings page.",
       "settingsNotes": "See Pack Settings for SVM category notes as we fill them in."
     },
@@ -167,7 +194,7 @@
       "name": "BarterItemsStacks",
       "slug": "barteritemsstacks",
       "side": "both",
-      "installedVersion": "1.4.0",
+      "installedVersion": "1.4.1",
       "description": "Raises stack sizes on barter items so junk loot does not fill the stash.",
       "settingsNotes": ""
     },
