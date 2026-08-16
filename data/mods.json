@@ -118,15 +118,6 @@
       "settingsNotes": ""
     },
     {
-      "id": 2747,
-      "name": "Weekend Drops",
-      "slug": "weekend-drops",
-      "side": "both",
-      "installedVersion": "1.0.5",
-      "description": "Rotating daily and weekend challenges that pay crates and GP coins.",
-      "settingsNotes": ""
-    },
-    {
       "id": 2886,
       "name": "Operator Traits",
       "slug": "operator-traits",
@@ -406,15 +397,6 @@
       "settingsNotes": ""
     },
     {
-      "id": 2679,
-      "name": "LootNET",
-      "slug": "lootnet",
-      "side": "both",
-      "installedVersion": "1.1.0",
-      "description": "Shows a running total of how much the raid's loot is worth so you know if the kit was worth the risk.",
-      "settingsNotes": ""
-    },
-    {
       "id": 1358,
       "name": "BrightLasers",
       "slug": "brightlasers",
@@ -532,15 +514,6 @@
       "settingsNotes": ""
     },
     {
-      "id": 2700,
-      "name": "knife sprint",
-      "slug": "knife-sprint",
-      "side": "client",
-      "installedVersion": "1.0.1",
-      "description": "Lets you sprint with melee out instead of being forced to walk.",
-      "settingsNotes": ""
-    },
-    {
       "id": 2735,
       "name": "ScopeRangefinder",
       "slug": "scoperangefinder",
@@ -583,15 +556,6 @@
       "side": "client",
       "installedVersion": "1.0.0",
       "description": "Hides the SPT version watermark while you are in raid.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2776,
-      "name": "Parmesan - Partizan Rework",
-      "slug": "parmesan-partizan-rework",
-      "side": "client",
-      "installedVersion": "1.0.1",
-      "description": "Makes Partizan hunt AI PMCs instead of tunnel-visioning the player every raid.",
       "settingsNotes": ""
     },
     {
