@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-16T18:12:54.295Z",
+  "checkedAt": "2026-08-16T18:27:07.283Z",
   "missing": [],
   "mods": {
     "236": {
@@ -937,6 +937,14 @@
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2910/pmc-spawn-toggle",
       "thumbnail": "https://files.sp-mod.com/mods/pScV7bKM2LsKXC7An61H29NFYz80GjGTRsOYIe23.png"
+    },
+    "2934": {
+      "name": "Armor Class Icon",
+      "slug": "armor-class-icon",
+      "latestVersion": "1.0.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2934/armor-class-icon",
+      "thumbnail": "https://files.sp-mod.com/mods/JBySxqr7NE6xoEAmFSPg1lngE02qx35hWBRt8yes.jpg"
     }
   }
 }
