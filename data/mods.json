@@ -1,195 +1,6 @@
 {
   "mods": [
     {
-      "id": 2523,
-      "name": "Bosses Have Gp Coins",
-      "slug": "bosses-have-gp-coins",
-      "side": "server",
-      "installedVersion": "1.1.0",
-      "description": "Bosses can drop GP coins, same idea as Lega medals but for the GP coin grind.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2314,
-      "name": "Season Rotator",
-      "slug": "season-rotator",
-      "side": "server",
-      "installedVersion": "2.0.1",
-      "description": "Cycles map seasons on a timer so raids are not stuck in one weather look forever.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2415,
-      "name": "Canted Aiming",
-      "slug": "canted-aiming",
-      "side": "server",
-      "installedVersion": "2.0.0",
-      "description": "Lets you point-shoot / cant the gun without needing a backup sight mount.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1416,
-      "name": "Default Fire Mode Fixer",
-      "slug": "default-fire-mode-fixer",
-      "side": "server",
-      "installedVersion": "2.1.0",
-      "description": "Fixes weapons that spawn on the wrong fire selector so full-auto / burst guns start in a sensible mode.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2481,
-      "name": "Crates In Airdrop",
-      "slug": "crates-in-airdrop",
-      "side": "server",
-      "installedVersion": "2.0.0",
-      "description": "Airdrops can contain loot crates instead of only spilling loose items.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2524,
-      "name": "Item Limits Begone!",
-      "slug": "item-limits-begone",
-      "side": "server",
-      "installedVersion": "1.1.0",
-      "description": "Removes or raises stash, trader, and related item limits that block stacking or buying.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2657,
-      "name": "Cultist Circle Improvements",
-      "slug": "cultist-circle-improvements",
-      "side": "server",
-      "installedVersion": "1.1.0",
-      "description": "Lets us tune Cultist Circle timers, costs, and rewards, including extra direct-reward crafts.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2049,
-      "name": "Add Secret Exfil Notes to Caches",
-      "slug": "add-secret-exfil-notes-to-caches",
-      "side": "server",
-      "installedVersion": "2.1.0",
-      "description": "Secret extract requirement notes can spawn in caches instead of only their vanilla sources.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2371,
-      "name": "FIR Fence Purchases",
-      "slug": "fir-fence-purchases",
-      "side": "server",
-      "installedVersion": "1.1.0",
-      "description": "Items bought from Fence count as Found in Raid.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2689,
-      "name": "Item Property Backport",
-      "slug": "item-property-backport",
-      "side": "server",
-      "installedVersion": "1.5.1",
-      "description": "Applies live-patch item stat and balance changes onto our SPT item data.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2526,
-      "name": "Advanced Flea Simulator",
-      "slug": "advanced-flea-simulator",
-      "side": "server",
-      "installedVersion": "2.0.0",
-      "description": "Makes the flea market feel closer to live: offers, pricing, and player-like listings instead of a static vendor board.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2506,
-      "name": "Funtar",
-      "slug": "funtar",
-      "side": "server",
-      "installedVersion": "2.0.0",
-      "description": "Reworks UNTAR so those scavs are actually worth fighting instead of a boring sideshow.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2831,
-      "name": "Transits Count",
-      "slug": "transits-count",
-      "side": "server",
-      "installedVersion": "1.1.1",
-      "description": "Map transits count as extracts for quests and raid completion, matching how people actually play SPT.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2903,
-      "name": "Raids Are Infinite",
-      "slug": "raids-are-infinite",
-      "side": "server",
-      "installedVersion": "1.0.0",
-      "description": "Removes the raid timer so you are not forced out when the clock hits zero.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1538,
-      "name": "Ref - SPT Friendly Quests",
-      "slug": "ref-spt-friendly-quests",
-      "side": "server",
-      "installedVersion": "2.1.0",
-      "description": "Adjusts Ref's quests so they work in SPT instead of requiring live-only Arena / multiplayer steps.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1594,
-      "name": "APBS - Acid's Progressive Bot System",
-      "slug": "apbs-acids-progressive-bot-system",
-      "side": "server",
-      "installedVersion": "2.3.0",
-      "description": "Bots gear up over the wipe instead of everyone spawning in endgame kits. Core of how CampD PMC/scav loadouts scale.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1539,
-      "name": "Bosses Have Lega Medals",
-      "slug": "bosses-have-lega-medals",
-      "side": "server",
-      "installedVersion": "2.1.0",
-      "description": "Bosses can drop Lega medals so those are not flea-only.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 526,
-      "name": "All The Clothes",
-      "slug": "all-the-clothes",
-      "side": "server",
-      "installedVersion": "3.2.0",
-      "description": "Unlocks the full clothing catalog instead of drip-feeding outfits through traders.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1348,
-      "name": "Scorpion",
-      "slug": "scorpion",
-      "side": "server",
-      "installedVersion": "1.1.1",
-      "description": "Adds a large extra quest line (100+ tasks), including timed event quests, available from the start of the wipe.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2679,
-      "name": "LootNET",
-      "slug": "lootnet",
-      "side": "both",
-      "installedVersion": "1.1.0",
-      "description": "Shows a running total of how much the raid's loot is worth so you know if the kit was worth the risk.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1342,
-      "name": "UI Fixes",
-      "slug": "ui-fixes",
-      "side": "both",
-      "installedVersion": "6.0.1",
-      "description": "Bundle of stash, inspect, and menu QoL fixes. Several other client mods plug into this.",
-      "settingsNotes": ""
-    },
-    {
       "id": 2310,
       "name": "WTT - CommonLib",
       "slug": "wtt-commonlib",
@@ -206,6 +17,60 @@
       "installedVersion": "1.0.8",
       "description": "Lets you pick PMC head and voice independently in character creation.",
       "settingsNotes": ""
+    },
+    {
+      "id": 1342,
+      "name": "UI Fixes",
+      "slug": "ui-fixes",
+      "side": "both",
+      "installedVersion": "6.0.1",
+      "description": "Bundle of stash, inspect, and menu QoL fixes. Several other client mods plug into this.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1090,
+      "name": "Color Converter API",
+      "slug": "color-converter-api",
+      "side": "client",
+      "installedVersion": "1.1.1",
+      "description": "Shared color-conversion library used by More Tag Colours. Leave it installed even though it has no UI of its own.",
+      "settingsNotes": "Required by More Tag Colours. Do not remove it on its own."
+    },
+    {
+      "id": 902,
+      "name": "BigBrain",
+      "slug": "bigbrain",
+      "side": "client",
+      "installedVersion": "1.5.0",
+      "description": "Bot-brain framework other AI mods depend on. Required support mod, not a gameplay toggle by itself.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 827,
+      "name": "Waypoints - Expanded Navmesh",
+      "slug": "waypoints-expanded-navmesh",
+      "side": "client",
+      "installedVersion": "1.9.0",
+      "description": "Extra navmesh so bots can path through more of the map instead of getting stuck on vanilla meshes.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2357,
+      "name": "Project Fika - Server",
+      "slug": "project-fika-server",
+      "side": "server",
+      "installedVersion": "2.4.0",
+      "description": "Co-op server package that hosts Fika sessions for the client.",
+      "settingsNotes": "Pairs with Project Fika (client)."
+    },
+    {
+      "id": 2326,
+      "name": "Project Fika",
+      "slug": "project-fika",
+      "side": "client",
+      "installedVersion": "2.4.1",
+      "description": "Co-op client so players can run SPT raids together instead of solo.",
+      "settingsNotes": "Pairs with Project Fika - Server. Both pieces need to stay on the same version."
     },
     {
       "id": 2512,
@@ -226,75 +91,12 @@
       "settingsNotes": ""
     },
     {
-      "id": 2843,
-      "name": "Blackout",
-      "slug": "blackout",
-      "side": "both",
-      "installedVersion": "4.0.0",
-      "description": "Recreates the Labs blackout event: real darkness, locked extracts, and keypad doors when the power dies.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2747,
-      "name": "Weekend Drops",
-      "slug": "weekend-drops",
-      "side": "both",
-      "installedVersion": "1.0.5",
-      "description": "Rotating daily and weekend challenges that pay crates and GP coins.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2790,
-      "name": "EasyMounting",
-      "slug": "easymounting",
-      "side": "both",
-      "installedVersion": "2.0.0",
-      "description": "Relaxes weapon attachment rules so more optics, grips, and mounts actually fit together.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2785,
-      "name": "ReceiveAllChats",
-      "slug": "receiveallchats",
-      "side": "both",
-      "installedVersion": "2.0.0",
-      "description": "Lets you see all in-raid chat channels instead of missing squad / system messages.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2886,
-      "name": "Operator Traits",
-      "slug": "operator-traits",
-      "side": "both",
-      "installedVersion": "1.0.0",
-      "description": "Zomboid-style positive and negative traits on the profile so each PMC does not play identical.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2910,
-      "name": "PMC Spawn Toggle",
-      "slug": "pmc-spawn-toggle",
-      "side": "both",
-      "installedVersion": "1.0.1",
-      "description": "Toggle whether AI PMCs spawn, without ripping out the rest of the bot stack.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1431,
-      "name": "Dynamic Maps",
-      "slug": "dynamic-maps",
-      "side": "both",
-      "installedVersion": "1.2.1",
-      "description": "In-raid map overlay that updates with extracts, player position, and related markers.",
-      "settingsNotes": "Special non-mod folder data ships with this pack in addition to the Forge mod."
-    },
-    {
-      "id": 2097,
-      "name": "ABPS - Acid's Bot Placement System",
-      "slug": "abps-acids-bot-placement-system",
-      "side": "both",
-      "installedVersion": "2.1.0",
-      "description": "Controls spawn waves, starting PMCs, and boss chances so raids stay populated and not identical every run.",
+      "id": 1688,
+      "name": "More Energy Drinks",
+      "slug": "more-energy-drinks",
+      "side": "server",
+      "installedVersion": "1.3.0",
+      "description": "Adds extra energy-drink items to loot and traders so hydration/energy options are not just the vanilla few.",
       "settingsNotes": ""
     },
     {
@@ -307,21 +109,165 @@
       "settingsNotes": ""
     },
     {
-      "id": 1358,
-      "name": "BrightLasers",
-      "slug": "brightlasers",
-      "side": "both",
-      "installedVersion": "3.0.0",
-      "description": "Makes laser and light beams actually visible in raid instead of a faint smudge.",
+      "id": 1348,
+      "name": "Scorpion",
+      "slug": "scorpion",
+      "side": "server",
+      "installedVersion": "1.1.1",
+      "description": "Adds a large extra quest line (100+ tasks), including timed event quests, available from the start of the wipe.",
       "settingsNotes": ""
     },
     {
-      "id": 1657,
-      "name": "MergeConsumables",
-      "slug": "mergeconsumables",
+      "id": 2747,
+      "name": "Weekend Drops",
+      "slug": "weekend-drops",
       "side": "both",
-      "installedVersion": "1.6.1",
-      "description": "Lets you combine stacks of meds, food, and other consumables in stash.",
+      "installedVersion": "1.0.5",
+      "description": "Rotating daily and weekend challenges that pay crates and GP coins.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2886,
+      "name": "Operator Traits",
+      "slug": "operator-traits",
+      "side": "both",
+      "installedVersion": "1.0.0",
+      "description": "Zomboid-style positive and negative traits on the profile so each PMC does not play identical.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 526,
+      "name": "All The Clothes",
+      "slug": "all-the-clothes",
+      "side": "server",
+      "installedVersion": "3.2.0",
+      "description": "Unlocks the full clothing catalog instead of drip-feeding outfits through traders.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 236,
+      "name": "Server Value Modifier",
+      "slug": "server-value-modifier-svm",
+      "side": "special",
+      "installedVersion": "2.2.1",
+      "description": "All-in-one server config tool (raid time, loot, bots, traders, and more). CampD overrides are documented on the Pack Settings page.",
+      "settingsNotes": "See Pack Settings for SVM category notes as we fill them in."
+    },
+    {
+      "id": 2689,
+      "name": "Item Property Backport",
+      "slug": "item-property-backport",
+      "side": "server",
+      "installedVersion": "1.5.1",
+      "description": "Applies live-patch item stat and balance changes onto our SPT item data.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2790,
+      "name": "EasyMounting",
+      "slug": "easymounting",
+      "side": "both",
+      "installedVersion": "2.0.0",
+      "description": "Relaxes weapon attachment rules so more optics, grips, and mounts actually fit together.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2480,
+      "name": "BarterItemsStacks",
+      "slug": "barteritemsstacks",
+      "side": "both",
+      "installedVersion": "1.4.0",
+      "description": "Raises stack sizes on barter items so junk loot does not fill the stash.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2524,
+      "name": "Item Limits Begone!",
+      "slug": "item-limits-begone",
+      "side": "server",
+      "installedVersion": "1.1.0",
+      "description": "Removes or raises stash, trader, and related item limits that block stacking or buying.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1619,
+      "name": "Lots of Loot Redux",
+      "slug": "lots-of-loot-redux",
+      "side": "server",
+      "installedVersion": "4.2.0",
+      "description": "Increases loose loot and container density across maps so raids have more to pick through.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2481,
+      "name": "Crates In Airdrop",
+      "slug": "crates-in-airdrop",
+      "side": "server",
+      "installedVersion": "2.0.0",
+      "description": "Airdrops can contain loot crates instead of only spilling loose items.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2049,
+      "name": "Add Secret Exfil Notes to Caches",
+      "slug": "add-secret-exfil-notes-to-caches",
+      "side": "server",
+      "installedVersion": "2.1.0",
+      "description": "Secret extract requirement notes can spawn in caches instead of only their vanilla sources.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2657,
+      "name": "Cultist Circle Improvements",
+      "slug": "cultist-circle-improvements",
+      "side": "server",
+      "installedVersion": "1.1.0",
+      "description": "Lets us tune Cultist Circle timers, costs, and rewards, including extra direct-reward crafts.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2526,
+      "name": "Advanced Flea Simulator",
+      "slug": "advanced-flea-simulator",
+      "side": "server",
+      "installedVersion": "2.0.0",
+      "description": "Makes the flea market feel closer to live: offers, pricing, and player-like listings instead of a static vendor board.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2371,
+      "name": "FIR Fence Purchases",
+      "slug": "fir-fence-purchases",
+      "side": "server",
+      "installedVersion": "1.1.0",
+      "description": "Items bought from Fence count as Found in Raid.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1594,
+      "name": "APBS - Acid's Progressive Bot System",
+      "slug": "apbs-acids-progressive-bot-system",
+      "side": "server",
+      "installedVersion": "2.3.0",
+      "description": "Bots gear up over the wipe instead of everyone spawning in endgame kits. Core of how CampD PMC/scav loadouts scale.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2097,
+      "name": "ABPS - Acid's Bot Placement System",
+      "slug": "abps-acids-bot-placement-system",
+      "side": "both",
+      "installedVersion": "2.1.0",
+      "description": "Controls spawn waves, starting PMCs, and boss chances so raids stay populated and not identical every run.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2910,
+      "name": "PMC Spawn Toggle",
+      "slug": "pmc-spawn-toggle",
+      "side": "both",
+      "installedVersion": "1.0.1",
+      "description": "Toggle whether AI PMCs spawn, without ripping out the rest of the bot stack.",
       "settingsNotes": ""
     },
     {
@@ -334,6 +280,123 @@
       "settingsNotes": ""
     },
     {
+      "id": 2506,
+      "name": "Funtar",
+      "slug": "funtar",
+      "side": "server",
+      "installedVersion": "2.0.0",
+      "description": "Reworks UNTAR so those scavs are actually worth fighting instead of a boring sideshow.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2314,
+      "name": "Season Rotator",
+      "slug": "season-rotator",
+      "side": "server",
+      "installedVersion": "2.0.1",
+      "description": "Cycles map seasons on a timer so raids are not stuck in one weather look forever.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2843,
+      "name": "Blackout",
+      "slug": "blackout",
+      "side": "both",
+      "installedVersion": "4.0.0",
+      "description": "Recreates the Labs blackout event: real darkness, locked extracts, and keypad doors when the power dies.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 820,
+      "name": "Door Randomizer",
+      "slug": "door-randomizer",
+      "side": "client",
+      "installedVersion": "1.8.0",
+      "description": "Randomizes which doors start open/closed/locked so map knowledge is not a static script.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2903,
+      "name": "Raids Are Infinite",
+      "slug": "raids-are-infinite",
+      "side": "server",
+      "installedVersion": "1.0.0",
+      "description": "Removes the raid timer so you are not forced out when the clock hits zero.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2831,
+      "name": "Transits Count",
+      "slug": "transits-count",
+      "side": "server",
+      "installedVersion": "1.1.1",
+      "description": "Map transits count as extracts for quests and raid completion, matching how people actually play SPT.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1538,
+      "name": "Ref - SPT Friendly Quests",
+      "slug": "ref-spt-friendly-quests",
+      "side": "server",
+      "installedVersion": "2.1.0",
+      "description": "Adjusts Ref's quests so they work in SPT instead of requiring live-only Arena / multiplayer steps.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1539,
+      "name": "Bosses Have Lega Medals",
+      "slug": "bosses-have-lega-medals",
+      "side": "server",
+      "installedVersion": "2.1.0",
+      "description": "Bosses can drop Lega medals so those are not flea-only.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2523,
+      "name": "Bosses Have Gp Coins",
+      "slug": "bosses-have-gp-coins",
+      "side": "server",
+      "installedVersion": "1.1.0",
+      "description": "Bosses can drop GP coins, same idea as Lega medals but for the GP coin grind.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1416,
+      "name": "Default Fire Mode Fixer",
+      "slug": "default-fire-mode-fixer",
+      "side": "server",
+      "installedVersion": "2.1.0",
+      "description": "Fixes weapons that spawn on the wrong fire selector so full-auto / burst guns start in a sensible mode.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2415,
+      "name": "Canted Aiming",
+      "slug": "canted-aiming",
+      "side": "server",
+      "installedVersion": "2.0.0",
+      "description": "Lets you point-shoot / cant the gun without needing a backup sight mount.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1657,
+      "name": "MergeConsumables",
+      "slug": "mergeconsumables",
+      "side": "both",
+      "installedVersion": "1.6.1",
+      "description": "Lets you combine stacks of meds, food, and other consumables in stash.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2344,
+      "name": "Dynamic Item Weights",
+      "slug": "dynamic-item-weights",
+      "side": "client",
+      "installedVersion": "1.2.0",
+      "description": "Container and mag weight reflects what is actually inside instead of a flat empty weight.",
+      "settingsNotes": ""
+    },
+    {
       "id": 1853,
       "name": "StatTrack",
       "slug": "stattrack",
@@ -343,13 +406,58 @@
       "settingsNotes": ""
     },
     {
-      "id": 2480,
-      "name": "BarterItemsStacks",
-      "slug": "barteritemsstacks",
+      "id": 2679,
+      "name": "LootNET",
+      "slug": "lootnet",
       "side": "both",
-      "installedVersion": "1.4.0",
-      "description": "Raises stack sizes on barter items so junk loot does not fill the stash.",
+      "installedVersion": "1.1.0",
+      "description": "Shows a running total of how much the raid's loot is worth so you know if the kit was worth the risk.",
       "settingsNotes": ""
+    },
+    {
+      "id": 1358,
+      "name": "BrightLasers",
+      "slug": "brightlasers",
+      "side": "both",
+      "installedVersion": "3.0.0",
+      "description": "Makes laser and light beams actually visible in raid instead of a faint smudge.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 2785,
+      "name": "ReceiveAllChats",
+      "slug": "receiveallchats",
+      "side": "both",
+      "installedVersion": "2.0.0",
+      "description": "Lets you see all in-raid chat channels instead of missing squad / system messages.",
+      "settingsNotes": ""
+    },
+    {
+      "id": 1431,
+      "name": "Dynamic Maps",
+      "slug": "dynamic-maps",
+      "side": "both",
+      "installedVersion": "1.2.1",
+      "description": "In-raid map overlay that updates with extracts, player position, and related markers.",
+      "settingsNotes": "Special non-mod folder data ships with this pack in addition to the Forge mod."
+    },
+    {
+      "id": 1533,
+      "name": "More Tag Colours",
+      "slug": "more-tag-colours",
+      "side": "client",
+      "installedVersion": "1.5.0",
+      "description": "Extra item tag colors for stash organization.",
+      "settingsNotes": "Needs Color Converter API installed with it."
+    },
+    {
+      "id": 1745,
+      "name": "Discarder",
+      "slug": "discarder",
+      "side": "client",
+      "installedVersion": "5.0.0",
+      "description": "Quick-discard items from stash without the usual confirm dance.",
+      "settingsNotes": "UI Fixes add-on."
     },
     {
       "id": 2530,
@@ -370,15 +478,6 @@
       "settingsNotes": ""
     },
     {
-      "id": 1533,
-      "name": "More Tag Colours",
-      "slug": "more-tag-colours",
-      "side": "client",
-      "installedVersion": "1.5.0",
-      "description": "Extra item tag colors for stash organization.",
-      "settingsNotes": "Needs Color Converter API installed with it."
-    },
-    {
       "id": 2405,
       "name": "LetMeRightClick",
       "slug": "letmerightclick",
@@ -386,15 +485,6 @@
       "installedVersion": "1.1.0",
       "description": "Restores right-click context menus in places the vanilla UI blocks them.",
       "settingsNotes": ""
-    },
-    {
-      "id": 1745,
-      "name": "Discarder",
-      "slug": "discarder",
-      "side": "client",
-      "installedVersion": "5.0.0",
-      "description": "Quick-discard items from stash without the usual confirm dance.",
-      "settingsNotes": "UI Fixes add-on."
     },
     {
       "id": 1937,
@@ -412,15 +502,6 @@
       "side": "client",
       "installedVersion": "1.0.2",
       "description": "Corrects EOTech sight picture / reticle issues that make those holos unusable.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 2344,
-      "name": "Dynamic Item Weights",
-      "slug": "dynamic-item-weights",
-      "side": "client",
-      "installedVersion": "1.2.0",
-      "description": "Container and mag weight reflects what is actually inside instead of a flat empty weight.",
       "settingsNotes": ""
     },
     {
@@ -595,6 +676,15 @@
       "settingsNotes": ""
     },
     {
+      "id": 824,
+      "name": "Task List Fixes",
+      "slug": "task-list-fixes",
+      "side": "client",
+      "installedVersion": "1.8.0",
+      "description": "Fixes quest list layout and filtering bugs in the tasks screen.",
+      "settingsNotes": ""
+    },
+    {
       "id": 2909,
       "name": "Task Search",
       "slug": "task-search",
@@ -610,24 +700,6 @@
       "side": "client",
       "installedVersion": "1.0.0",
       "description": "Filter stash contents by type or name so finding gear in a huge stash is faster.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 902,
-      "name": "BigBrain",
-      "slug": "bigbrain",
-      "side": "client",
-      "installedVersion": "1.5.0",
-      "description": "Bot-brain framework other AI mods depend on. Required support mod, not a gameplay toggle by itself.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 827,
-      "name": "Waypoints - Expanded Navmesh",
-      "slug": "waypoints-expanded-navmesh",
-      "side": "client",
-      "installedVersion": "1.9.0",
-      "description": "Extra navmesh so bots can path through more of the map instead of getting stuck on vanilla meshes.",
       "settingsNotes": ""
     },
     {
@@ -730,15 +802,6 @@
       "settingsNotes": ""
     },
     {
-      "id": 824,
-      "name": "Task List Fixes",
-      "slug": "task-list-fixes",
-      "side": "client",
-      "installedVersion": "1.8.0",
-      "description": "Fixes quest list layout and filtering bugs in the tasks screen.",
-      "settingsNotes": ""
-    },
-    {
       "id": 2521,
       "name": "Amands' Sense - Updated",
       "slug": "amands-sense-updated",
@@ -754,15 +817,6 @@
       "side": "client",
       "installedVersion": "1.3.0",
       "description": "Speeds up listing items on the flea so you are not clicking through the full sell flow every stack.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 820,
-      "name": "Door Randomizer",
-      "slug": "door-randomizer",
-      "side": "client",
-      "installedVersion": "1.8.0",
-      "description": "Randomizes which doors start open/closed/locked so map knowledge is not a static script.",
       "settingsNotes": ""
     },
     {
@@ -782,60 +836,6 @@
       "installedVersion": "1.0.6",
       "description": "Notifies you when a flare extract is available / fired so you do not miss the window.",
       "settingsNotes": ""
-    },
-    {
-      "id": 236,
-      "name": "Server Value Modifier",
-      "slug": "server-value-modifier-svm",
-      "side": "special",
-      "installedVersion": "2.2.1",
-      "description": "All-in-one server config tool (raid time, loot, bots, traders, and more). CampD overrides are documented on the Pack Settings page.",
-      "settingsNotes": "See Pack Settings for SVM category notes as we fill them in."
-    },
-    {
-      "id": 1619,
-      "name": "Lots of Loot Redux",
-      "slug": "lots-of-loot-redux",
-      "side": "server",
-      "installedVersion": "4.2.0",
-      "description": "Increases loose loot and container density across maps so raids have more to pick through.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1688,
-      "name": "More Energy Drinks",
-      "slug": "more-energy-drinks",
-      "side": "server",
-      "installedVersion": "1.3.0",
-      "description": "Adds extra energy-drink items to loot and traders so hydration/energy options are not just the vanilla few.",
-      "settingsNotes": ""
-    },
-    {
-      "id": 1090,
-      "name": "Color Converter API",
-      "slug": "color-converter-api",
-      "side": "client",
-      "installedVersion": "1.1.1",
-      "description": "Shared color-conversion library used by More Tag Colours. Leave it installed even though it has no UI of its own.",
-      "settingsNotes": "Required by More Tag Colours. Do not remove it on its own."
-    },
-    {
-      "id": 2326,
-      "name": "Project Fika",
-      "slug": "project-fika",
-      "side": "client",
-      "installedVersion": "2.4.1",
-      "description": "Co-op client so players can run SPT raids together instead of solo.",
-      "settingsNotes": "Pairs with Project Fika - Server. Both pieces need to stay on the same version."
-    },
-    {
-      "id": 2357,
-      "name": "Project Fika - Server",
-      "slug": "project-fika-server",
-      "side": "server",
-      "installedVersion": "2.4.0",
-      "description": "Co-op server package that hosts Fika sessions for the client.",
-      "settingsNotes": "Pairs with Project Fika (client)."
     },
     {
       "id": 2235,
