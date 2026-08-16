@@ -118,6 +118,15 @@
       "settingsNotes": ""
     },
     {
+      "id": 2934,
+      "name": "Armor Class Icon",
+      "slug": "armor-class-icon",
+      "side": "client",
+      "installedVersion": "1.0.0",
+      "description": "",
+      "settingsNotes": ""
+    },
+    {
       "id": 1688,
       "name": "More Energy Drinks",
       "slug": "more-energy-drinks",
