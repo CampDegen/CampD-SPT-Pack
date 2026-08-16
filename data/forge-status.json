@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-16T17:53:16.274Z",
+  "checkedAt": "2026-08-16T18:12:54.295Z",
   "missing": [],
   "mods": {
     "236": {
@@ -346,6 +346,14 @@
       "detailUrl": "https://sp-mod.com/mod/1745/discarder",
       "thumbnail": "https://files.sp-mod.com/mods/2378.png"
     },
+    "1775": {
+      "name": "WTT - Menu Overhaul",
+      "slug": "wtt-menu-overhaul",
+      "latestVersion": "1.3.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/1775/wtt-menu-overhaul",
+      "thumbnail": "https://files.sp-mod.com/mods/2412.jpg"
+    },
     "1853": {
       "name": "StatTrack",
       "slug": "stattrack",
@@ -418,6 +426,14 @@
       "detailUrl": "https://sp-mod.com/mod/2106/completed-fika-quests-extended",
       "thumbnail": "https://files.sp-mod.com/mods/2792.jpg"
     },
+    "2121": {
+      "name": "Increase Look Direction",
+      "slug": "increase-look-direction",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
+      "detailUrl": "https://sp-mod.com/mod/2121/increase-look-direction",
+      "thumbnail": "https://files.sp-mod.com/mods/Vjwc9Q3ef92J2Ui0PabcUMq4LLKKw4zanfnLReFk.png"
+    },
     "2153": {
       "name": "Expanded Task Text (ETT)",
       "slug": "expanded-task-text-ett",
@@ -449,6 +465,14 @@
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2207/fast-sell-in-flea",
       "thumbnail": "https://files.sp-mod.com/mods/2910.png"
+    },
+    "2210": {
+      "name": "Live Like Boss Spawn Chances",
+      "slug": "live-like-boss-spawn-chances",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1.0",
+      "detailUrl": "https://sp-mod.com/mod/2210/live-like-boss-spawn-chances",
+      "thumbnail": "https://files.sp-mod.com/mods/2913.jpg"
     },
     "2221": {
       "name": "BALL - Better Ammo Loading List",
@@ -569,14 +593,6 @@
       "sptConstraint": "~4.0.13",
       "detailUrl": "https://sp-mod.com/mod/2438/level-endurance-and-strength",
       "thumbnail": "https://files.sp-mod.com/mods/mdclJXbHpKWJAPrq8YhLSwQiasY8TnCE8koek0HD.png"
-    },
-    "2441": {
-      "name": "NARCONet - Mod Sync",
-      "slug": "narconet-mod-sync",
-      "latestVersion": "1.2.1",
-      "sptConstraint": "~4.1",
-      "detailUrl": "https://sp-mod.com/mod/2441/narconet-mod-sync",
-      "thumbnail": "https://files.sp-mod.com/mods/4NouoXA6ejwVZ8WpJra6nUljkYLdGCCVcHCHYUir.png"
     },
     "2480": {
       "name": "BarterItemsStacks",
