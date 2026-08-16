@@ -784,15 +784,6 @@
       "settingsNotes": ""
     },
     {
-      "id": 2851,
-      "name": "SPT Mod Manager",
-      "slug": "spt-mod-manager",
-      "side": "special",
-      "installedVersion": "0.5.1",
-      "description": "Desktop manager for installing and updating SPT mods from Forge. Not loaded in-raid; used to maintain the pack.",
-      "settingsNotes": ""
-    },
-    {
       "id": 236,
       "name": "Server Value Modifier",
       "slug": "server-value-modifier-svm",
