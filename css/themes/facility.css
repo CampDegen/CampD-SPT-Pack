@@ -397,12 +397,13 @@ code {
 }
 
 .tool-card {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1rem;
   align-items: stretch;
   margin: 0 0 1.5rem;
-  padding: 1rem 1.1rem 1.05rem;
+  padding: 1rem 3.2rem 1.05rem 1.1rem;
   background: var(--bg-panel);
   border: 2px solid var(--border-heavy);
   box-shadow: var(--shadow-print);
@@ -470,6 +471,21 @@ code {
 
 .tool-btn.is-secondary {
   color: var(--text-muted);
+}
+
+.tool-card-github {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.65rem;
+  display: flex;
+  color: var(--text-faded);
+  text-decoration: none;
+}
+
+.tool-card-github:hover,
+.tool-card-github:focus-visible {
+  color: var(--accent-warm);
+  text-decoration: none;
 }
 
 .toolbar {

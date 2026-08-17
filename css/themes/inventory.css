@@ -263,12 +263,13 @@ code {
 }
 
 .tool-card {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1rem;
   align-items: stretch;
   margin: 0 0 1.5rem;
-  padding: 1rem 1.1rem 1.05rem;
+  padding: 1rem 3.2rem 1.05rem 1.1rem;
   background: var(--bg-2);
   border: 1px solid var(--line);
   border-top: 2px solid var(--olive-dim);
@@ -333,6 +334,21 @@ code {
 
 .tool-btn.is-secondary {
   color: var(--muted);
+}
+
+.tool-card-github {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.65rem;
+  display: flex;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.tool-card-github:hover,
+.tool-card-github:focus-visible {
+  color: var(--olive);
+  text-decoration: none;
 }
 
 .toolbar {

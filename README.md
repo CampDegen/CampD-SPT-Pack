@@ -34,7 +34,7 @@ To restore the original Tarkov inventory look, change the stylesheet `href` in `
 
 The facility theme uses the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings / Looking to add sit in a pack-local nav under the header. Film grain and vignette use real DOM overlays (`.film-grain`, `.vignette`) and `assets/grain.png`, not SVG `feTurbulence` data-URIs, so Chromium paints the aged look on first load.
 
-The mods page has a Lone's SPT Manager card (`assets/lones-spt-manager.ico`) with the latest Windows download and a same-origin `data/mods.json` download (live: `https://campdegen.com/spt-pack/data/mods.json`).
+The mods page has a Lone's SPT Manager card (`assets/lones-spt-manager.ico`) with the latest Windows download, a same-origin `data/mods.json` download (live: `https://campdegen.com/spt-pack/data/mods.json`), and a corner GitHub mark to the manager repo.
 
 Fonts for the inventory theme are Source Sans 3 / Rajdhani / IBM Plex Mono; the facility theme uses Bebas Neue / Rajdhani / Share Tech Mono (already loaded in the HTML). Tokens come from [reference_data/colors.md](reference_data/colors.md).
 
