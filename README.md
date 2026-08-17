@@ -4,7 +4,7 @@ Static GitHub Pages site for the mods installed on CampD’s SPT server. It list
 
 Forge listing text is not used. Edit the JSON in `data/` instead.
 
-Agent notes: [SPT_MERGE_KNOWLEDGE.md](SPT_MERGE_KNOWLEDGE.md), [SPT_AGENT_HANDOFF.md](SPT_AGENT_HANDOFF.md). This repo is the **permanent source** for the pack. CampD-Website only mirrors public files to `https://campdegen.com/spt-pack/`. Do not delete this repo. Website README: [CampDegen/CampD-Website](https://github.com/CampDegen/CampD-Website).
+Local agent notes and handoffs live in `agent/` (gitignored). This repo is the **permanent source** for the pack. CampD-Website only mirrors public files to `https://campdegen.com/spt-pack/`. Do not delete this repo. Website README: [CampDegen/CampD-Website](https://github.com/CampDegen/CampD-Website).
 
 ## Pages
 
