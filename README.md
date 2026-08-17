@@ -10,7 +10,7 @@ Agent notes: [SPT_MERGE_KNOWLEDGE.md](SPT_MERGE_KNOWLEDGE.md), [SPT_AGENT_HANDOF
 
 | Page | What it is |
 | --- | --- |
-| `index.html` | Two-column mod tile catalog, Forge icons, search, side filters, version badges |
+| `index.html` | Two-column mod tile catalog, Forge icons, search, side filters, version badges, Lone's SPT Manager download |
 | `settings.html` | Pack-wide SVM, ReSHADE, and extra data notes |
 | `looking.html` | Old-server candidates with automatic compatibility status for the installed SPT version |
 
@@ -33,6 +33,8 @@ Active look is the CampD facility theme (`css/themes/facility.css`), linked **di
 To restore the original Tarkov inventory look, change the stylesheet `href` in `index.html`, `settings.html`, and `looking.html` from `css/themes/facility.css` to `css/themes/inventory.css`.
 
 The facility theme uses the same aged background tokens and masthead (logo + CampD, no Overview / SPT Pack / Communications tabs) as campdegen.com. Mods / Pack Settings / Looking to add sit in a pack-local nav under the header. Film grain and vignette use real DOM overlays (`.film-grain`, `.vignette`) and `assets/grain.png`, not SVG `feTurbulence` data-URIs, so Chromium paints the aged look on first load.
+
+The mods page has a Lone's SPT Manager card (`assets/lones-spt-manager.ico`) with the latest Windows download and a same-origin `data/mods.json` download (live: `https://campdegen.com/spt-pack/data/mods.json`).
 
 Fonts for the inventory theme are Source Sans 3 / Rajdhani / IBM Plex Mono; the facility theme uses Bebas Neue / Rajdhani / Share Tech Mono (already loaded in the HTML). Tokens come from [reference_data/colors.md](reference_data/colors.md).
 
@@ -73,7 +75,7 @@ After adding or bumping a version, run the updater (or push `data/mods.json` to 
 
 Pack-wide notes: `data/pack-settings.json`. Empty SVM groups render as “Not documented yet.”
 
-Old-server leftovers: `data/looking-to-add.json`. `id` / `slug` come from Forge after name matching. Leave `id` as `null` if there is no current Forge page. `oldName` is the label from the old list when it differs. `notes` are match / compatibility caveats, not Forge listing text.
+Old-server leftovers: `data/looking-to-add.json`. `id` / `slug` come from Forge after name matching. Leave `id` as `null` if there is no current Forge page. `oldName` is the label from the old list when it differs. `notes` are install or overlap caveats, not “we matched this Forge page” text. Compatibility badges already cover SPT version.
 
 The Looking to add badge compares `data/site.json`’s installed SPT version against the latest Forge release’s `spt_version_constraint`. It shows **Ready for 4.1.2**, **Waiting for 4.1.2**, or **Compatibility unknown** and changes automatically when the daily Forge refresh finds a newly compatible release. It does not change the installed SPT version.
 

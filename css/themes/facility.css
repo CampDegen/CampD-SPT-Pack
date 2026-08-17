@@ -396,6 +396,82 @@ code {
   color: var(--text-muted);
 }
 
+.tool-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: stretch;
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem 1.05rem;
+  background: var(--bg-panel);
+  border: 2px solid var(--border-heavy);
+  box-shadow: var(--shadow-print);
+}
+
+.tool-card-icon {
+  height: 0;
+  min-height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: contrast(1.05) brightness(0.92);
+}
+
+.tool-card-copy {
+  min-width: 0;
+}
+
+.tool-card-copy .eyebrow {
+  margin-bottom: 0.25rem;
+}
+
+.tool-card-copy h2 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 0.95;
+  text-shadow: 1px 1px 0 var(--ink);
+}
+
+.tool-card-copy p {
+  margin: 0 0 0.85rem;
+  max-width: 42rem;
+  color: var(--text-muted);
+}
+
+.tool-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-btn {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tool-btn:hover,
+.tool-btn:focus-visible {
+  color: var(--accent-warm);
+  text-decoration: none;
+  border-color: var(--accent-warm);
+  background: var(--bg-panel);
+}
+
+.tool-btn.is-secondary {
+  color: var(--text-muted);
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -809,6 +885,16 @@ code {
 @media (max-width: 800px) {
   .stats {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .tool-card {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-card-icon {
+    height: 4rem;
+    min-height: 0;
+    width: 4rem;
   }
 }
 

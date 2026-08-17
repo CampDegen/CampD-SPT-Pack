@@ -6,7 +6,7 @@
       "name": "Battle Ambience",
       "slug": "battle-ambience",
       "description": "Adds distant gunfire and combat atmosphere so maps do not feel empty between fights.",
-      "notes": "Old list name matched Forge exactly. Latest Forge listing still targets SPT 4.0."
+      "notes": "Latest Forge listing still targets SPT 4.0."
     },
     {
       "id": 2510,
@@ -14,7 +14,7 @@
       "slug": "fikasync",
       "oldName": "Battle Ambience (Fika Sync)",
       "description": "Fika helper that keeps ambience and similar client audio mods in sync during co-op.",
-      "notes": "No separate 'Battle Ambience (Fika Sync)' Forge page; this is the closest listing. Fika is now on the pack, but the latest FikaSync listing still targets SPT 4.0, not 4.1.2."
+      "notes": "Only add this if Battle Ambience is also installed."
     },
     {
       "id": 2617,
@@ -65,7 +65,7 @@
       "slug": "item-preview-qol-screenshots",
       "oldName": "Item Preview QoL",
       "description": "Improves inspect previews and lets you grab cleaner item screenshots.",
-      "notes": "Separate from Preview Sizer, which is already installed. Latest listing targets SPT 4.0.x."
+      "notes": "Was a requirement for another mod and should not be added without that mod."
     },
     {
       "id": 2685,
@@ -73,7 +73,7 @@
       "slug": "knight-mask-fix-40",
       "oldName": "Knight Mask Fix",
       "description": "Fixes Death Knight mask clipping / visor issues on current SPT faces.",
-      "notes": "Picked the 4.0+ listing over the older 3.11 'Death Knight Mask Fix'."
+      "notes": ""
     },
     {
       "id": 922,
@@ -117,7 +117,7 @@
       "slug": "completed-fika-quests-extended",
       "oldName": "Quests Extended",
       "description": "Extra / restored quests, including Fika-friendly completed-state handling.",
-      "notes": "Closest current Forge listing for 'Quests Extended'. Fika is now on the pack, but this listing still targets SPT 4.0."
+      "notes": "This was a requirement for another mod and should not be added without that mod."
     },
     {
       "id": 791,
@@ -147,7 +147,7 @@
       "name": "Temporary Fixes",
       "slug": "temporary-fixes",
       "description": "Bundle of short-term client/server bug workarounds for a specific SPT patch.",
-      "notes": "Latest listing is gated to SPT 4.0.0–4.0.13. Probably obsolete on 4.1.2."
+      "notes": "Not sure if this will even get updated to 4.1.x, but we had it in the last one so it's here."
     },
     {
       "id": 2615,
@@ -155,7 +155,7 @@
       "slug": "updated-collector-quest-and-streamer-case-eft-10-backport",
       "oldName": "Updated Collector Quest",
       "description": "Brings the live-wipe Collector / streamer-case quest changes into SPT.",
-      "notes": "Closest Forge match for the old name. Listing is SPT 4.0.13."
+      "notes": "Latest Forge listing is SPT 4.0.13."
     },
     {
       "id": 2499,
@@ -171,7 +171,7 @@
       "slug": "healing-autocancel",
       "oldName": "Healing Auto Cancel",
       "description": "Cancels the heal animation when you move or take damage so you are not locked in place.",
-      "notes": "Forge page is Healing Autocancel. Latest listing targets SPT 4.0."
+      "notes": "Latest Forge listing targets SPT 4.0."
     },
     {
       "id": 2063,
@@ -179,7 +179,7 @@
       "slug": "underfire-an-adrenaline-effect",
       "oldName": "Under Fire",
       "description": "Adds an adrenaline / incoming-fire effect when you are being shot at.",
-      "notes": "Forge page is UnderFire - An Adrenaline Effect. Latest listing targets SPT 4.0."
+      "notes": "Latest Forge listing targets SPT 4.0."
     }
   ]
 }

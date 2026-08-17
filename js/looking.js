@@ -151,7 +151,7 @@ function renderMod(mod, index, forge, sptVersion) {
         <p>${escapeHtml(mod.description)}</p>
         ${
           notes
-            ? `<div class="settings-note"><strong>Match notes</strong><span>${escapeHtml(notes)}</span></div>`
+            ? `<div class="settings-note"><strong>Notes</strong><span>${escapeHtml(notes)}</span></div>`
             : ""
         }
         <div class="mod-meta">
