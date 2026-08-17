@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-16T18:27:07.283Z",
+  "checkedAt": "2026-08-17T01:42:27.813Z",
   "missing": [],
   "mods": {
     "236": {
@@ -429,7 +429,7 @@
     "2121": {
       "name": "Increase Look Direction",
       "slug": "increase-look-direction",
-      "latestVersion": "1.1.0",
+      "latestVersion": "1.2.1",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2121/increase-look-direction",
       "thumbnail": "https://files.sp-mod.com/mods/Vjwc9Q3ef92J2Ui0PabcUMq4LLKKw4zanfnLReFk.png"
