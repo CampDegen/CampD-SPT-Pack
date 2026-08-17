@@ -41,7 +41,7 @@
       "name": "Increase Look Direction",
       "slug": "increase-look-direction",
       "side": "client",
-      "installedVersion": "1.1.0",
+      "installedVersion": "1.2.1",
       "description": "",
       "settingsNotes": ""
     },
@@ -617,7 +617,7 @@
       "name": "Adaptive Bot Culling",
       "slug": "adaptive-bot-culling",
       "side": "client",
-      "installedVersion": "1.1.0",
+      "installedVersion": "1.2.0",
       "description": "Pauses bot brains and animations when they are culled, which cuts CPU when lots of AI are around corners.",
       "settingsNotes": ""
     },
