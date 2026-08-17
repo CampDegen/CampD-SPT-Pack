@@ -578,12 +578,16 @@ code {
 }
 
 .mod-name {
+  min-width: 0;
+  overflow: hidden;
   font-family: var(--display);
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   color: var(--text-strong);
   line-height: 1.15;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .versions {
@@ -642,18 +646,73 @@ code {
   background: var(--bg-3);
 }
 
-.mod-body {
-  display: none;
-  padding: 0 0.95rem 0.95rem 0.95rem;
-  border-top: 1px solid var(--line);
+.mod-dialog {
+  width: min(42rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--olive-dim);
+  background: var(--bg-2);
+  color: var(--text);
 }
 
-.mod.is-open .mod-body {
-  display: block;
+.mod-dialog::backdrop {
+  background: rgba(8, 10, 8, 0.7);
 }
 
-.mod-body p {
-  margin: 0.75rem 0 0;
+.mod-dialog-sheet {
+  position: relative;
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
+.mod-dialog-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.28rem 0.5rem;
+  border: 1px solid var(--line);
+  background: var(--bg-1);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mod-dialog-close:hover,
+.mod-dialog-close:focus-visible {
+  color: var(--olive);
+  border-color: var(--olive);
+}
+
+.mod-dialog-head {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  margin-bottom: 0.9rem;
+  padding-right: 4.2rem;
+}
+
+.mod-dialog-head .mod-icon {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.mod-dialog-title {
+  margin: 0 0 0.4rem;
+  font-family: var(--display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.mod-dialog-main p {
+  margin: 0;
 }
 
 .mod-meta {

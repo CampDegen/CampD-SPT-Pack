@@ -87,7 +87,7 @@ Site title / SPT version: `data/site.json`.
 
 The generated status also stores each Forge `thumbnail`. Catalog tiles load those 144×144 mod icons directly from `files.sp-mod.com`; a letter placeholder is shown when Forge has no icon or an image fails.
 
-Display controls let visitors choose Single, Dual (default), or Triple columns and either Type + A–Z (default: Server, Both, Client, Special, then name) or strict A–Z sorting. Choices persist in browser local storage. Tiles always flow left-to-right across rows and collapse to one column below 720px.
+Display controls let visitors choose Single, Dual (default), or Triple columns and either Type + A–Z (default: Server, Both, Client, Special, then name) or strict A–Z sorting. Choices persist in browser local storage. Tiles always flow left-to-right across rows and collapse to one column below 720px. Long mod names stay on one line and ellipsis; hover the title or open the card dialog for the full name. Clicking a card opens a shared `<dialog>` instead of expanding in the grid.
 
 ```bash
 node scripts/update-forge-status.mjs

@@ -1,4 +1,5 @@
 import { escapeHtml, loadJson } from "./lib.js";
+import { bindModDialog, openModDialog } from "./mod-dialog.js";
 
 const PREFERENCE_KEYS = {
   columns: "campd-spt-pack-columns",
@@ -108,10 +109,49 @@ function forgeUrl(mod, forge) {
   return "";
 }
 
-function renderMod(mod, index, forge, sptVersion) {
+function compatibilityView(mod, forge, sptVersion) {
   const verified = Boolean(mod.id);
-  const openId = `looking-${mod.id || index}`;
   const latest = forge?.latestVersion ?? "";
+  const compatible = verified ? isSptCompatible(sptVersion, forge?.sptConstraint) : null;
+  return {
+    latest,
+    verified,
+    statusClass: compatible === true ? "is-ahead" : compatible === false ? "is-update" : "is-unknown",
+    badge:
+      compatible === true
+        ? `Ready for ${sptVersion}`
+        : compatible === false
+          ? `Waiting for ${sptVersion}`
+          : "Compatibility unknown",
+    badgeClass:
+      compatible === true ? "badge-ahead" : compatible === false ? "badge-update" : "badge-unknown",
+    versionLine: verified
+      ? `<span class="versions"><span class="ver-latest">${escapeHtml(latest || "—")}</span></span>`
+      : `<span class="versions"><span class="ver-latest">No Forge page</span></span>`,
+  };
+}
+
+function renderMod(mod, index, forge, sptVersion) {
+  const view = compatibilityView(mod, forge, sptVersion);
+
+  return `
+    <article class="mod ${view.statusClass}" data-id="${mod.id ?? ""}" data-index="${index}">
+      <button class="mod-head" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mod-dialog">
+        ${iconHtml(mod, forge)}
+        <span class="mod-copy">
+          <span class="mod-name" title="${escapeHtml(mod.name)}">${escapeHtml(mod.name)}</span>
+          <span class="mod-head-row">
+            <span class="badge ${view.badgeClass}">${view.badge}</span>
+          </span>
+          ${view.versionLine}
+        </span>
+      </button>
+    </article>
+  `;
+}
+
+function dialogHtml(mod, forge, sptVersion) {
+  const view = compatibilityView(mod, forge, sptVersion);
   const notes = (mod.notes || "").trim();
   const oldName =
     (mod.oldName || "").trim() && mod.oldName !== mod.name
@@ -121,46 +161,29 @@ function renderMod(mod, index, forge, sptVersion) {
     ? `<span>Forge SPT: <code>${escapeHtml(forge.sptConstraint)}</code></span>`
     : "";
   const link = forgeUrl(mod, forge);
-  const compatible = verified ? isSptCompatible(sptVersion, forge?.sptConstraint) : null;
-  const statusClass = compatible === true ? "is-ahead" : compatible === false ? "is-update" : "is-unknown";
-  const badge =
-    compatible === true
-      ? `Ready for ${sptVersion}`
-      : compatible === false
-        ? `Waiting for ${sptVersion}`
-        : "Compatibility unknown";
-  const badgeClass =
-    compatible === true ? "badge-ahead" : compatible === false ? "badge-update" : "badge-unknown";
-  const versionLine = verified
-    ? `<span class="versions"><span class="ver-latest">${escapeHtml(latest || "—")}</span></span>`
-    : `<span class="versions"><span class="ver-latest">No Forge page</span></span>`;
 
   return `
-    <article class="mod ${statusClass}" data-id="${mod.id ?? ""}" data-index="${index}">
-      <button class="mod-head" type="button" aria-expanded="false" aria-controls="${openId}">
-        ${iconHtml(mod, forge)}
-        <span class="mod-copy">
-          <span class="mod-name">${escapeHtml(mod.name)}</span>
-          <span class="mod-head-row">
-            <span class="badge ${badgeClass}">${badge}</span>
-          </span>
-          ${versionLine}
+    <div class="mod-dialog-head">
+      ${iconHtml(mod, forge)}
+      <div class="mod-copy">
+        <h2 class="mod-dialog-title" id="mod-dialog-title">${escapeHtml(mod.name)}</h2>
+        <span class="mod-head-row">
+          <span class="badge ${view.badgeClass}">${view.badge}</span>
         </span>
-      </button>
-      <div class="mod-body" id="${openId}">
-        <p>${escapeHtml(mod.description)}</p>
-        ${
-          notes
-            ? `<div class="settings-note"><strong>Notes</strong><span>${escapeHtml(notes)}</span></div>`
-            : ""
-        }
-        <div class="mod-meta">
-          ${link ? `<a href="${link}" target="_blank" rel="noreferrer">Open on Forge</a>` : "<span>No Forge URL</span>"}
-          ${oldName}
-          ${constraint}
-        </div>
+        ${view.versionLine}
       </div>
-    </article>
+    </div>
+    <p>${escapeHtml(mod.description)}</p>
+    ${
+      notes
+        ? `<div class="settings-note"><strong>Notes</strong><span>${escapeHtml(notes)}</span></div>`
+        : ""
+    }
+    <div class="mod-meta">
+      ${link ? `<a href="${link}" target="_blank" rel="noreferrer">Open on Forge</a>` : "<span>No Forge URL</span>"}
+      ${oldName}
+      ${constraint}
+    </div>
   `;
 }
 
@@ -211,8 +234,10 @@ function bindCatalog(state) {
     const button = event.target.closest(".mod-head");
     if (!button) return;
     const card = button.closest(".mod");
-    const open = card.classList.toggle("is-open");
-    button.setAttribute("aria-expanded", open ? "true" : "false");
+    const mod = state.mods[Number(card.dataset.index)];
+    if (!mod) return;
+    const forge = mod.id ? state.forgeMap[mod.id] ?? null : null;
+    openModDialog(state.dialog, dialogHtml(mod, forge, state.sptVersion), button);
   });
 
   state.searchEl.addEventListener("input", () => {
@@ -257,6 +282,7 @@ async function init() {
     catalog: catalogEl,
     searchEl: document.getElementById("search"),
     columnsEl: document.getElementById("columns"),
+    dialog: document.getElementById("mod-dialog"),
     countEl: document.getElementById("result-count"),
     mods,
     forgeMap,
@@ -266,6 +292,7 @@ async function init() {
   };
   state.columnsEl.value = columns;
   state.catalog.dataset.columns = columns;
+  bindModDialog(state.dialog);
   bindCatalog(state);
   renderCatalog(state);
 }

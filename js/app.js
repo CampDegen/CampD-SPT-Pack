@@ -1,4 +1,5 @@
 import { escapeHtml, loadJson, statusOf } from "./lib.js";
+import { bindModDialog, openModDialog } from "./mod-dialog.js";
 
 const SIDE_LABELS = {
   server: "Server",
@@ -86,18 +87,13 @@ function iconHtml(mod, forge) {
 function renderMod(mod, forge) {
   const latest = forge?.latestVersion ?? "";
   const status = statusOf(mod.installedVersion, latest);
-  const openId = `mod-${mod.id}`;
-  const settings = (mod.settingsNotes || "").trim();
-  const constraint = forge?.sptConstraint
-    ? `<span>Forge SPT: <code>${escapeHtml(forge.sptConstraint)}</code></span>`
-    : "";
 
   return `
     <article class="mod is-${status}" data-id="${mod.id}" data-side="${mod.side}" data-status="${status}">
-      <button class="mod-head" type="button" aria-expanded="false" aria-controls="${openId}">
+      <button class="mod-head" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mod-dialog">
         ${iconHtml(mod, forge)}
         <span class="mod-copy">
-          <span class="mod-name">${escapeHtml(mod.name)}</span>
+          <span class="mod-name" title="${escapeHtml(mod.name)}">${escapeHtml(mod.name)}</span>
           <span class="mod-head-row">
             <span class="side side-${mod.side}">${SIDE_LABELS[mod.side] ?? mod.side}</span>
             <span class="badge badge-${status}">${STATUS_LABELS[status]}</span>
@@ -109,19 +105,44 @@ function renderMod(mod, forge) {
           </span>
         </span>
       </button>
-      <div class="mod-body" id="${openId}">
-        <p>${escapeHtml(mod.description)}</p>
-        ${
-          settings
-            ? `<div class="settings-note"><strong>CampD settings</strong><span>${escapeHtml(settings)}</span></div>`
-            : ""
-        }
-        <div class="mod-meta">
-          <a href="${forgeUrl(mod, forge)}" target="_blank" rel="noreferrer">Open on Forge</a>
-          ${constraint}
-        </div>
-      </div>
     </article>
+  `;
+}
+
+function dialogHtml(mod, forge) {
+  const latest = forge?.latestVersion ?? "";
+  const status = statusOf(mod.installedVersion, latest);
+  const settings = (mod.settingsNotes || "").trim();
+  const constraint = forge?.sptConstraint
+    ? `<span>Forge SPT: <code>${escapeHtml(forge.sptConstraint)}</code></span>`
+    : "";
+
+  return `
+    <div class="mod-dialog-head">
+      ${iconHtml(mod, forge)}
+      <div class="mod-copy">
+        <h2 class="mod-dialog-title" id="mod-dialog-title">${escapeHtml(mod.name)}</h2>
+        <span class="mod-head-row">
+          <span class="side side-${mod.side}">${SIDE_LABELS[mod.side] ?? mod.side}</span>
+          <span class="badge badge-${status}">${STATUS_LABELS[status]}</span>
+        </span>
+        <span class="versions">
+          <span class="ver-installed">${escapeHtml(mod.installedVersion)}</span>
+          <span class="ver-arrow" aria-hidden="true">→</span>
+          <span class="ver-latest">${escapeHtml(latest || "—")}</span>
+        </span>
+      </div>
+    </div>
+    <p>${escapeHtml(mod.description)}</p>
+    ${
+      settings
+        ? `<div class="settings-note"><strong>CampD settings</strong><span>${escapeHtml(settings)}</span></div>`
+        : ""
+    }
+    <div class="mod-meta">
+      <a href="${forgeUrl(mod, forge)}" target="_blank" rel="noreferrer">Open on Forge</a>
+      ${constraint}
+    </div>
   `;
 }
 
@@ -168,8 +189,9 @@ function bindCatalog(state) {
     const button = event.target.closest(".mod-head");
     if (!button) return;
     const card = button.closest(".mod");
-    const open = card.classList.toggle("is-open");
-    button.setAttribute("aria-expanded", open ? "true" : "false");
+    const mod = state.modById.get(Number(card.dataset.id));
+    if (!mod) return;
+    openModDialog(state.dialog, dialogHtml(mod, state.forgeMap[mod.id]), button);
   });
 
   state.searchEl.addEventListener("input", () => {
@@ -234,6 +256,7 @@ async function init() {
     filtersEl: document.getElementById("filters"),
     columnsEl: document.getElementById("columns"),
     sortEl: document.getElementById("sort"),
+    dialog: document.getElementById("mod-dialog"),
     countEl: document.getElementById("result-count"),
     modById: new Map(mods.map((mod) => [mod.id, mod])),
     mods,
@@ -246,6 +269,7 @@ async function init() {
   state.columnsEl.value = columns;
   state.sortEl.value = sortMode;
   state.catalog.dataset.columns = columns;
+  bindModDialog(state.dialog);
   bindCatalog(state);
   renderCatalog(state);
 }

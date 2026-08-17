@@ -720,6 +720,8 @@ code {
 }
 
 .mod-name {
+  min-width: 0;
+  overflow: hidden;
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 400;
@@ -727,6 +729,8 @@ code {
   text-transform: uppercase;
   color: var(--text-primary);
   line-height: 1.1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .versions {
@@ -785,18 +789,74 @@ code {
   background: color-mix(in srgb, var(--accent-danger) 12%, transparent);
 }
 
-.mod-body {
-  display: none;
-  padding: 0 0.95rem 0.95rem;
-  border-top: 1px dashed var(--border);
+.mod-dialog {
+  width: min(42rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  padding: 0;
+  overflow: auto;
+  border: 2px solid var(--border-heavy);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-print);
 }
 
-.mod.is-open .mod-body {
-  display: block;
+.mod-dialog::backdrop {
+  background: rgba(12, 10, 8, 0.72);
 }
 
-.mod-body p {
-  margin: 0.75rem 0 0;
+.mod-dialog-sheet {
+  position: relative;
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
+.mod-dialog-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.28rem 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mod-dialog-close:hover,
+.mod-dialog-close:focus-visible {
+  color: var(--accent-warm);
+  border-color: var(--accent-warm);
+}
+
+.mod-dialog-head {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  margin-bottom: 0.9rem;
+  padding-right: 4.2rem;
+}
+
+.mod-dialog-head .mod-icon {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.mod-dialog-title {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  text-shadow: 1px 1px 0 var(--ink);
+}
+
+.mod-dialog-main p {
+  margin: 0;
 }
 
 .mod-meta {
