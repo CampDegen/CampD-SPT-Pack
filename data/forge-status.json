@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-17T01:42:27.813Z",
+  "checkedAt": "2026-08-17T06:54:39.920Z",
   "missing": [],
   "mods": {
     "236": {
@@ -869,7 +869,7 @@
     "2874": {
       "name": "Adaptive Bot Culling",
       "slug": "adaptive-bot-culling",
-      "latestVersion": "1.1.0",
+      "latestVersion": "1.2.0",
       "sptConstraint": "~4.1.0 ",
       "detailUrl": "https://sp-mod.com/mod/2874/adaptive-bot-culling",
       "thumbnail": "https://files.sp-mod.com/mods/U69LKHdaWZAKIa1emEfDp71yNMvUI0mNwVFz5CuS.png"
