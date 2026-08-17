@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mod Pack Editor</title>
+    <style>
+      :root {
+        --bg: #121417;
+        --surface: #1c1f24;
+        --sidebar: #16181c;
+        --text: #e8eaed;
+        --muted: #9aa3ad;
+        --border: #3a4048;
+        --accent: #3b82f6;
+        --accent-soft: #1a2d4a;
+        --ok: #4ade80;
+        --warn: #fbbf24;
+        --danger: #f87171;
+        --on-accent: #ffffff;
+        --radius: 8px;
+        --font: system-ui, "Segoe UI", sans-serif;
+        --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; height: 100%; }
+      body {
+        display: flex;
+        flex-direction: column;
+        background: var(--bg);
+        color: var(--text);
+        font: 14px/1.45 var(--font);
+        color-scheme: dark;
+      }
+      button, select, input, textarea {
+        font: inherit;
+        color: var(--text);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+      }
+      button:disabled { opacity: 0.45; cursor: not-allowed; }
+      a.link-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.3rem 0.6rem;
+        background: #22262c;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--text);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      a.link-btn:hover { border-color: #5a6270; }
+      a.link-btn[aria-disabled="true"] { opacity: 0.45; pointer-events: none; }
+      button:hover { border-color: #5a6270; }
+      button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+      }
+      input, select, textarea { padding: 0.45rem 0.6rem; width: 100%; }
+      input, select { min-height: 2.35rem; height: 2.35rem; }
+      textarea { min-height: 5.5rem; resize: vertical; }
+      textarea.tall { min-height: 8rem; }
+      label {
+        display: block;
+        margin: 0 0 0.3rem;
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .field { margin-top: 0.85rem; }
+      .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; align-items: end; }
+      .row > .field { margin-top: 0; }
+      kbd {
+        font-family: var(--mono);
+        font-size: 0.75em;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0.05rem 0.3rem;
+        background: var(--bg);
+        color: inherit;
+      }
+      code { font-family: var(--mono); font-size: 0.9em; }
+
+      .chrome {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 0.65rem 1rem;
+      }
+      .bar h1 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 650;
+        white-space: nowrap;
+      }
+      .tabs {
+        display: flex;
+        gap: 0.3rem;
+        flex: 1;
+        min-width: 16rem;
+      }
+      .tab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.4rem 0.7rem;
+        background: transparent;
+        border-color: transparent;
+        color: var(--muted);
+      }
+      .tab:hover { background: var(--bg); color: var(--text); }
+      .tab.is-active {
+        background: var(--accent-soft);
+        border-color: var(--accent);
+        color: var(--text);
+      }
+      .tab-count {
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+      .tab.is-dirty::after {
+        content: "";
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: var(--warn);
+      }
+      .chrome-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-left: auto;
+      }
+      .primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: var(--on-accent);
+        padding: 0.4rem 0.8rem;
+        font-weight: 600;
+      }
+      .primary:hover,
+      .primary:focus-visible {
+        background: #2563eb;
+        border-color: #60a5fa;
+        color: var(--on-accent);
+        filter: none;
+      }
+      .primary kbd {
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.45);
+        color: var(--on-accent);
+      }
+      .danger {
+        color: var(--danger);
+        border-color: #5c2a2a;
+        background: var(--surface);
+      }
+      .ghost { background: transparent; }
+      .status { font-size: 0.8rem; color: var(--muted); max-width: 22rem; }
+      .status.ok { color: var(--ok); }
+      .status.err { color: var(--danger); }
+      .context {
+        margin: 0;
+        padding: 0.4rem 1rem 0.55rem;
+        color: var(--muted);
+        font-size: 0.82rem;
+        border-top: 1px solid var(--bg);
+      }
+      .context code { color: var(--text); }
+
+      [hidden] { display: none !important; }
+      .workspace { flex: 1; min-height: 0; flex-direction: column; }
+      .workspace:not([hidden]) { display: flex; }
+      .layout {
+        flex: 1;
+        display: grid;
+        grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+        min-height: 0;
+      }
+      .list {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        background: var(--sidebar);
+        border-right: 1px solid var(--border);
+      }
+      .list-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.85rem 0.9rem 0.55rem;
+      }
+      .list-head h2 { margin: 0; font-size: 0.85rem; }
+      .list-head p { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.78rem; }
+      .list-head button { padding: 0.3rem 0.6rem; }
+      .search { width: calc(100% - 1.8rem); margin: 0 0.9rem 0.7rem; }
+      .item-list { flex: 1; overflow: auto; padding: 0 0.65rem 0.9rem; }
+      .item {
+        width: 100%;
+        text-align: left;
+        margin: 0 0 0.35rem;
+        padding: 0.5rem 0.6rem;
+        background: var(--surface);
+      }
+      .item.is-active {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+      .item-name { display: block; font-weight: 600; }
+      .item-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem 0.5rem;
+        margin-top: 0.2rem;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+      }
+      .side {
+        padding: 0.02rem 0.3rem;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: var(--bg);
+      }
+
+      .form { overflow: auto; padding: 1.1rem 1.4rem 2.2rem; }
+      .form-inner { max-width: 48rem; }
+      .editor-head { margin-bottom: 1rem; }
+      .kicker { margin: 0 0 0.2rem; color: var(--muted); font-size: 0.8rem; }
+      .editor-head h2 { margin: 0; font-size: 1.35rem; font-weight: 650; }
+      .lede { margin: 0.35rem 0 0; color: var(--muted); }
+      .toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
+      .toolbar button { padding: 0.3rem 0.6rem; }
+      .card {
+        margin-top: 0.9rem;
+        padding: 0.95rem 1rem 1.05rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+      }
+      .card h3 { margin: 0 0 0.25rem; font-size: 0.95rem; }
+      .hint { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.85rem; }
+      .empty { color: var(--muted); padding: 1.25rem 0.4rem; }
+
+      .page-band {
+        padding: 0.75rem 1.1rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .page-band textarea { min-height: 3.8rem; max-width: 48rem; }
+
+      .settings-ui { flex: 1; overflow: auto; padding: 1.1rem 1.4rem 2.2rem; }
+      .settings-inner { max-width: 52rem; }
+      .group-card { margin-top: 0.75rem; background: var(--bg); }
+      .blocked { padding: 2.5rem 1.5rem; max-width: 36rem; }
+
+      @media (max-width: 900px) {
+        .layout { grid-template-columns: 1fr; }
+        .list { border-right: 0; border-bottom: 1px solid var(--border); max-height: 16rem; }
+        .row { grid-template-columns: 1fr; }
+        .chrome-actions { margin-left: 0; width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blocked" class="blocked" hidden>
+      <h1>Local only</h1>
+      <p>Run <code>node scripts/pack-editor.mjs</code> from the pack repo, then open the URL it prints.</p>
+    </div>
+    <header class="chrome" id="chrome">
+      <div class="bar">
+        <h1>Mod Pack Editor</h1>
+        <nav class="tabs" aria-label="Catalog files">
+          <button class="tab is-active" data-tab="mods" type="button">
+            Installed mods <span class="tab-count" id="mods-tab-count"></span>
+          </button>
+          <button class="tab" data-tab="looking" type="button">
+            Looking to add <span class="tab-count" id="looking-tab-count"></span>
+          </button>
+          <button class="tab" data-tab="settings" type="button">Pack settings</button>
+        </nav>
+        <div class="chrome-actions">
+          <span class="status" id="status">Loading…</span>
+          <button class="primary" id="save" type="button">Save <kbd>Ctrl+S</kbd></button>
+        </div>
+      </div>
+      <p class="context" id="file-context">Local editor for the three catalog JSON files in <code>data/</code>.</p>
+    </header>
+
+    <div class="workspace" id="mods-ui">
+      <div class="layout">
+        <aside class="list">
+          <div class="list-head">
+            <div>
+              <h2>On the pack</h2>
+              <p id="mods-count">—</p>
+            </div>
+            <button type="button" id="mods-add">Add mod</button>
+          </div>
+          <input class="search" id="mods-search" type="search" placeholder="Search name, slug, or id" />
+          <div class="item-list" id="mods-list"></div>
+        </aside>
+        <section class="form"><div class="form-inner" id="mods-form"></div></section>
+      </div>
+    </div>
+
+    <div class="workspace" id="looking-ui" hidden>
+      <div class="page-band">
+        <label for="l-intro">Intro on looking.html</label>
+        <textarea id="l-intro" placeholder="Short blurb at the top of the Looking to add page"></textarea>
+      </div>
+      <div class="layout">
+        <aside class="list">
+          <div class="list-head">
+            <div>
+              <h2>Candidates</h2>
+              <p id="looking-count">—</p>
+            </div>
+            <button type="button" id="looking-add">Add candidate</button>
+          </div>
+          <input class="search" id="looking-search" type="search" placeholder="Search name, slug, or id" />
+          <div class="item-list" id="looking-list"></div>
+        </aside>
+        <section class="form"><div class="form-inner" id="looking-form"></div></section>
+      </div>
+    </div>
+
+    <div class="workspace settings-ui" id="settings-ui" hidden></div>
+
+    <script>
+      const local = location.hostname === "127.0.0.1" || location.hostname === "localhost";
+      if (!local) {
+        document.getElementById("blocked").hidden = false;
+        document.getElementById("chrome").hidden = true;
+        throw new Error("localhost only");
+      }
+
+      const state = {
+        tab: "mods",
+        data: { mods: { mods: [] }, looking: { intro: "", mods: [] }, settings: { intro: "", sections: [] } },
+        dirty: { mods: false, looking: false, settings: false },
+        selected: { mods: 0, looking: 0 },
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const statusEl = $("status");
+
+      function setStatus(text, kind = "") {
+        statusEl.textContent = text;
+        statusEl.className = `status ${kind}`;
+      }
+
+      function markDirty(tab = state.tab) {
+        state.dirty[tab] = true;
+        updateTabLabels();
+        setStatus(`${fileName(tab)} has unsaved changes`);
+      }
+
+      function updateTabLabels() {
+        for (const button of document.querySelectorAll(".tab")) {
+          button.classList.toggle("is-dirty", Boolean(state.dirty[button.dataset.tab]));
+        }
+        const modsN = state.data.mods.mods.length;
+        const lookingN = state.data.looking.mods.length;
+        $("mods-tab-count").textContent = `(${modsN})`;
+        $("looking-tab-count").textContent = `(${lookingN})`;
+        $("mods-count").textContent = `${modsN} mod${modsN === 1 ? "" : "s"}`;
+        $("looking-count").textContent = `${lookingN} candidate${lookingN === 1 ? "" : "s"}`;
+      }
+
+      function fileContext(tab = state.tab) {
+        if (tab === "mods") return `Editing <code>data/mods.json</code> — mods currently on the pack (index.html).`;
+        if (tab === "looking") return `Editing <code>data/looking-to-add.json</code> — old-server candidates not on the pack (looking.html).`;
+        return `Editing <code>data/pack-settings.json</code> — SVM, ReSHADE, and extra folder notes (settings.html).`;
+      }
+
+      function parseForgeUrl(url) {
+        const match = String(url).trim().match(/sp-mod\.com\/mod\/(\d+)\/([^/?#]+)/i);
+        if (!match) return null;
+        return { id: Number(match[1]), slug: decodeURIComponent(match[2]) };
+      }
+
+      function forgePageUrl(mod) {
+        const id = Number(mod?.id);
+        const slug = String(mod?.slug || "").trim();
+        if (!Number.isInteger(id) || id < 1 || !slug) return "";
+        return `https://sp-mod.com/mod/${id}/${encodeURIComponent(slug)}`;
+      }
+
+      function syncForgeOpenButtons(which) {
+        const url = forgePageUrl(state.data[which].mods[state.selected[which]]);
+        const ids = which === "mods" ? ["mods-forge"] : ["looking-forge"];
+        for (const id of ids) {
+          const el = $(id);
+          if (!el) continue;
+          if (url) {
+            el.href = url;
+            el.removeAttribute("aria-disabled");
+          } else {
+            el.removeAttribute("href");
+            el.setAttribute("aria-disabled", "true");
+          }
+        }
+      }
+
+      function applyForgeUrl(which, url) {
+        const parsed = parseForgeUrl(url);
+        if (!parsed) {
+          setStatus("Need a Forge URL like https://sp-mod.com/mod/1234/some-slug", "err");
+          return;
+        }
+        const mod = state.data[which].mods[state.selected[which]];
+        if (!mod) return;
+        mod.id = parsed.id;
+        mod.slug = parsed.slug;
+        markDirty(which);
+        which === "mods" ? renderMods() : renderLooking();
+        setStatus(`Filled id ${mod.id} and slug from Forge URL`, "ok");
+      }
+
+      async function load() {
+        const response = await fetch("/api/data");
+        if (!response.ok) throw new Error(await response.text());
+        state.data = await response.json();
+        $("l-intro").value = state.data.looking.intro || "";
+        renderAll();
+        $("file-context").innerHTML = fileContext();
+        setStatus("Loaded data/*.json", "ok");
+      }
+
+      async function save() {
+        const key = state.tab;
+        const response = await fetch(`/api/${key}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(state.data[key]),
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          setStatus(payload.error || "Save failed", "err");
+          return;
+        }
+        state.dirty[key] = false;
+        updateTabLabels();
+        setStatus(`Saved ${fileName(key)}`, "ok");
+      }
+
+      function fileName(key) {
+        return key === "mods" ? "mods.json" : key === "looking" ? "looking-to-add.json" : "pack-settings.json";
+      }
+
+      function switchTab(tab) {
+        state.tab = tab;
+        for (const button of document.querySelectorAll(".tab")) {
+          button.classList.toggle("is-active", button.dataset.tab === tab);
+        }
+        $("mods-ui").hidden = tab !== "mods";
+        $("looking-ui").hidden = tab !== "looking";
+        $("settings-ui").hidden = tab !== "settings";
+        $("file-context").innerHTML = fileContext(tab);
+        if (state.dirty[tab]) setStatus(`${fileName(tab)} has unsaved changes`);
+        else setStatus(`Editing ${fileName(tab)}`);
+      }
+
+      function renderAll() {
+        updateTabLabels();
+        renderMods();
+        renderLooking();
+        renderSettings();
+      }
+
+      function filtered(list, query, fields) {
+        const q = query.trim().toLowerCase();
+        if (!q) return list.map((item, index) => ({ item, index }));
+        return list
+          .map((item, index) => ({ item, index }))
+          .filter(({ item }) => fields.some((field) => String(item[field] ?? "").toLowerCase().includes(q)));
+      }
+
+      function renderModList(which) {
+        const query = $(`${which}-search`).value;
+        const mods = state.data[which].mods;
+        const selected = state.selected[which];
+        $(`${which}-list`).innerHTML = filtered(mods, query, ["name", "slug", "id", "oldName"]).map(({ item, index }) => `
+          <button class="item ${index === selected ? "is-active" : ""}" type="button" data-index="${index}">
+            <span class="item-name">${escapeHtml(item.name || "(untitled)")}</span>
+            <span class="item-meta">
+              ${item.side ? `<span class="side">${escapeHtml(item.side)}</span>` : ""}
+              <span>${item.id ?? "no Forge id"}</span>
+              ${item.slug ? `<span>${escapeHtml(item.slug)}</span>` : ""}
+            </span>
+          </button>
+        `).join("") || `<p class="empty">Nothing matches that search.</p>`;
+      }
+
+      function editorHead(kicker, title, lede, actions) {
+        return `
+          <header class="editor-head">
+            <p class="kicker">${kicker}</p>
+            <h2 id="${actions.titleId}">${escapeHtml(title || "(untitled)")}</h2>
+            <p class="lede">${lede}</p>
+            <div class="toolbar">
+              <button type="button" id="${actions.up}">Move up</button>
+              <button type="button" id="${actions.down}">Move down</button>
+              <a class="link-btn" id="${actions.forge}" href="${actions.forgeHref || "#"}" target="_blank" rel="noopener noreferrer" ${actions.forgeDisabled ? 'aria-disabled="true"' : ""}>Open Forge page</a>
+              <button type="button" id="${actions.copy}">${actions.copyLabel}</button>
+              <button class="danger" type="button" id="${actions.del}">Remove</button>
+            </div>
+          </header>
+        `;
+      }
+
+      function renderMods() {
+        renderModList("mods");
+        updateTabLabels();
+        const mod = state.data.mods.mods[state.selected.mods];
+        if (!mod) {
+          $("mods-form").innerHTML = `<p class="empty">Add a mod from the list on the left to start editing the live pack catalog.</p>`;
+          return;
+        }
+        $("mods-form").innerHTML = `
+          ${editorHead("Installed pack mod", mod.name, "This card appears on the Mods page (index.html).", {
+            titleId: "m-title",
+            up: "mods-up",
+            down: "mods-down",
+            forge: "mods-forge",
+            forgeHref: forgePageUrl(mod),
+            forgeDisabled: !forgePageUrl(mod),
+            copy: "mods-copy",
+            copyLabel: "Copy to Looking to add",
+            del: "mods-del",
+          })}
+          <section class="card">
+            <h3>Forge identity</h3>
+            <p class="hint">Paste the Forge page URL to fill id and slug. Side and installed version are what the catalog shows.</p>
+            <div class="field">
+              <label for="m-url">Forge URL</label>
+              <input id="m-url" placeholder="https://sp-mod.com/mod/1234/some-slug" />
+            </div>
+            <div class="row">
+              <div class="field"><label for="m-id">Forge id</label><input id="m-id" type="number" min="1" value="${mod.id || ""}" /></div>
+              <div class="field">
+                <label for="m-side">Side</label>
+                <select id="m-side">
+                  ${["server", "both", "client", "special"].map((side) => `<option ${mod.side === side ? "selected" : ""}>${side}</option>`).join("")}
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="m-slug">Slug</label><input id="m-slug" value="${escapeAttr(mod.slug)}" /></div>
+              <div class="field"><label for="m-ver">Installed version</label><input id="m-ver" value="${escapeAttr(mod.installedVersion)}" /></div>
+            </div>
+          </section>
+          <section class="card">
+            <h3>Catalog copy</h3>
+            <p class="hint">CampD-written text only. Do not paste the Forge listing.</p>
+            <div class="field"><label for="m-name">Name</label><input id="m-name" value="${escapeAttr(mod.name)}" /></div>
+            <div class="field"><label for="m-desc">Description</label><textarea id="m-desc" class="tall">${escapeHtml(mod.description)}</textarea></div>
+            <div class="field"><label for="m-notes">Settings notes</label><textarea id="m-notes">${escapeHtml(mod.settingsNotes)}</textarea></div>
+          </section>
+        `;
+        bindModFields("mods");
+      }
+
+      function renderLooking() {
+        renderModList("looking");
+        updateTabLabels();
+        const wrap = $("looking-form");
+        const mod = state.data.looking.mods[state.selected.looking];
+        if (!mod) {
+          wrap.innerHTML = `<p class="empty">Add a candidate from the list on the left. Page intro is the band above this panel.</p>`;
+          return;
+        }
+        wrap.innerHTML = `
+          ${editorHead("Looking-to-add candidate", mod.name, "Not on the current pack. Compatibility badges come from Forge, not from the notes field.", {
+            titleId: "l-title",
+            up: "looking-up",
+            down: "looking-down",
+            forge: "looking-forge",
+            forgeHref: forgePageUrl(mod),
+            forgeDisabled: !forgePageUrl(mod),
+            copy: "looking-copy",
+            copyLabel: "Copy to Installed mods",
+            del: "looking-del",
+          })}
+          <section class="card">
+            <h3>Forge identity</h3>
+            <p class="hint">Leave id blank if there is no current Forge page. Old list name is only for when the leftover used a different title.</p>
+            <div class="field">
+              <label for="l-url">Forge URL</label>
+              <input id="l-url" placeholder="https://sp-mod.com/mod/1234/some-slug" />
+            </div>
+            <div class="row">
+              <div class="field"><label for="l-id">Forge id</label><input id="l-id" type="number" min="1" value="${mod.id ?? ""}" /></div>
+              <div class="field"><label for="l-slug">Slug</label><input id="l-slug" value="${escapeAttr(mod.slug || "")}" /></div>
+            </div>
+            <div class="field"><label for="l-old">Old list name</label><input id="l-old" value="${escapeAttr(mod.oldName || "")}" /></div>
+          </section>
+          <section class="card">
+            <h3>Catalog copy</h3>
+            <p class="hint">Notes are install or overlap caveats only — not “we matched this Forge page.”</p>
+            <div class="field"><label for="l-name">Name</label><input id="l-name" value="${escapeAttr(mod.name)}" /></div>
+            <div class="field"><label for="l-desc">Description</label><textarea id="l-desc" class="tall">${escapeHtml(mod.description)}</textarea></div>
+            <div class="field"><label for="l-notes">Notes</label><textarea id="l-notes">${escapeHtml(mod.notes)}</textarea></div>
+          </section>
+        `;
+        bindModFields("looking");
+      }
+
+      function bindModFields(which) {
+        const selected = () => state.data[which].mods[state.selected[which]];
+        const set = (id, apply) => {
+          const el = $(id);
+          if (!el) return;
+          el.oninput = el.onchange = () => {
+            apply(selected(), el);
+            markDirty(which);
+            renderModList(which);
+          };
+        };
+        if (which === "mods") {
+          $("m-url").onchange = $("m-url").onkeydown = (event) => {
+            if (event.type === "keydown" && event.key !== "Enter") return;
+            event.preventDefault();
+            applyForgeUrl("mods", $("m-url").value);
+          };
+          set("m-id", (mod, el) => { mod.id = el.value === "" ? 0 : Number(el.value); syncForgeOpenButtons("mods"); });
+          set("m-side", (mod, el) => { mod.side = el.value; });
+          set("m-name", (mod, el) => {
+            mod.name = el.value;
+            const title = $("m-title");
+            if (title) title.textContent = el.value || "(untitled)";
+          });
+          set("m-slug", (mod, el) => { mod.slug = el.value; syncForgeOpenButtons("mods"); });
+          set("m-ver", (mod, el) => { mod.installedVersion = el.value; });
+          set("m-desc", (mod, el) => { mod.description = el.value; });
+          set("m-notes", (mod, el) => { mod.settingsNotes = el.value; });
+          $("mods-up").onclick = () => move("mods", -1);
+          $("mods-down").onclick = () => move("mods", 1);
+          $("mods-del").onclick = () => removeAt("mods");
+          $("mods-copy").onclick = () => copyToLooking();
+        } else {
+          $("l-url").onchange = $("l-url").onkeydown = (event) => {
+            if (event.type === "keydown" && event.key !== "Enter") return;
+            event.preventDefault();
+            applyForgeUrl("looking", $("l-url").value);
+          };
+          set("l-id", (mod, el) => { mod.id = el.value === "" ? null : Number(el.value); syncForgeOpenButtons("looking"); });
+          set("l-old", (mod, el) => { mod.oldName = el.value; });
+          set("l-name", (mod, el) => {
+            mod.name = el.value;
+            const title = $("l-title");
+            if (title) title.textContent = el.value || "(untitled)";
+          });
+          set("l-slug", (mod, el) => { mod.slug = el.value; syncForgeOpenButtons("looking"); });
+          set("l-desc", (mod, el) => { mod.description = el.value; });
+          set("l-notes", (mod, el) => { mod.notes = el.value; });
+          $("looking-up").onclick = () => move("looking", -1);
+          $("looking-down").onclick = () => move("looking", 1);
+          $("looking-del").onclick = () => removeAt("looking");
+          $("looking-copy").onclick = () => copyToInstalled();
+        }
+      }
+
+      function move(which, delta) {
+        const list = state.data[which].mods;
+        const from = state.selected[which];
+        const to = from + delta;
+        if (to < 0 || to >= list.length) return;
+        [list[from], list[to]] = [list[to], list[from]];
+        state.selected[which] = to;
+        markDirty(which);
+        which === "mods" ? renderMods() : renderLooking();
+      }
+
+      function removeAt(which) {
+        const list = state.data[which].mods;
+        if (!list.length) return;
+        list.splice(state.selected[which], 1);
+        state.selected[which] = Math.max(0, state.selected[which] - 1);
+        markDirty(which);
+        which === "mods" ? renderMods() : renderLooking();
+      }
+
+      function copyToLooking() {
+        const mod = state.data.mods.mods[state.selected.mods];
+        if (!mod) return;
+        state.data.looking.mods.push({
+          id: mod.id,
+          name: mod.name,
+          slug: mod.slug,
+          description: mod.description,
+          notes: "",
+        });
+        state.selected.looking = state.data.looking.mods.length - 1;
+        markDirty("looking");
+        renderLooking();
+        switchTab("looking");
+        setStatus("Copied to looking-to-add.json (not saved yet)");
+      }
+
+      function copyToInstalled() {
+        const mod = state.data.looking.mods[state.selected.looking];
+        if (!mod) return;
+        if (mod.id == null || !mod.slug) {
+          setStatus("Need a Forge id and slug before copying to installed.", "err");
+          return;
+        }
+        state.data.mods.mods.push({
+          id: mod.id,
+          name: mod.name,
+          slug: mod.slug,
+          side: "server",
+          installedVersion: "",
+          description: mod.description,
+          settingsNotes: "",
+        });
+        state.selected.mods = state.data.mods.mods.length - 1;
+        markDirty("mods");
+        renderMods();
+        switchTab("mods");
+        setStatus("Copied to mods.json. Set side and installed version, then save.", "ok");
+      }
+
+      function renderSettings() {
+        const data = state.data.settings;
+        $("settings-ui").innerHTML = `
+          <div class="settings-inner">
+            <header class="editor-head">
+              <p class="kicker">Pack-wide notes</p>
+              <h2>Pack settings</h2>
+              <p class="lede">SVM, ReSHADE, and extra folder data on settings.html. Empty group notes show as “Not documented yet.”</p>
+            </header>
+            <section class="card">
+              <h3>Page intro</h3>
+              <p class="hint">Top of the Pack Settings page.</p>
+              <textarea id="s-intro" class="tall">${escapeHtml(data.intro)}</textarea>
+            </section>
+            ${data.sections.map((section, sIndex) => `
+              <article class="card">
+                <h3>${escapeHtml(section.title || "Untitled section")}</h3>
+                <p class="hint">Section on settings.html. Anchor id is for the page, not the visible heading.</p>
+                <div class="row">
+                  <div class="field"><label>Anchor id</label><input data-s="${sIndex}" data-f="id" value="${escapeAttr(section.id)}" /></div>
+                  <div class="field"><label>Title</label><input data-s="${sIndex}" data-f="title" value="${escapeAttr(section.title)}" /></div>
+                </div>
+                <div class="field"><label>Blurb</label><textarea data-s="${sIndex}" data-f="blurb">${escapeHtml(section.blurb || "")}</textarea></div>
+                ${(section.groups || []).map((group, gIndex) => `
+                  <div class="card group-card">
+                    <h3>${escapeHtml(group.title || "Untitled group")}</h3>
+                    <div class="row">
+                      <div class="field"><label>Anchor id</label><input data-s="${sIndex}" data-g="${gIndex}" data-f="id" value="${escapeAttr(group.id)}" /></div>
+                      <div class="field"><label>Title</label><input data-s="${sIndex}" data-g="${gIndex}" data-f="title" value="${escapeAttr(group.title)}" /></div>
+                    </div>
+                    <div class="field"><label>Notes</label><textarea data-s="${sIndex}" data-g="${gIndex}" data-f="notes">${escapeHtml(group.notes || "")}</textarea></div>
+                    <div class="toolbar">
+                      <button class="danger ghost" type="button" data-del-group="${sIndex}:${gIndex}">Remove group</button>
+                    </div>
+                  </div>
+                `).join("")}
+                <div class="toolbar">
+                  <button type="button" data-add-group="${sIndex}">Add group</button>
+                  <button class="danger ghost" type="button" data-del-section="${sIndex}">Remove section</button>
+                </div>
+              </article>
+            `).join("")}
+            <div class="toolbar">
+              <button type="button" id="s-add-section">Add section</button>
+            </div>
+          </div>
+        `;
+        $("s-intro").oninput = () => {
+          data.intro = $("s-intro").value;
+          markDirty("settings");
+        };
+        $("settings-ui").oninput = (event) => {
+          const el = event.target;
+          if (!el.dataset.s) return;
+          const section = data.sections[Number(el.dataset.s)];
+          if (el.dataset.g == null) section[el.dataset.f] = el.value;
+          else section.groups[Number(el.dataset.g)][el.dataset.f] = el.value;
+          markDirty("settings");
+        };
+        $("settings-ui").onclick = (event) => {
+          const add = event.target.closest("[data-add-group]");
+          const delG = event.target.closest("[data-del-group]");
+          const delS = event.target.closest("[data-del-section]");
+          if (add) {
+            data.sections[Number(add.dataset.addGroup)].groups.push({ id: "new-group", title: "New group", notes: "" });
+            markDirty("settings");
+            renderSettings();
+          } else if (delG) {
+            const [s, g] = delG.dataset.delGroup.split(":").map(Number);
+            data.sections[s].groups.splice(g, 1);
+            markDirty("settings");
+            renderSettings();
+          } else if (delS) {
+            data.sections.splice(Number(delS.dataset.delSection), 1);
+            markDirty("settings");
+            renderSettings();
+          }
+        };
+        $("s-add-section").onclick = () => {
+          data.sections.push({ id: "new-section", title: "New section", blurb: "", groups: [] });
+          markDirty("settings");
+          renderSettings();
+        };
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+      function escapeAttr(value) {
+        return escapeHtml(value).replaceAll('"', "&quot;");
+      }
+
+      for (const button of document.querySelectorAll(".tab")) {
+        button.onclick = () => switchTab(button.dataset.tab);
+      }
+      $("save").onclick = () => save();
+      window.addEventListener("keydown", (event) => {
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "s") {
+          event.preventDefault();
+          save();
+        }
+      });
+      $("mods-search").oninput = () => renderModList("mods");
+      $("looking-search").oninput = () => renderModList("looking");
+      $("l-intro").oninput = () => {
+        state.data.looking.intro = $("l-intro").value;
+        markDirty("looking");
+      };
+      $("mods-add").onclick = () => {
+        state.data.mods.mods.push({
+          id: 0,
+          name: "New mod",
+          slug: "new-mod",
+          side: "server",
+          installedVersion: "",
+          description: "",
+          settingsNotes: "",
+        });
+        state.selected.mods = state.data.mods.mods.length - 1;
+        markDirty("mods");
+        renderMods();
+      };
+      $("looking-add").onclick = () => {
+        state.data.looking.mods.push({
+          id: null,
+          name: "New candidate",
+          slug: "",
+          description: "",
+          notes: "",
+        });
+        state.selected.looking = state.data.looking.mods.length - 1;
+        markDirty("looking");
+        renderLooking();
+      };
+      $("mods-list").onclick = (event) => {
+        const item = event.target.closest("[data-index]");
+        if (!item) return;
+        state.selected.mods = Number(item.dataset.index);
+        renderMods();
+      };
+      $("looking-list").onclick = (event) => {
+        const item = event.target.closest("[data-index]");
+        if (!item) return;
+        state.selected.looking = Number(item.dataset.index);
+        renderLooking();
+      };
+
+      window.addEventListener("beforeunload", (event) => {
+        if (Object.values(state.dirty).some(Boolean)) event.preventDefault();
+      });
+
+      load().catch((error) => setStatus(error.message, "err"));
+    </script>
+  </body>
+</html>

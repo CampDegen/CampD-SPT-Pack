@@ -2,7 +2,7 @@
 
 Static GitHub Pages site for the mods installed on CampD’s SPT server. It lists each mod with a CampD-written description, the installed version, the latest version on [Forge](https://sp-mod.com), and (where we have them) settings notes. SVM / ReSHADE / extra folder data live on the Pack Settings page.
 
-Forge listing text is not used. Edit the JSON in `data/` instead.
+Forge listing text is not used. Edit the JSON in `data/` (by hand or with the [Mod Pack Editor](#mod-pack-editor)) instead.
 
 Local agent notes and handoffs live in `agent/` (gitignored). This repo is the **permanent source** for the pack. CampD-Website only mirrors public files to `https://campdegen.com/spt-pack/`. Do not delete this repo. Website README: [CampDegen/CampD-Website](https://github.com/CampDegen/CampD-Website).
 
@@ -80,6 +80,22 @@ Old-server leftovers: `data/looking-to-add.json`. `id` / `slug` come from Forge 
 The Looking to add badge compares `data/site.json`’s installed SPT version against the latest Forge release’s `spt_version_constraint`. It shows **Ready for 4.1.2**, **Waiting for 4.1.2**, or **Compatibility unknown** and changes automatically when the daily Forge refresh finds a newly compatible release. It does not change the installed SPT version.
 
 Site title / SPT version: `data/site.json`.
+
+## Mod Pack Editor
+
+Local-only UI for `data/mods.json`, `data/looking-to-add.json`, and `data/pack-settings.json`. It lives in `scripts/` so website sync does **not** copy it to campdegen.com.
+
+Needs Node 18+. From the repo root:
+
+```bash
+node scripts/pack-editor.mjs
+```
+
+Then open http://127.0.0.1:8787 (override the port with `PACK_EDITOR_PORT` if 8787 is taken). The server binds to localhost only. The editor uses its own dark utility layout (not the CampD facility theme). Tabs are the three JSON files. **Save** (or Ctrl+S) writes the current tab back into `data/`. Commit those files yourself when you want the catalog to update.
+
+Paste a Forge URL (`https://sp-mod.com/mod/<id>/<slug>`) to fill id and slug. **Open Forge page** opens that listing in a new tab. You can copy a row between Installed mods and Looking to add, then fill side / installed version / notes before saving.
+
+Do not treat `scripts/pack-editor.html` as a public page. Opened anywhere except localhost, it refuses to run.
 
 ## Forge version checks
 
