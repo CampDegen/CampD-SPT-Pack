@@ -41,7 +41,7 @@
       "name": "Increase Look Direction",
       "slug": "increase-look-direction",
       "side": "client",
-      "installedVersion": "1.2.1",
+      "installedVersion": "1.3.0",
       "description": "",
       "settingsNotes": ""
     },
@@ -86,7 +86,7 @@
       "name": "Project Fika",
       "slug": "project-fika",
       "side": "client",
-      "installedVersion": "2.4.1",
+      "installedVersion": "2.4.2",
       "description": "Co-op client so players can run SPT raids together instead of solo.",
       "settingsNotes": "Pairs with Project Fika - Server. Both pieces need to stay on the same version."
     },
@@ -95,7 +95,7 @@
       "name": "WTT - Content Backport",
       "slug": "wtt-content-backport",
       "side": "both",
-      "installedVersion": "2.0.0",
+      "installedVersion": "2.0.1",
       "description": "Backports later-wipe items, gear, and related content into our SPT build.",
       "settingsNotes": ""
     },
@@ -122,7 +122,7 @@
       "name": "Armor Class Icon",
       "slug": "armor-class-icon",
       "side": "client",
-      "installedVersion": "1.0.0",
+      "installedVersion": "1.1.0",
       "description": "",
       "settingsNotes": ""
     },
@@ -554,7 +554,7 @@
       "name": "ScopeRangefinder",
       "slug": "scoperangefinder",
       "side": "client",
-      "installedVersion": "3.0.0",
+      "installedVersion": "3.1.0",
       "description": "Shows range-to-target while using scopes so you can hold over without a dedicated rangefinder.",
       "settingsNotes": ""
     },
@@ -689,7 +689,7 @@
       "name": "Task Search",
       "slug": "task-search",
       "side": "client",
-      "installedVersion": "1.1.0",
+      "installedVersion": "1.1.1",
       "description": "Search and filter the tasks screen instead of scrolling the entire quest list.",
       "settingsNotes": ""
     },
@@ -752,7 +752,7 @@
       "name": "Kaeno-TraderScrolling",
       "slug": "kaeno-traderscrolling",
       "side": "client",
-      "installedVersion": "4.0.0",
+      "installedVersion": "4.1.0",
       "description": "Makes trader stock lists actually scroll instead of cutting off items.",
       "settingsNotes": ""
     },
