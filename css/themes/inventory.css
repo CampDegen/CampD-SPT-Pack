@@ -577,6 +577,10 @@ code {
   color: var(--amber);
 }
 
+.side-addon {
+  color: var(--amber);
+}
+
 .mod-name {
   min-width: 0;
   overflow: hidden;

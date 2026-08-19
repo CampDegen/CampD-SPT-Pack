@@ -1,4 +1,4 @@
-import { escapeHtml, loadJson } from "./lib.js";
+import { escapeHtml, forgeListingUrl, forgeStatusOf, listingKind, loadJson } from "./lib.js";
 import { bindModDialog, openModDialog } from "./mod-dialog.js";
 
 const PREFERENCE_KEYS = {
@@ -104,15 +104,14 @@ function iconHtml(mod, forge) {
 }
 
 function forgeUrl(mod, forge) {
-  if (forge?.detailUrl) return forge.detailUrl;
-  if (mod.id && mod.slug) return `https://sp-mod.com/mod/${mod.id}/${mod.slug}`;
-  return "";
+  return forgeListingUrl(mod, forge);
 }
 
 function compatibilityView(mod, forge, sptVersion) {
   const verified = Boolean(mod.id);
   const latest = forge?.latestVersion ?? "";
-  const compatible = verified ? isSptCompatible(sptVersion, forge?.sptConstraint) : null;
+  const compatible =
+    listingKind(mod) === "addon" || !verified ? null : isSptCompatible(sptVersion, forge?.sptConstraint);
   return {
     latest,
     verified,
@@ -135,12 +134,13 @@ function renderMod(mod, index, forge, sptVersion) {
   const view = compatibilityView(mod, forge, sptVersion);
 
   return `
-    <article class="mod ${view.statusClass}" data-id="${mod.id ?? ""}" data-index="${index}">
+    <article class="mod ${view.statusClass}" data-kind="${listingKind(mod)}" data-id="${mod.id ?? ""}" data-index="${index}">
       <button class="mod-head" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mod-dialog">
         ${iconHtml(mod, forge)}
         <span class="mod-copy">
           <span class="mod-name" title="${escapeHtml(mod.name)}">${escapeHtml(mod.name)}</span>
           <span class="mod-head-row">
+            ${listingKind(mod) === "addon" ? `<span class="side side-addon">Addon</span>` : ""}
             <span class="badge ${view.badgeClass}">${view.badge}</span>
           </span>
           ${view.versionLine}
@@ -168,6 +168,7 @@ function dialogHtml(mod, forge, sptVersion) {
       <div class="mod-copy">
         <h2 class="mod-dialog-title" id="mod-dialog-title">${escapeHtml(mod.name)}</h2>
         <span class="mod-head-row">
+          ${listingKind(mod) === "addon" ? `<span class="side side-addon">Addon</span>` : ""}
           <span class="badge ${view.badgeClass}">${view.badge}</span>
         </span>
         ${view.versionLine}
@@ -207,7 +208,7 @@ function renderCatalog(state) {
     .sort((left, right) => compareNames(left.mod, right.mod));
   state.catalog.innerHTML = sorted
     .map(({ mod, index }) =>
-      renderMod(mod, index, mod.id ? state.forgeMap[mod.id] ?? null : null, state.sptVersion),
+      renderMod(mod, index, forgeStatusOf(state.forge, mod) ?? null, state.sptVersion),
     )
     .join("");
   applyFilter(state);
@@ -236,7 +237,7 @@ function bindCatalog(state) {
     const card = button.closest(".mod");
     const mod = state.mods[Number(card.dataset.index)];
     if (!mod) return;
-    const forge = mod.id ? state.forgeMap[mod.id] ?? null : null;
+    const forge = forgeStatusOf(state.forge, mod) ?? null;
     openModDialog(state.dialog, dialogHtml(mod, forge, state.sptVersion), button);
   });
 
@@ -263,9 +264,8 @@ async function init() {
   if (looking.intro) document.getElementById("lede").textContent = looking.intro;
 
   const mods = looking.mods ?? [];
-  const forgeMap = forge.mods ?? {};
   const compatibility = mods.map((mod) =>
-    isSptCompatible(site.sptVersion, forgeMap[mod.id]?.sptConstraint),
+    listingKind(mod) === "addon" ? null : isSptCompatible(site.sptVersion, forgeStatusOf(forge, mod)?.sptConstraint),
   );
   const compatible = compatibility.filter((value) => value === true).length;
   const waiting = compatibility.filter((value) => value === false).length;
@@ -285,7 +285,7 @@ async function init() {
     dialog: document.getElementById("mod-dialog"),
     countEl: document.getElementById("result-count"),
     mods,
-    forgeMap,
+    forge,
     sptVersion: site.sptVersion,
     query: "",
     columns,

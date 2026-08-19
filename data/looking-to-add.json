@@ -9,9 +9,10 @@
       "notes": "Latest Forge listing still targets SPT 4.0."
     },
     {
-      "id": 2510,
-      "name": "FikaSync",
-      "slug": "fikasync",
+      "kind": "addon",
+      "id": 56,
+      "name": "Battle Ambience (Fika Sync)",
+      "slug": "battle-ambience-fika-sync",
       "oldName": "Battle Ambience (Fika Sync)",
       "description": "Fika helper that keeps ambience and similar client audio mods in sync during co-op.",
       "notes": "Only add this if Battle Ambience is also installed."

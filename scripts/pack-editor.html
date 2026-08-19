@@ -384,16 +384,29 @@
       }
 
       function parseForgeUrl(url) {
-        const match = String(url).trim().match(/sp-mod\.com\/mod\/(\d+)\/([^/?#]+)/i);
+        const match = String(url).trim().match(/sp-mod\.com\/(mod|addon)\/(\d+)\/([^/?#]+)/i);
         if (!match) return null;
-        return { id: Number(match[1]), slug: decodeURIComponent(match[2]) };
+        return {
+          kind: match[1].toLowerCase() === "addon" ? "addon" : "mod",
+          id: Number(match[2]),
+          slug: decodeURIComponent(match[3]),
+        };
+      }
+
+      function listingKind(mod) {
+        return mod?.kind === "addon" ? "addon" : "mod";
+      }
+
+      function applyListingKind(mod, kind) {
+        if (kind === "addon") mod.kind = "addon";
+        else delete mod.kind;
       }
 
       function forgePageUrl(mod) {
         const id = Number(mod?.id);
         const slug = String(mod?.slug || "").trim();
         if (!Number.isInteger(id) || id < 1 || !slug) return "";
-        return `https://sp-mod.com/mod/${id}/${encodeURIComponent(slug)}`;
+        return `https://sp-mod.com/${listingKind(mod)}/${id}/${encodeURIComponent(slug)}`;
       }
 
       function syncForgeOpenButtons(which) {
@@ -415,13 +428,14 @@
       function applyForgeUrl(which, url) {
         const parsed = parseForgeUrl(url);
         if (!parsed) {
-          setStatus("Need a Forge URL like https://sp-mod.com/mod/1234/some-slug", "err");
+          setStatus("Need a Forge URL like https://sp-mod.com/mod/1234/some-slug or /addon/4/some-slug", "err");
           return;
         }
         const mod = state.data[which].mods[state.selected[which]];
         if (!mod) return;
         mod.id = parsed.id;
         mod.slug = parsed.slug;
+        applyListingKind(mod, parsed.kind);
         markDirty(which);
         which === "mods" ? renderMods() : renderLooking();
         setStatus(`Filled id ${mod.id} and slug from Forge URL`, "ok");
@@ -483,7 +497,7 @@
         if (!q) return list.map((item, index) => ({ item, index }));
         return list
           .map((item, index) => ({ item, index }))
-          .filter(({ item }) => fields.some((field) => String(item[field] ?? "").toLowerCase().includes(q)));
+          .filter(({ item }) => fields.some((field) => String(item[field] ?? "").toLowerCase().includes(q)) || (item.kind === "addon" && "addon".includes(q)));
       }
 
       function renderModList(which) {
@@ -494,6 +508,7 @@
           <button class="item ${index === selected ? "is-active" : ""}" type="button" data-index="${index}">
             <span class="item-name">${escapeHtml(item.name || "(untitled)")}</span>
             <span class="item-meta">
+              ${item.kind === "addon" ? `<span class="side">addon</span>` : ""}
               ${item.side ? `<span class="side">${escapeHtml(item.side)}</span>` : ""}
               <span>${item.id ?? "no Forge id"}</span>
               ${item.slug ? `<span>${escapeHtml(item.slug)}</span>` : ""}
@@ -541,24 +556,31 @@
           })}
           <section class="card">
             <h3>Forge identity</h3>
-            <p class="hint">Paste the Forge page URL to fill id and slug. Side and installed version are what the catalog shows.</p>
+            <p class="hint">Paste a Forge page URL (<code>/mod/</code> or <code>/addon/</code>) to fill listing type, id, and slug. Addon ids are a separate namespace from mod ids.</p>
             <div class="field">
               <label for="m-url">Forge URL</label>
-              <input id="m-url" placeholder="https://sp-mod.com/mod/1234/some-slug" />
+              <input id="m-url" placeholder="https://sp-mod.com/mod/1234/some-slug or /addon/4/some-slug" />
             </div>
             <div class="row">
+              <div class="field">
+                <label for="m-kind">Listing</label>
+                <select id="m-kind">
+                  <option value="mod" ${mod.kind !== "addon" ? "selected" : ""}>Mod</option>
+                  <option value="addon" ${mod.kind === "addon" ? "selected" : ""}>Addon</option>
+                </select>
+              </div>
               <div class="field"><label for="m-id">Forge id</label><input id="m-id" type="number" min="1" value="${mod.id || ""}" /></div>
+            </div>
+            <div class="row">
               <div class="field">
                 <label for="m-side">Side</label>
                 <select id="m-side">
                   ${["server", "both", "client", "special"].map((side) => `<option ${mod.side === side ? "selected" : ""}>${side}</option>`).join("")}
                 </select>
               </div>
-            </div>
-            <div class="row">
-              <div class="field"><label for="m-slug">Slug</label><input id="m-slug" value="${escapeAttr(mod.slug)}" /></div>
               <div class="field"><label for="m-ver">Installed version</label><input id="m-ver" value="${escapeAttr(mod.installedVersion)}" /></div>
             </div>
+            <div class="field"><label for="m-slug">Slug</label><input id="m-slug" value="${escapeAttr(mod.slug)}" /></div>
           </section>
           <section class="card">
             <h3>Catalog copy</h3>
@@ -594,16 +616,25 @@
           })}
           <section class="card">
             <h3>Forge identity</h3>
-            <p class="hint">Leave id blank if there is no current Forge page. Old list name is only for when the leftover used a different title.</p>
+            <p class="hint">Leave id blank if there is no current Forge page. Old list name is only for when the leftover used a different title. Addon URLs use <code>/addon/</code>; addon ids are not mod ids.</p>
             <div class="field">
               <label for="l-url">Forge URL</label>
-              <input id="l-url" placeholder="https://sp-mod.com/mod/1234/some-slug" />
+              <input id="l-url" placeholder="https://sp-mod.com/mod/1234/some-slug or /addon/4/some-slug" />
             </div>
             <div class="row">
+              <div class="field">
+                <label for="l-kind">Listing</label>
+                <select id="l-kind">
+                  <option value="mod" ${mod.kind !== "addon" ? "selected" : ""}>Mod</option>
+                  <option value="addon" ${mod.kind === "addon" ? "selected" : ""}>Addon</option>
+                </select>
+              </div>
               <div class="field"><label for="l-id">Forge id</label><input id="l-id" type="number" min="1" value="${mod.id ?? ""}" /></div>
-              <div class="field"><label for="l-slug">Slug</label><input id="l-slug" value="${escapeAttr(mod.slug || "")}" /></div>
             </div>
-            <div class="field"><label for="l-old">Old list name</label><input id="l-old" value="${escapeAttr(mod.oldName || "")}" /></div>
+            <div class="row">
+              <div class="field"><label for="l-slug">Slug</label><input id="l-slug" value="${escapeAttr(mod.slug || "")}" /></div>
+              <div class="field"><label for="l-old">Old list name</label><input id="l-old" value="${escapeAttr(mod.oldName || "")}" /></div>
+            </div>
           </section>
           <section class="card">
             <h3>Catalog copy</h3>
@@ -634,6 +665,7 @@
             applyForgeUrl("mods", $("m-url").value);
           };
           set("m-id", (mod, el) => { mod.id = el.value === "" ? 0 : Number(el.value); syncForgeOpenButtons("mods"); });
+          set("m-kind", (mod, el) => { applyListingKind(mod, el.value); syncForgeOpenButtons("mods"); });
           set("m-side", (mod, el) => { mod.side = el.value; });
           set("m-name", (mod, el) => {
             mod.name = el.value;
@@ -655,6 +687,7 @@
             applyForgeUrl("looking", $("l-url").value);
           };
           set("l-id", (mod, el) => { mod.id = el.value === "" ? null : Number(el.value); syncForgeOpenButtons("looking"); });
+          set("l-kind", (mod, el) => { applyListingKind(mod, el.value); syncForgeOpenButtons("looking"); });
           set("l-old", (mod, el) => { mod.oldName = el.value; });
           set("l-name", (mod, el) => {
             mod.name = el.value;
@@ -698,6 +731,7 @@
           id: mod.id,
           name: mod.name,
           slug: mod.slug,
+          ...(mod.kind === "addon" ? { kind: "addon" } : {}),
           description: mod.description,
           notes: "",
         });
@@ -719,6 +753,7 @@
           id: mod.id,
           name: mod.name,
           slug: mod.slug,
+          ...(mod.kind === "addon" ? { kind: "addon" } : {}),
           side: "server",
           installedVersion: "",
           description: mod.description,

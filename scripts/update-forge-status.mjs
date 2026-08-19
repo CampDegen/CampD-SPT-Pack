@@ -6,8 +6,9 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MODS_PATH = join(ROOT, "data", "mods.json");
 const LOOKING_PATH = join(ROOT, "data", "looking-to-add.json");
 const STATUS_PATH = join(ROOT, "data", "forge-status.json");
-const API = "https://sp-mod.com/api/v0/mods";
-const USER_AGENT = "CampD-SPT-Pack/1.0 (https://github.com/CampD/spt-pack; forge-version-check)";
+const MODS_API = "https://sp-mod.com/api/v0/mods";
+const ADDONS_API = "https://sp-mod.com/api/v0/addons";
+const USER_AGENT = "CampD-SPT-Pack/1.0 (https://github.com/CampDegen/CampD-SPT-Pack; forge-version-check)";
 const PAGE_SIZE = 50;
 
 function parseVersion(value) {
@@ -48,8 +49,8 @@ function pickLatest(versions) {
   }, null);
 }
 
-async function fetchChunk(ids) {
-  const url = new URL(API);
+async function fetchChunk(kind, ids) {
+  const url = new URL(kind === "addon" ? ADDONS_API : MODS_API);
   url.searchParams.set("filter[id]", ids.join(","));
   url.searchParams.set("include", "versions");
   url.searchParams.set("per_page", String(PAGE_SIZE));
@@ -63,7 +64,7 @@ async function fetchChunk(ids) {
 
   if (!response.ok) {
     const body = await response.text();
-    throw new Error(`Forge API ${response.status} for ids ${ids.join(",")}: ${body.slice(0, 300)}`);
+    throw new Error(`Forge API ${response.status} for ${kind} ids ${ids.join(",")}: ${body.slice(0, 300)}`);
   }
 
   const payload = await response.json();
@@ -73,20 +74,41 @@ async function fetchChunk(ids) {
   return payload.data ?? [];
 }
 
-async function main() {
-  const catalog = JSON.parse(await readFile(MODS_PATH, "utf8"));
-  const looking = JSON.parse(await readFile(LOOKING_PATH, "utf8"));
-  const ids = [
-    ...new Set([
-      ...(catalog.mods ?? []).map((mod) => mod.id),
-      ...(looking.mods ?? []).map((mod) => mod.id).filter(Boolean),
-    ]),
-  ];
-  const mods = {};
-  const missing = [];
+function listingKind(mod) {
+  return mod?.kind === "addon" ? "addon" : "mod";
+}
 
+function collectListings(catalog, looking) {
+  const seen = new Set();
+  const listings = [];
+  for (const mod of [...(catalog.mods ?? []), ...(looking.mods ?? [])]) {
+    if (!mod?.id) continue;
+    const kind = listingKind(mod);
+    const key = `${kind}:${mod.id}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    listings.push({ kind, id: mod.id });
+  }
+  return listings;
+}
+
+function statusRecord(kind, id, row) {
+  const latest = pickLatest(row.versions);
+  return {
+    name: row.name,
+    slug: row.slug,
+    latestVersion: latest?.version ?? null,
+    sptConstraint: latest?.spt_version_constraint ?? null,
+    detailUrl: row.detail_url ?? `https://sp-mod.com/${kind}/${id}/${row.slug}`,
+    thumbnail: row.thumbnail || null,
+  };
+}
+
+async function fetchKind(kind, ids) {
+  const found = {};
+  const missing = [];
   for (const idsChunk of chunk(ids, PAGE_SIZE)) {
-    const rows = await fetchChunk(idsChunk);
+    const rows = await fetchChunk(kind, idsChunk);
     const byId = new Map(rows.map((row) => [row.id, row]));
     for (const id of idsChunk) {
       const row = byId.get(id);
@@ -94,27 +116,36 @@ async function main() {
         missing.push(id);
         continue;
       }
-      const latest = pickLatest(row.versions);
-      mods[id] = {
-        name: row.name,
-        slug: row.slug,
-        latestVersion: latest?.version ?? null,
-        sptConstraint: latest?.spt_version_constraint ?? null,
-        detailUrl: row.detail_url ?? `https://sp-mod.com/mod/${id}/${row.slug}`,
-        thumbnail: row.thumbnail || null,
-      };
+      found[id] = statusRecord(kind, id, row);
     }
   }
+  return { found, missing };
+}
+
+async function main() {
+  const catalog = JSON.parse(await readFile(MODS_PATH, "utf8"));
+  const looking = JSON.parse(await readFile(LOOKING_PATH, "utf8"));
+  const listings = collectListings(catalog, looking);
+  const modIds = listings.filter((item) => item.kind === "mod").map((item) => item.id);
+  const addonIds = listings.filter((item) => item.kind === "addon").map((item) => item.id);
+
+  const modsResult = await fetchKind("mod", modIds);
+  const addonsResult = addonIds.length ? await fetchKind("addon", addonIds) : { found: {}, missing: [] };
 
   const status = {
     checkedAt: new Date().toISOString(),
-    missing,
-    mods,
+    missing: modsResult.missing,
+    missingAddons: addonsResult.missing,
+    mods: modsResult.found,
+    addons: addonsResult.found,
   };
 
   await writeFile(STATUS_PATH, `${JSON.stringify(status, null, 2)}\n`);
-  console.log(`Wrote ${Object.keys(mods).length} Forge statuses to data/forge-status.json`);
-  if (missing.length) console.warn(`Missing from Forge: ${missing.join(", ")}`);
+  console.log(
+    `Wrote ${Object.keys(modsResult.found).length} Forge mods and ${Object.keys(addonsResult.found).length} addons to data/forge-status.json`,
+  );
+  if (modsResult.missing.length) console.warn(`Missing from Forge mods: ${modsResult.missing.join(", ")}`);
+  if (addonsResult.missing.length) console.warn(`Missing from Forge addons: ${addonsResult.missing.join(", ")}`);
 }
 
 main().catch((error) => {

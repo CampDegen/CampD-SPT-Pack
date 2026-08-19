@@ -52,7 +52,7 @@ Actions needs **Read and write** workflow permissions so the daily Forge updater
 
 `data/mods.json` is the source of truth. [reference_data/Modlist.md](reference_data/Modlist.md) is the original handwritten list and is not read by the site. CampD homepage colors and type are documented in [reference_data/colors.md](reference_data/colors.md) (same tokens as campdegen.com).
 
-Each mod:
+Each listing:
 
 ```json
 {
@@ -66,7 +66,9 @@ Each mod:
 }
 ```
 
-- `id` / `slug` come from the Forge URL: `https://sp-mod.com/mod/<id>/<slug>`
+Forge also has **addons** (same catalog shape, different URL and API). Set `"kind": "addon"` and use `/addon/<id>/<slug>`. Omit `kind` for normal mods. Addon ids collide with mod ids (addon `4` is not mod `4`).
+
+- `id` / `slug` come from the Forge URL: `https://sp-mod.com/mod/<id>/<slug>` or `https://sp-mod.com/addon/<id>/<slug>`
 - `side` is `server`, `both`, `client`, or `special`
 - `description` is required and must be ours, not copied from Forge
 - `settingsNotes` is optional; leave `""` until we document a change
@@ -77,7 +79,7 @@ Pack-wide notes: `data/pack-settings.json`. Empty SVM groups render as “Not do
 
 Old-server leftovers: `data/looking-to-add.json`. `id` / `slug` come from Forge after name matching. Leave `id` as `null` if there is no current Forge page. `oldName` is the label from the old list when it differs. `notes` are install or overlap caveats, not “we matched this Forge page” text. Compatibility badges already cover SPT version.
 
-The Looking to add badge compares `data/site.json`’s installed SPT version against the latest Forge release’s `spt_version_constraint`. It shows **Ready for 4.1.2**, **Waiting for 4.1.2**, or **Compatibility unknown** and changes automatically when the daily Forge refresh finds a newly compatible release. It does not change the installed SPT version.
+The Looking to add badge compares `data/site.json`’s installed SPT version against the latest Forge release’s `spt_version_constraint`. It shows **Ready for 4.1.2**, **Waiting for 4.1.2**, or **Compatibility unknown** and changes automatically when the daily Forge refresh finds a newly compatible release. It does not change the installed SPT version. Addons are not checked that way (their version constraint is for the parent mod, not SPT), so they stay **Compatibility unknown**.
 
 Site title / SPT version: `data/site.json`.
 
@@ -93,13 +95,13 @@ node scripts/pack-editor.mjs
 
 Then open http://127.0.0.1:8787 (override the port with `PACK_EDITOR_PORT` if 8787 is taken). The server binds to localhost only. The editor uses its own dark utility layout (not the CampD facility theme). Tabs are the three JSON files. **Save** (or Ctrl+S) writes the current tab back into `data/`. Commit those files yourself when you want the catalog to update.
 
-Paste a Forge URL (`https://sp-mod.com/mod/<id>/<slug>`) to fill id and slug. **Open Forge page** opens that listing in a new tab. You can copy a row between Installed mods and Looking to add, then fill side / installed version / notes before saving.
+Paste a Forge URL (`https://sp-mod.com/mod/<id>/<slug>` or `https://sp-mod.com/addon/<id>/<slug>`) to fill listing type, id, and slug. Set **Listing** to Addon when Forge uses `/addon/`. **Open Forge page** opens that listing in a new tab. You can copy a row between Installed mods and Looking to add, then fill side / installed version / notes before saving.
 
 Do not treat `scripts/pack-editor.html` as a public page. Opened anywhere except localhost, it refuses to run.
 
 ## Forge version checks
 
-`scripts/update-forge-status.mjs` calls `GET https://sp-mod.com/api/v0/mods?include=versions` in chunks of 50 ids and writes `data/forge-status.json`.
+`scripts/update-forge-status.mjs` calls `GET https://sp-mod.com/api/v0/mods?include=versions` and `GET https://sp-mod.com/api/v0/addons?include=versions` in chunks of 50 ids and writes `data/forge-status.json` (`mods` and `addons` maps). Addon ids are never queried on the mods API.
 
 The generated status also stores each Forge `thumbnail`. Catalog tiles load those 144×144 mod icons directly from `files.sp-mod.com`; a letter placeholder is shown when Forge has no icon or an image fails.
 
@@ -109,11 +111,11 @@ Display controls let visitors choose Single, Dual (default), or Triple columns a
 node scripts/update-forge-status.mjs
 ```
 
-Needs Node 18+. The GitHub Action `.github/workflows/update-forge.yml` runs that script daily at 06:00 UTC, on `workflow_dispatch`, and when `data/mods.json` or `data/looking-to-add.json` changes on `main`. It fetches every Forge id from both files.
+Needs Node 18+. The GitHub Action `.github/workflows/update-forge.yml` runs that script daily at 06:00 UTC, on `workflow_dispatch`, and when `data/mods.json` or `data/looking-to-add.json` changes on `main`. It fetches every Forge mod and addon id from both files.
 
 Badges:
 
 - **Up to date** — installed matches Forge latest
 - **Update** — Forge has a newer version
 - **Ahead** — installed is newer than Forge latest
-- **Unknown** — that id was missing from the API response
+- **Unknown** — that id was missing from the matching Forge API (mods vs addons)

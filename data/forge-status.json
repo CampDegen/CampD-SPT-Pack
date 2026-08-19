@@ -1,6 +1,7 @@
 {
-  "checkedAt": "2026-08-19T23:08:29.402Z",
+  "checkedAt": "2026-08-19T23:23:04.556Z",
   "missing": [],
+  "missingAddons": [],
   "mods": {
     "236": {
       "name": "Server Value Modifier [SVM]",
@@ -634,14 +635,6 @@
       "detailUrl": "https://sp-mod.com/mod/2506/funtar",
       "thumbnail": "https://files.sp-mod.com/mods/puT92kA3ktRp1JIDvTR5I5O7WITwsesCKKf9h9PN.png"
     },
-    "2510": {
-      "name": "FikaSync",
-      "slug": "fikasync",
-      "latestVersion": "0.3.5",
-      "sptConstraint": "~4 <4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2510/fikasync",
-      "thumbnail": "https://files.sp-mod.com/mods/R0sRHZVdisBr8oYUIf0vucOAidMX2KdTu1ZLUonT.png"
-    },
     "2512": {
       "name": "WTT - Content Backport",
       "slug": "wtt-content-backport",
@@ -945,6 +938,24 @@
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2934/armor-class-icon",
       "thumbnail": "https://files.sp-mod.com/mods/JBySxqr7NE6xoEAmFSPg1lngE02qx35hWBRt8yes.jpg"
+    }
+  },
+  "addons": {
+    "4": {
+      "name": "MergeConsumables - Fika sync",
+      "slug": "mergeconsumables-fika-sync",
+      "latestVersion": "1.1.0",
+      "sptConstraint": null,
+      "detailUrl": "https://sp-mod.com/addon/4/mergeconsumables-fika-sync",
+      "thumbnail": "https://files.sp-mod.com/addons/rF7q9kqgQeSlG8Xf5a0jSsQ6pRPMqtOnxDvEbtnY.png"
+    },
+    "56": {
+      "name": "Battle Ambience (Fika Sync)",
+      "slug": "battle-ambience-fika-sync",
+      "latestVersion": "1.0.1",
+      "sptConstraint": null,
+      "detailUrl": "https://sp-mod.com/addon/56/battle-ambience-fika-sync",
+      "thumbnail": "https://files.sp-mod.com/addons/jQhnouO1OgJRkQD3ORvwYaWVIdWVAd7oPb14yvyN.png"
     }
   }
 }

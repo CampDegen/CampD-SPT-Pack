@@ -845,6 +845,16 @@
       "installedVersion": "1.1.3",
       "description": "Lightweight ReSHADE preset for sharper visuals without frying the UI. Dropped into the SPT root.",
       "settingsNotes": "ReSHADE preset with ReSHADE preinstalled. Drop into root. Works with Amands's Graphics. Turn off sharpen in EFT settings."
+    },
+    {
+      "kind": "addon",
+      "id": 4,
+      "name": "Merge Consumables - Fika sync",
+      "slug": "mergeconsumables-fika-sync",
+      "side": "client",
+      "installedVersion": "1.1.0",
+      "description": "",
+      "settingsNotes": ""
     }
   ]
 }

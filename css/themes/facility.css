@@ -719,6 +719,10 @@ code {
   color: var(--accent-highlight);
 }
 
+.side-addon {
+  color: var(--accent-highlight);
+}
+
 .mod-name {
   min-width: 0;
   overflow: hidden;

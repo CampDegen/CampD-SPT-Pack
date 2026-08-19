@@ -1,4 +1,4 @@
-import { escapeHtml, loadJson, statusOf } from "./lib.js";
+import { escapeHtml, forgeListingUrl, forgeStatusOf, listingKind, listingKey, loadJson, statusOf } from "./lib.js";
 import { bindModDialog, openModDialog } from "./mod-dialog.js";
 
 const SIDE_LABELS = {
@@ -54,7 +54,7 @@ function formatCheckedAt(iso) {
 }
 
 function forgeUrl(mod, status) {
-  return status?.detailUrl || `https://sp-mod.com/mod/${mod.id}/${mod.slug}`;
+  return forgeListingUrl(mod, status);
 }
 
 function iconInitial(name) {
@@ -89,12 +89,13 @@ function renderMod(mod, forge) {
   const status = statusOf(mod.installedVersion, latest);
 
   return `
-    <article class="mod is-${status}" data-id="${mod.id}" data-side="${mod.side}" data-status="${status}">
+    <article class="mod is-${status}" data-kind="${listingKind(mod)}" data-id="${mod.id}" data-side="${mod.side}" data-status="${status}">
       <button class="mod-head" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mod-dialog">
         ${iconHtml(mod, forge)}
         <span class="mod-copy">
           <span class="mod-name" title="${escapeHtml(mod.name)}">${escapeHtml(mod.name)}</span>
           <span class="mod-head-row">
+            ${listingKind(mod) === "addon" ? `<span class="side side-addon">Addon</span>` : ""}
             <span class="side side-${mod.side}">${SIDE_LABELS[mod.side] ?? mod.side}</span>
             <span class="badge badge-${status}">${STATUS_LABELS[status]}</span>
           </span>
@@ -123,6 +124,7 @@ function dialogHtml(mod, forge) {
       <div class="mod-copy">
         <h2 class="mod-dialog-title" id="mod-dialog-title">${escapeHtml(mod.name)}</h2>
         <span class="mod-head-row">
+          ${listingKind(mod) === "addon" ? `<span class="side side-addon">Addon</span>` : ""}
           <span class="side side-${mod.side}">${SIDE_LABELS[mod.side] ?? mod.side}</span>
           <span class="badge badge-${status}">${STATUS_LABELS[status]}</span>
         </span>
@@ -150,7 +152,8 @@ function applyFilter(state) {
   const query = state.query.trim().toLowerCase();
   let visible = 0;
   for (const card of state.catalog.querySelectorAll(".mod")) {
-    const mod = state.modById.get(Number(card.dataset.id));
+    const mod = state.listingByKey.get(`${card.dataset.kind}:${card.dataset.id}`);
+    if (!mod) continue;
     const haystack = `${mod.name} ${mod.description} ${mod.settingsNotes} ${mod.slug}`.toLowerCase();
     const sideOk = state.side === "all" || mod.side === state.side;
     const queryOk = !query || haystack.includes(query);
@@ -164,7 +167,7 @@ function applyFilter(state) {
 function renderCatalog(state) {
   const compare = state.sortMode === "alphabetical" ? compareModNames : compareMods;
   const sorted = [...state.mods].sort(compare);
-  state.catalog.innerHTML = sorted.map((mod) => renderMod(mod, state.forgeMap[mod.id])).join("");
+  state.catalog.innerHTML = sorted.map((mod) => renderMod(mod, forgeStatusOf(state.forge, mod))).join("");
   applyFilter(state);
 }
 
@@ -189,9 +192,9 @@ function bindCatalog(state) {
     const button = event.target.closest(".mod-head");
     if (!button) return;
     const card = button.closest(".mod");
-    const mod = state.modById.get(Number(card.dataset.id));
+    const mod = state.listingByKey.get(`${card.dataset.kind}:${card.dataset.id}`);
     if (!mod) return;
-    openModDialog(state.dialog, dialogHtml(mod, state.forgeMap[mod.id]), button);
+    openModDialog(state.dialog, dialogHtml(mod, forgeStatusOf(state.forge, mod)), button);
   });
 
   state.searchEl.addEventListener("input", () => {
@@ -233,11 +236,10 @@ async function init() {
   if (site.tagline) document.getElementById("lede").textContent = site.tagline;
   document.getElementById("checked").textContent = formatCheckedAt(forge.checkedAt);
 
-  const forgeMap = forge.mods ?? {};
   const mods = catalog.mods ?? [];
   const counts = { total: mods.length, current: 0, update: 0, unknown: 0, ahead: 0 };
   for (const mod of mods) {
-    const status = statusOf(mod.installedVersion, forgeMap[mod.id]?.latestVersion);
+    const status = statusOf(mod.installedVersion, forgeStatusOf(forge, mod)?.latestVersion);
     counts[status] += 1;
   }
 
@@ -258,9 +260,9 @@ async function init() {
     sortEl: document.getElementById("sort"),
     dialog: document.getElementById("mod-dialog"),
     countEl: document.getElementById("result-count"),
-    modById: new Map(mods.map((mod) => [mod.id, mod])),
+    listingByKey: new Map(mods.map((mod) => [listingKey(mod), mod])),
     mods,
-    forgeMap,
+    forge,
     query: "",
     side: "all",
     columns,

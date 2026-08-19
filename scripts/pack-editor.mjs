@@ -61,7 +61,8 @@ function validateMods(data) {
   if (!data || !Array.isArray(data.mods)) throw new Error("mods.json needs a mods array.");
   for (const [index, mod] of data.mods.entries()) {
     if (typeof mod !== "object" || mod == null) throw new Error(`Mod ${index} is invalid.`);
-    if (!Number.isInteger(mod.id) || mod.id < 1) throw new Error(`Mod ${index} needs a Forge id (paste the Forge URL or enter the number from /mod/<id>/).`);
+    if (!Number.isInteger(mod.id) || mod.id < 1) throw new Error(`Mod ${index} needs a Forge id (paste the Forge URL or enter the number from /mod/<id>/ or /addon/<id>/).`);
+    if (mod.kind != null && mod.kind !== "addon") throw new Error(`Mod ${index} kind must be omitted or "addon".`);
     if (!mod.name || !mod.slug) throw new Error(`Mod ${index} needs name and slug.`);
     if (!["server", "both", "client", "special"].includes(mod.side)) {
       throw new Error(`Mod ${index} side must be server, both, client, or special.`);
@@ -81,6 +82,7 @@ function validateLooking(data) {
     if (mod.id != null && (!Number.isInteger(mod.id) || mod.id < 1)) {
       throw new Error(`Looking mod ${index} id must be a Forge id or empty.`);
     }
+    if (mod.kind != null && mod.kind !== "addon") throw new Error(`Looking mod ${index} kind must be omitted or "addon".`);
     if (!mod.name) throw new Error(`Looking mod ${index} needs a name.`);
     if (mod.slug != null && typeof mod.slug !== "string") throw new Error(`Looking mod ${index} slug must be a string.`);
     if (typeof mod.description !== "string") throw new Error(`Looking mod ${index} needs description.`);
@@ -103,12 +105,23 @@ function validateSettings(data) {
   }
 }
 
+function listingKind(mod) {
+  return mod?.kind === "addon" ? "addon" : "mod";
+}
+
+function listingFields(mod) {
+  const next = {};
+  if (listingKind(mod) === "addon") next.kind = "addon";
+  next.id = mod.id;
+  next.name = mod.name;
+  next.slug = mod.slug ?? "";
+  return next;
+}
+
 function normalizeMods(data) {
   return {
     mods: data.mods.map((mod) => ({
-      id: mod.id,
-      name: mod.name,
-      slug: mod.slug,
+      ...listingFields(mod),
       side: mod.side,
       installedVersion: mod.installedVersion,
       description: mod.description,
@@ -122,10 +135,9 @@ function normalizeLooking(data) {
     intro: data.intro,
     mods: data.mods.map((mod) => {
       const next = {
-        id: mod.id == null ? null : mod.id,
-        name: mod.name,
-        slug: mod.slug ?? "",
+        ...listingFields({ ...mod, id: mod.id == null ? null : mod.id }),
       };
+      if (mod.id == null) next.id = null;
       if (typeof mod.oldName === "string" && mod.oldName.trim()) next.oldName = mod.oldName.trim();
       next.description = mod.description;
       next.notes = mod.notes;
