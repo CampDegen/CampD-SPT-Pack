@@ -122,7 +122,7 @@
       "name": "Armor Class Icon",
       "slug": "armor-class-icon",
       "side": "client",
-      "installedVersion": "1.1.0",
+      "installedVersion": "1.1.1",
       "description": "",
       "settingsNotes": ""
     },
@@ -257,7 +257,7 @@
       "name": "Advanced Flea Simulator",
       "slug": "advanced-flea-simulator",
       "side": "server",
-      "installedVersion": "2.0.0",
+      "installedVersion": "2.0.1",
       "description": "Makes the flea market feel closer to live: offers, pricing, and player-like listings instead of a static vendor board.",
       "settingsNotes": ""
     },
@@ -410,7 +410,7 @@
       "name": "MergeConsumables",
       "slug": "mergeconsumables",
       "side": "both",
-      "installedVersion": "1.6.1",
+      "installedVersion": "1.6.2",
       "description": "Lets you combine stacks of meds, food, and other consumables in stash.",
       "settingsNotes": ""
     },
@@ -635,7 +635,7 @@
       "name": "LinkedSearchInStash",
       "slug": "linkedsearchinstash",
       "side": "client",
-      "installedVersion": "2.0.0",
+      "installedVersion": "2.0.1",
       "description": "Linked-search works in stash the same way it does on the flea.",
       "settingsNotes": ""
     },
@@ -761,7 +761,7 @@
       "name": "Continuous Healing",
       "slug": "continuous-healing",
       "side": "client",
-      "installedVersion": "1.6.0",
+      "installedVersion": "1.6.1",
       "description": "Healing items keep applying without re-clicking every limb.",
       "settingsNotes": ""
     },
@@ -824,7 +824,7 @@
       "name": "NerfBotGrenades",
       "slug": "nerfbotgrenades",
       "side": "client",
-      "installedVersion": "1.3.0",
+      "installedVersion": "1.3.1",
       "description": "Makes bot grenades less laser-accurate so they are still dangerous but not aimbot nades.",
       "settingsNotes": ""
     },
@@ -854,6 +854,15 @@
       "side": "client",
       "installedVersion": "1.1.0",
       "description": "",
+      "settingsNotes": ""
+    },
+    {
+      "id": 791,
+      "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+      "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+      "side": "server",
+      "installedVersion": "4.5.0",
+      "description": "Replaces vanilla bot combat brains: peeks, nades, holds, and push logic.",
       "settingsNotes": ""
     }
   ]

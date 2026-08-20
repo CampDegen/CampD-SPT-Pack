@@ -121,14 +121,6 @@
       "notes": "This was a requirement for another mod and should not be added without that mod."
     },
     {
-      "id": 791,
-      "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
-      "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
-      "oldName": "SAIN",
-      "description": "Replaces vanilla bot combat brains: peeks, nades, holds, and push logic.",
-      "notes": "Huge stack. Latest listing still shows SPT 4.0. Conflicts / overlaps with the APBS + ABPS setup we already run — do not add blindly."
-    },
-    {
       "id": 2299,
       "name": "Show Me The Money (Item Pricing)",
       "slug": "show-me-the-money-item-pricing",
