@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-20T06:44:24.417Z",
+  "checkedAt": "2026-08-20T22:03:23.862Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -30,8 +30,8 @@
     "791": {
       "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
       "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
-      "latestVersion": "4.4.3",
-      "sptConstraint": "~4.0.0",
+      "latestVersion": "4.5.0",
+      "sptConstraint": "~4.1.3",
       "detailUrl": "https://sp-mod.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
       "thumbnail": "https://files.sp-mod.com/mods/1062.jpg"
     },
@@ -127,7 +127,7 @@
       "name": "Color Converter API",
       "slug": "color-converter-api",
       "latestVersion": "1.1.1",
-      "sptConstraint": "~4.1.0",
+      "sptConstraint": ">=4.1.0 <4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1090/color-converter-api",
       "thumbnail": "https://files.sp-mod.com/mods/1509.jpg"
     },
@@ -167,7 +167,7 @@
       "name": "HandsAreNotBusy",
       "slug": "handsarenotbusy",
       "latestVersion": "1.7.0",
-      "sptConstraint": ">=4.1.0",
+      "sptConstraint": ">=4.1.0 <4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1298/handsarenotbusy",
       "thumbnail": "https://files.sp-mod.com/mods/1810.png"
     },
@@ -326,8 +326,8 @@
     "1657": {
       "name": "MergeConsumables",
       "slug": "mergeconsumables",
-      "latestVersion": "1.6.1",
-      "sptConstraint": ">=4.1.0",
+      "latestVersion": "1.6.2",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1657/mergeconsumables",
       "thumbnail": "https://files.sp-mod.com/mods/2262.png"
     },
@@ -374,16 +374,16 @@
     "1884": {
       "name": "Continuous Healing",
       "slug": "continuous-healing",
-      "latestVersion": "1.6.0",
-      "sptConstraint": ">=4.1.0",
+      "latestVersion": "1.6.1",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1884/continuous-healing",
       "thumbnail": "https://files.sp-mod.com/mods/2546.png"
     },
     "1925": {
       "name": "NerfBotGrenades",
       "slug": "nerfbotgrenades",
-      "latestVersion": "1.3.0",
-      "sptConstraint": ">=4.1.0",
+      "latestVersion": "1.3.1",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1925/nerfbotgrenades",
       "thumbnail": "https://files.sp-mod.com/mods/2596.png"
     },
@@ -575,7 +575,7 @@
       "name": "LetMeRightClick",
       "slug": "letmerightclick",
       "latestVersion": "1.1.0",
-      "sptConstraint": ">=4.1.0",
+      "sptConstraint": ">=4.1.0 <4.1.3",
       "detailUrl": "https://sp-mod.com/mod/2405/letmerightclick",
       "thumbnail": "https://files.sp-mod.com/mods/6zLllXtIZ2qbTCJtba4FWy0amAstYp8nHwtXD5Fz.png"
     },
@@ -670,8 +670,8 @@
     "2526": {
       "name": "Advanced Flea Simulator",
       "slug": "advanced-flea-simulator",
-      "latestVersion": "2.0.0",
-      "sptConstraint": "4.1.2",
+      "latestVersion": "2.0.1",
+      "sptConstraint": "~4.1.3",
       "detailUrl": "https://sp-mod.com/mod/2526/advanced-flea-simulator",
       "thumbnail": "https://files.sp-mod.com/mods/aonR9PhKNP6EBzHrr2l6k1DZ9lFV76N93PHRKER1.png"
     },
@@ -782,7 +782,7 @@
     "2731": {
       "name": "LinkedSearchInStash",
       "slug": "linkedsearchinstash",
-      "latestVersion": "2.0.0",
+      "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2731/linkedsearchinstash",
       "thumbnail": "https://files.sp-mod.com/mods/NZO9yYI0xVs4YASttr7v4r8MxbfDig5c3idSyKfX.png"
@@ -934,7 +934,7 @@
     "2934": {
       "name": "Armor Class Icon",
       "slug": "armor-class-icon",
-      "latestVersion": "1.1.0",
+      "latestVersion": "1.1.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2934/armor-class-icon",
       "thumbnail": "https://files.sp-mod.com/mods/JBySxqr7NE6xoEAmFSPg1lngE02qx35hWBRt8yes.jpg"
