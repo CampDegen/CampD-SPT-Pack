@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-20T22:11:40.410Z",
+  "checkedAt": "2026-08-21T06:45:47.269Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -302,8 +302,8 @@
     "1594": {
       "name": "APBS - Acid's Progressive Bot System",
       "slug": "apbs-acids-progressive-bot-system",
-      "latestVersion": "2.3.0",
-      "sptConstraint": "~4.1",
+      "latestVersion": "2.3.1",
+      "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/1594/apbs-acids-progressive-bot-system",
       "thumbnail": "https://files.sp-mod.com/mods/2180.png"
     },
@@ -599,7 +599,7 @@
       "name": "BarterItemsStacks",
       "slug": "barteritemsstacks",
       "latestVersion": "1.4.1",
-      "sptConstraint": "~4.1.0",
+      "sptConstraint": "4.1.2",
       "detailUrl": "https://sp-mod.com/mod/2480/barteritemsstacks",
       "thumbnail": "https://files.sp-mod.com/mods/TnF3r4yN7ZOq6jYyUVv6NuzLvXTVKXqP9ctvMsVj.jpg"
     },
@@ -878,7 +878,7 @@
     "2886": {
       "name": "Operator Traits",
       "slug": "operator-traits",
-      "latestVersion": "1.0.0",
+      "latestVersion": "1.1.0",
       "sptConstraint": "~4.1.0 ",
       "detailUrl": "https://sp-mod.com/mod/2886/operator-traits",
       "thumbnail": "https://files.sp-mod.com/mods/q7U3FFUJnXdkAQyyihqUtEIGjvKjMyWBuexZ0AYK.png"
