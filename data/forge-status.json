@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-21T06:45:47.269Z",
+  "checkedAt": "2026-08-21T21:51:29.129Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -166,8 +166,8 @@
     "1298": {
       "name": "HandsAreNotBusy",
       "slug": "handsarenotbusy",
-      "latestVersion": "1.7.0",
-      "sptConstraint": ">=4.1.0 <4.1.3",
+      "latestVersion": "1.7.1",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1298/handsarenotbusy",
       "thumbnail": "https://files.sp-mod.com/mods/1810.png"
     },
@@ -374,7 +374,7 @@
     "1884": {
       "name": "Continuous Healing",
       "slug": "continuous-healing",
-      "latestVersion": "1.6.1",
+      "latestVersion": "1.6.2",
       "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1884/continuous-healing",
       "thumbnail": "https://files.sp-mod.com/mods/2546.png"
@@ -447,7 +447,7 @@
       "name": "VRAM Cleaner",
       "slug": "vram-cleaner",
       "latestVersion": "1.0.3",
-      "sptConstraint": "4.1.2",
+      "sptConstraint": "4.0.13",
       "detailUrl": "https://sp-mod.com/mod/2173/vram-cleaner",
       "thumbnail": "https://files.sp-mod.com/mods/2876.png"
     },
@@ -574,8 +574,8 @@
     "2405": {
       "name": "LetMeRightClick",
       "slug": "letmerightclick",
-      "latestVersion": "1.1.0",
-      "sptConstraint": ">=4.1.0 <4.1.3",
+      "latestVersion": "1.1.1",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/2405/letmerightclick",
       "thumbnail": "https://files.sp-mod.com/mods/6zLllXtIZ2qbTCJtba4FWy0amAstYp8nHwtXD5Fz.png"
     },
@@ -599,7 +599,7 @@
       "name": "BarterItemsStacks",
       "slug": "barteritemsstacks",
       "latestVersion": "1.4.1",
-      "sptConstraint": "4.1.2",
+      "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2480/barteritemsstacks",
       "thumbnail": "https://files.sp-mod.com/mods/TnF3r4yN7ZOq6jYyUVv6NuzLvXTVKXqP9ctvMsVj.jpg"
     },
@@ -623,7 +623,7 @@
       "name": "EOTech Fix",
       "slug": "eotech-fix",
       "latestVersion": "1.0.2",
-      "sptConstraint": "4.1.2",
+      "sptConstraint": "4.0.13",
       "detailUrl": "https://sp-mod.com/mod/2502/eotech-fix",
       "thumbnail": "https://files.sp-mod.com/mods/DMi3xaXvUw8AsGb7CObNOpg0VKr5GuSub8W2lKkU.png"
     },
@@ -798,7 +798,7 @@
     "2735": {
       "name": "ScopeRangefinder",
       "slug": "scoperangefinder",
-      "latestVersion": "3.1.0",
+      "latestVersion": "3.2.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2735/scoperangefinder",
       "thumbnail": "https://files.sp-mod.com/mods/xqkKdJqmh2oBSQcyuD8VaX9ukNMwBy331IZTN7RC.png"
@@ -814,7 +814,7 @@
     "2785": {
       "name": "ReceiveAllChats",
       "slug": "receiveallchats",
-      "latestVersion": "2.0.0",
+      "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2785/receiveallchats",
       "thumbnail": "https://files.sp-mod.com/mods/WOKQ76NIK0UxecMhFZPqqKpeXSREnVaS8TwJqAyk.png"
