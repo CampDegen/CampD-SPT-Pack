@@ -158,7 +158,7 @@
       "name": "Operator Traits",
       "slug": "operator-traits",
       "side": "both",
-      "installedVersion": "1.0.0",
+      "installedVersion": "1.1.0",
       "description": "Zomboid-style positive and negative traits on the profile so each PMC does not play identical.",
       "settingsNotes": ""
     },
@@ -275,7 +275,7 @@
       "name": "APBS - Acid's Progressive Bot System",
       "slug": "apbs-acids-progressive-bot-system",
       "side": "server",
-      "installedVersion": "2.3.0",
+      "installedVersion": "2.3.1",
       "description": "Bots gear up over the wipe instead of everyone spawning in endgame kits. Core of how CampD PMC/scav loadouts scale.",
       "settingsNotes": ""
     },
@@ -446,7 +446,7 @@
       "name": "ReceiveAllChats",
       "slug": "receiveallchats",
       "side": "both",
-      "installedVersion": "2.0.0",
+      "installedVersion": "2.0.1",
       "description": "Lets you see all in-raid chat channels instead of missing squad / system messages.",
       "settingsNotes": ""
     },
@@ -500,7 +500,7 @@
       "name": "LetMeRightClick",
       "slug": "letmerightclick",
       "side": "client",
-      "installedVersion": "1.1.0",
+      "installedVersion": "1.1.1",
       "description": "Restores right-click context menus in places the vanilla UI blocks them.",
       "settingsNotes": ""
     },
@@ -554,7 +554,7 @@
       "name": "ScopeRangefinder",
       "slug": "scoperangefinder",
       "side": "client",
-      "installedVersion": "3.1.0",
+      "installedVersion": "3.2.0",
       "description": "Shows range-to-target while using scopes so you can hold over without a dedicated rangefinder.",
       "settingsNotes": ""
     },
@@ -734,7 +734,7 @@
       "name": "HandsAreNotBusy",
       "slug": "handsarenotbusy",
       "side": "client",
-      "installedVersion": "1.7.0",
+      "installedVersion": "1.7.1",
       "description": "Stops the game from blocking actions just because your hands are \"busy\" inspecting or looting.",
       "settingsNotes": ""
     },
@@ -761,7 +761,7 @@
       "name": "Continuous Healing",
       "slug": "continuous-healing",
       "side": "client",
-      "installedVersion": "1.6.1",
+      "installedVersion": "1.6.2",
       "description": "Healing items keep applying without re-clicking every limb.",
       "settingsNotes": ""
     },
