@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-21T21:55:02.008Z",
+  "checkedAt": "2026-08-22T06:39:18.735Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -126,8 +126,8 @@
     "1090": {
       "name": "Color Converter API",
       "slug": "color-converter-api",
-      "latestVersion": "1.1.1",
-      "sptConstraint": ">=4.1.0 <4.1.3",
+      "latestVersion": "1.2.0",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/1090/color-converter-api",
       "thumbnail": "https://files.sp-mod.com/mods/1509.jpg"
     },
@@ -807,7 +807,7 @@
       "name": "No Barrel Shadow",
       "slug": "no-barrel-shadow",
       "latestVersion": "2.0.0",
-      "sptConstraint": "4.1.0",
+      "sptConstraint": "4.1.x",
       "detailUrl": "https://sp-mod.com/mod/2780/no-barrel-shadow",
       "thumbnail": "https://files.sp-mod.com/mods/h27meExYcmtVbdECnvmerhg3ke1ctQXDuQjH3Lwa.png"
     },
@@ -847,7 +847,7 @@
       "name": "Blackout",
       "slug": "blackout",
       "latestVersion": "4.0.0",
-      "sptConstraint": "4.1.0",
+      "sptConstraint": "4.1.x",
       "detailUrl": "https://sp-mod.com/mod/2843/blackout",
       "thumbnail": "https://files.sp-mod.com/mods/TUbFUbxJ2fMDesjdhv96XyJvUvXlGEoLpy4tF64F.png"
     },
