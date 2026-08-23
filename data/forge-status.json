@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-22T06:39:18.735Z",
+  "checkedAt": "2026-08-23T06:19:25.416Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -518,7 +518,7 @@
     "2310": {
       "name": "WTT - CommonLib",
       "slug": "wtt-commonlib",
-      "latestVersion": "3.0.4",
+      "latestVersion": "3.0.5",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2310/wtt-commonlib",
       "thumbnail": "https://files.sp-mod.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png"
@@ -846,7 +846,7 @@
     "2843": {
       "name": "Blackout",
       "slug": "blackout",
-      "latestVersion": "4.0.0",
+      "latestVersion": "4.1.0",
       "sptConstraint": "4.1.x",
       "detailUrl": "https://sp-mod.com/mod/2843/blackout",
       "thumbnail": "https://files.sp-mod.com/mods/TUbFUbxJ2fMDesjdhv96XyJvUvXlGEoLpy4tF64F.png"
