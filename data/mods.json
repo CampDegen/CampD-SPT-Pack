@@ -5,7 +5,7 @@
       "name": "WTT - CommonLib",
       "slug": "wtt-commonlib",
       "side": "both",
-      "installedVersion": "3.0.4",
+      "installedVersion": "3.0.5",
       "description": "Shared library required by the other WTT mods. Not useful on its own.",
       "settingsNotes": ""
     },
@@ -50,7 +50,7 @@
       "name": "Color Converter API",
       "slug": "color-converter-api",
       "side": "client",
-      "installedVersion": "1.1.1",
+      "installedVersion": "1.2.0",
       "description": "Shared color-conversion library used by More Tag Colours. Leave it installed even though it has no UI of its own.",
       "settingsNotes": "Required by More Tag Colours. Do not remove it on its own."
     },
@@ -329,7 +329,7 @@
       "name": "Blackout",
       "slug": "blackout",
       "side": "both",
-      "installedVersion": "4.0.0",
+      "installedVersion": "4.1.0",
       "description": "Recreates the Labs blackout event: real darkness, locked extracts, and keypad doors when the power dies.",
       "settingsNotes": ""
     },
