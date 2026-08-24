@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-08-23T06:39:58.683Z",
+  "checkedAt": "2026-08-24T06:57:50.392Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
     "236": {
       "name": "Server Value Modifier [SVM]",
       "slug": "server-value-modifier-svm",
-      "latestVersion": "2.2.2",
-      "sptConstraint": "~4.1.0",
+      "latestVersion": "2.2.3",
+      "sptConstraint": "~4.1.3",
       "detailUrl": "https://sp-mod.com/mod/236/server-value-modifier-svm",
       "thumbnail": "https://files.sp-mod.com/mods/379.png"
     },
@@ -462,7 +462,7 @@
     "2207": {
       "name": "Fast Sell In Flea",
       "slug": "fast-sell-in-flea",
-      "latestVersion": "1.3.0",
+      "latestVersion": "1.3.1",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2207/fast-sell-in-flea",
       "thumbnail": "https://files.sp-mod.com/mods/2910.png"
@@ -518,8 +518,8 @@
     "2310": {
       "name": "WTT - CommonLib",
       "slug": "wtt-commonlib",
-      "latestVersion": "3.0.5",
-      "sptConstraint": "~4.1.0",
+      "latestVersion": "3.0.6",
+      "sptConstraint": "~4.1.3",
       "detailUrl": "https://sp-mod.com/mod/2310/wtt-commonlib",
       "thumbnail": "https://files.sp-mod.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png"
     },
@@ -766,7 +766,7 @@
     "2689": {
       "name": "Item Property Backport",
       "slug": "item-property-backport",
-      "latestVersion": "1.5.1",
+      "latestVersion": "1.5.2",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2689/item-property-backport",
       "thumbnail": null
@@ -798,7 +798,7 @@
     "2735": {
       "name": "ScopeRangefinder",
       "slug": "scoperangefinder",
-      "latestVersion": "3.2.0",
+      "latestVersion": "3.3.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2735/scoperangefinder",
       "thumbnail": "https://files.sp-mod.com/mods/xqkKdJqmh2oBSQcyuD8VaX9ukNMwBy331IZTN7RC.png"
@@ -822,7 +822,7 @@
     "2790": {
       "name": "EasyMounting",
       "slug": "easymounting",
-      "latestVersion": "2.0.0",
+      "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2790/easymounting",
       "thumbnail": "https://files.sp-mod.com/mods/Wf6T09iWt3fNhzWGhzqZDR4BwITGxIeOSyuufVtn.png"
@@ -886,7 +886,7 @@
     "2903": {
       "name": "Raids Are Infinite",
       "slug": "raids-are-infinite",
-      "latestVersion": "1.0.0",
+      "latestVersion": "1.1.0",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2903/raids-are-infinite",
       "thumbnail": "https://files.sp-mod.com/mods/qWAPqeIXyrtholIgtnxG9eLEWOI6zm4p3xZHyjri.jpg"
