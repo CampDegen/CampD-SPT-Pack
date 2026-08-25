@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-24T06:57:50.392Z",
+  "checkedAt": "2026-08-25T06:46:47.637Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -294,8 +294,8 @@
     "1582": {
       "name": "Headshot Darkness",
       "slug": "headshot-darkness",
-      "latestVersion": "1.2.4",
-      "sptConstraint": "~4.0 <4.1.0",
+      "latestVersion": "1.2.5",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1582/headshot-darkness",
       "thumbnail": "https://files.sp-mod.com/mods/2164.png"
     },
@@ -502,8 +502,8 @@
     "2264": {
       "name": "Battle Ambience",
       "slug": "battle-ambience",
-      "latestVersion": "2.3.0",
-      "sptConstraint": "~4.0.0",
+      "latestVersion": "2.4.0",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2264/battle-ambience",
       "thumbnail": "https://files.sp-mod.com/mods/2973.png"
     },
@@ -952,7 +952,7 @@
     "56": {
       "name": "Battle Ambience (Fika Sync)",
       "slug": "battle-ambience-fika-sync",
-      "latestVersion": "1.0.1",
+      "latestVersion": "1.0.2",
       "sptConstraint": null,
       "detailUrl": "https://sp-mod.com/addon/56/battle-ambience-fika-sync",
       "thumbnail": "https://files.sp-mod.com/addons/jQhnouO1OgJRkQD3ORvwYaWVIdWVAd7oPb14yvyN.png"
