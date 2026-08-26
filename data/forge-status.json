@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-25T06:46:47.637Z",
+  "checkedAt": "2026-08-26T06:49:22.705Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -806,7 +806,7 @@
     "2780": {
       "name": "No Barrel Shadow",
       "slug": "no-barrel-shadow",
-      "latestVersion": "2.0.0",
+      "latestVersion": "2.0.1",
       "sptConstraint": "4.1.x",
       "detailUrl": "https://sp-mod.com/mod/2780/no-barrel-shadow",
       "thumbnail": "https://files.sp-mod.com/mods/h27meExYcmtVbdECnvmerhg3ke1ctQXDuQjH3Lwa.png"
