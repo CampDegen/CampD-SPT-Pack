@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-27T17:22:42.191Z",
+  "checkedAt": "2026-08-28T18:15:40.884Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -182,7 +182,7 @@
     "1342": {
       "name": "UI Fixes",
       "slug": "ui-fixes",
-      "latestVersion": "6.0.1",
+      "latestVersion": "6.0.2",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1342/ui-fixes",
       "thumbnail": "https://files.sp-mod.com/mods/1860.png"
@@ -318,7 +318,7 @@
     "1619": {
       "name": "Lots of Loot Redux",
       "slug": "lots-of-loot-redux",
-      "latestVersion": "4.2.0",
+      "latestVersion": "4.2.1",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1619/lots-of-loot-redux",
       "thumbnail": "https://files.sp-mod.com/mods/2212.jpg"
@@ -614,8 +614,8 @@
     "2499": {
       "name": "WikiLinks",
       "slug": "wikilinks",
-      "latestVersion": "1.0.3",
-      "sptConstraint": "~4.0.0",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2499/wikilinks",
       "thumbnail": "https://files.sp-mod.com/mods/OxXq46GD382qNRJSnvQaRxcvFPnHNoMaR91LHkA2.png"
     },
@@ -878,7 +878,7 @@
     "2886": {
       "name": "Operator Traits",
       "slug": "operator-traits",
-      "latestVersion": "1.1.0",
+      "latestVersion": "1.2.0",
       "sptConstraint": "~4.1.0 ",
       "detailUrl": "https://sp-mod.com/mod/2886/operator-traits",
       "thumbnail": "https://files.sp-mod.com/mods/q7U3FFUJnXdkAQyyihqUtEIGjvKjMyWBuexZ0AYK.png"
