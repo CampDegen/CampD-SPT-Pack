@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-29T12:24:06.483Z",
+  "checkedAt": "2026-08-30T11:22:40.091Z",
   "missing": [],
   "missingAddons": [],
   "mods": {
@@ -598,7 +598,7 @@
     "2480": {
       "name": "BarterItemsStacks",
       "slug": "barteritemsstacks",
-      "latestVersion": "1.4.1",
+      "latestVersion": "1.4.2",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2480/barteritemsstacks",
       "thumbnail": "https://files.sp-mod.com/mods/TnF3r4yN7ZOq6jYyUVv6NuzLvXTVKXqP9ctvMsVj.jpg"
@@ -807,7 +807,7 @@
       "name": "No Barrel Shadow",
       "slug": "no-barrel-shadow",
       "latestVersion": "2.0.1",
-      "sptConstraint": "4.1.x",
+      "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2780/no-barrel-shadow",
       "thumbnail": "https://files.sp-mod.com/mods/h27meExYcmtVbdECnvmerhg3ke1ctQXDuQjH3Lwa.png"
     },
@@ -847,7 +847,7 @@
       "name": "Blackout",
       "slug": "blackout",
       "latestVersion": "4.1.0",
-      "sptConstraint": "4.1.x",
+      "sptConstraint": "~4.1.1",
       "detailUrl": "https://sp-mod.com/mod/2843/blackout",
       "thumbnail": "https://files.sp-mod.com/mods/TUbFUbxJ2fMDesjdhv96XyJvUvXlGEoLpy4tF64F.png"
     },
