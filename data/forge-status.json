@@ -1,6 +1,8 @@
 {
-  "checkedAt": "2026-08-30T11:22:40.091Z",
-  "missing": [],
+  "checkedAt": "2026-08-31T12:52:06.351Z",
+  "missing": [
+    2886
+  ],
   "missingAddons": [],
   "mods": {
     "236": {
@@ -78,8 +80,8 @@
     "865": {
       "name": "Gilded Key Storage",
       "slug": "gilded-key-storage",
-      "latestVersion": "2.1.0",
-      "sptConstraint": "~4.1.1",
+      "latestVersion": "2.1.1",
+      "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/865/gilded-key-storage",
       "thumbnail": "https://files.sp-mod.com/mods/1166.png"
     },
@@ -438,8 +440,8 @@
     "2153": {
       "name": "Expanded Task Text (ETT)",
       "slug": "expanded-task-text-ett",
-      "latestVersion": "1.6.4",
-      "sptConstraint": "~3.11.0",
+      "latestVersion": "2.1.0",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2153/expanded-task-text-ett",
       "thumbnail": "https://files.sp-mod.com/mods/2853.png"
     },
@@ -846,7 +848,7 @@
     "2843": {
       "name": "Blackout",
       "slug": "blackout",
-      "latestVersion": "4.1.0",
+      "latestVersion": "4.1.1",
       "sptConstraint": "~4.1.1",
       "detailUrl": "https://sp-mod.com/mod/2843/blackout",
       "thumbnail": "https://files.sp-mod.com/mods/TUbFUbxJ2fMDesjdhv96XyJvUvXlGEoLpy4tF64F.png"
@@ -874,14 +876,6 @@
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2881/autokeycard-for-labs",
       "thumbnail": null
-    },
-    "2886": {
-      "name": "Operator Traits",
-      "slug": "operator-traits",
-      "latestVersion": "1.2.0",
-      "sptConstraint": "~4.1.0 ",
-      "detailUrl": "https://sp-mod.com/mod/2886/operator-traits",
-      "thumbnail": "https://files.sp-mod.com/mods/q7U3FFUJnXdkAQyyihqUtEIGjvKjMyWBuexZ0AYK.png"
     },
     "2903": {
       "name": "Raids Are Infinite",
