@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-03T10:45:47.797Z",
+  "checkedAt": "2026-09-04T10:44:17.926Z",
   "missing": [
     2886
   ],
@@ -600,7 +600,7 @@
     "2480": {
       "name": "BarterItemsStacks",
       "slug": "barteritemsstacks",
-      "latestVersion": "1.4.2",
+      "latestVersion": "1.4.3",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2480/barteritemsstacks",
       "thumbnail": "https://files.sp-mod.com/mods/TnF3r4yN7ZOq6jYyUVv6NuzLvXTVKXqP9ctvMsVj.jpg"
