@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-07T11:43:37.069Z",
+  "checkedAt": "2026-09-08T10:42:33.746Z",
   "missing": [
     2886
   ],
@@ -288,8 +288,8 @@
     "1575": {
       "name": "Increase Climb Height",
       "slug": "increase-climb-height",
-      "latestVersion": "2.0.1",
-      "sptConstraint": "~4.0 <4.1.0",
+      "latestVersion": "2.1.1",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1575/increase-climb-height",
       "thumbnail": "https://files.sp-mod.com/mods/2154.png"
     },
@@ -304,7 +304,7 @@
     "1594": {
       "name": "APBS - Acid's Progressive Bot System",
       "slug": "apbs-acids-progressive-bot-system",
-      "latestVersion": "2.3.1",
+      "latestVersion": "2.4.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/1594/apbs-acids-progressive-bot-system",
       "thumbnail": "https://files.sp-mod.com/mods/2180.png"
