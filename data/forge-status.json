@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-09T10:51:12.576Z",
+  "checkedAt": "2026-09-10T10:45:15.709Z",
   "missing": [
     2886
   ],
@@ -779,7 +779,7 @@
       "latestVersion": "2.0.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2729/notificationfilter",
-      "thumbnail": "https://files.sp-mod.com/mods/lDKM4wTNULJR7fMAPSfQkYDOMPEMXzqFtNiqOFIz.png"
+      "thumbnail": "https://files.sp-mod.com/mods/PScfPns5oVNtKpkK3bf4f36QHQnKwjD27fQ6faks.png"
     },
     "2731": {
       "name": "LinkedSearchInStash",
@@ -787,7 +787,7 @@
       "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2731/linkedsearchinstash",
-      "thumbnail": "https://files.sp-mod.com/mods/NZO9yYI0xVs4YASttr7v4r8MxbfDig5c3idSyKfX.png"
+      "thumbnail": "https://files.sp-mod.com/mods/GDIXdQrkxBKZVssdImA88phk811hRViGLFhpyD9Q.png"
     },
     "2733": {
       "name": "RaidMenuCleanupFix",
@@ -795,15 +795,15 @@
       "latestVersion": "2.0.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2733/raidmenucleanupfix",
-      "thumbnail": "https://files.sp-mod.com/mods/BI4Ltp5mxo0cEXVJHQozOUYZH4OwuuYxAaEp4exK.png"
+      "thumbnail": "https://files.sp-mod.com/mods/vkAZFGmlpnEVXZcWwOf4OkPLbW8QNcOQwx6Q3Mp9.png"
     },
     "2735": {
       "name": "ScopeRangefinder",
       "slug": "scoperangefinder",
-      "latestVersion": "3.3.0",
+      "latestVersion": "3.4.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2735/scoperangefinder",
-      "thumbnail": "https://files.sp-mod.com/mods/xqkKdJqmh2oBSQcyuD8VaX9ukNMwBy331IZTN7RC.png"
+      "thumbnail": "https://files.sp-mod.com/mods/Nt8bULEEfs4nKB1cM6sFAsRN5YMPtnLxu1kcwdtX.png"
     },
     "2780": {
       "name": "No Barrel Shadow",
@@ -819,7 +819,7 @@
       "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2785/receiveallchats",
-      "thumbnail": "https://files.sp-mod.com/mods/WOKQ76NIK0UxecMhFZPqqKpeXSREnVaS8TwJqAyk.png"
+      "thumbnail": "https://files.sp-mod.com/mods/6SXklbL1tdomAJ8OUc9uxUgTJYpQCtfVw8ztHbC6.png"
     },
     "2790": {
       "name": "EasyMounting",
@@ -827,7 +827,7 @@
       "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2790/easymounting",
-      "thumbnail": "https://files.sp-mod.com/mods/Wf6T09iWt3fNhzWGhzqZDR4BwITGxIeOSyuufVtn.png"
+      "thumbnail": "https://files.sp-mod.com/mods/TQOEkZrTaPA0mnpeFK30SCWJQsF6CuQQt1HzF41k.png"
     },
     "2824": {
       "name": "TraderSearch",
@@ -835,7 +835,7 @@
       "latestVersion": "2.0.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2824/tradersearch",
-      "thumbnail": "https://files.sp-mod.com/mods/B9P1W7jbjyYD40bTkrDcvO7vpaZOmwmA9ROkkdSc.png"
+      "thumbnail": "https://files.sp-mod.com/mods/5vpy6UASy6VTuiMdTJC0UgBlJyMlwkpGbkeCxEYX.png"
     },
     "2831": {
       "name": "Transits Count",
@@ -899,7 +899,7 @@
       "latestVersion": "1.0.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2907/stashfilter",
-      "thumbnail": "https://files.sp-mod.com/mods/9Pwp4dUCvQvemdlwKGa5Weji2gSJ4eOU3kz8mbPs.png"
+      "thumbnail": "https://files.sp-mod.com/mods/IHdZY8FZvydHo1SoHoUxwuKAYivK3op7Clb6Hu5W.png"
     },
     "2908": {
       "name": "Tarkin's Hideout Cat",
