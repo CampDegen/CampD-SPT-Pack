@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-13T11:11:30.924Z",
+  "checkedAt": "2026-09-14T11:58:24.853Z",
   "missing": [
     2886
   ],
@@ -728,8 +728,8 @@
     "2617": {
       "name": "Don't Shoot The Bus",
       "slug": "dont-shoot-the-bus",
-      "latestVersion": "1.0.0",
-      "sptConstraint": "~4.0.12",
+      "latestVersion": "1.1.0",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2617/dont-shoot-the-bus",
       "thumbnail": "https://files.sp-mod.com/mods/KZL4Ua97tBnwg43LeO28Wfh7HZxYqBBj7RMpvL9v.png"
     },
