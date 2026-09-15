@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-14T11:58:24.853Z",
+  "checkedAt": "2026-09-15T11:13:45.577Z",
   "missing": [
     2886
   ],
@@ -536,8 +536,8 @@
     "2326": {
       "name": "Project Fika",
       "slug": "project-fika",
-      "latestVersion": "2.4.2",
-      "sptConstraint": ">=4.1.2",
+      "latestVersion": "2.4.3",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/2326/project-fika",
       "thumbnail": "https://files.sp-mod.com/mods/RhGQs4svMQ3MWGiEwn8WUQXxP3GUdVhLorptQcXA.png"
     },
@@ -560,8 +560,8 @@
     "2357": {
       "name": "Project Fika - Server",
       "slug": "project-fika-server",
-      "latestVersion": "2.4.0",
-      "sptConstraint": ">=4.1.1",
+      "latestVersion": "2.4.1",
+      "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/2357/project-fika-server",
       "thumbnail": "https://files.sp-mod.com/mods/TyZYkymyyncPYhtym6yzksKglj9ppqaby4VkxGn0.png"
     },
