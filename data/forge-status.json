@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-17T11:05:26.604Z",
+  "checkedAt": "2026-09-18T10:40:42.913Z",
   "missing": [
     2886
   ],
@@ -320,7 +320,7 @@
     "1619": {
       "name": "Lots of Loot Redux",
       "slug": "lots-of-loot-redux",
-      "latestVersion": "4.2.1",
+      "latestVersion": "4.2.2",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1619/lots-of-loot-redux",
       "thumbnail": "https://files.sp-mod.com/mods/2212.jpg"
