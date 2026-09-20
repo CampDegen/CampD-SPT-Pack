@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-19T10:24:58.966Z",
+  "checkedAt": "2026-09-20T10:44:56.725Z",
   "missing": [
     2886
   ],
@@ -456,8 +456,8 @@
     "2206": {
       "name": "Item Preview QoL + screenshots",
       "slug": "item-preview-qol-screenshots",
-      "latestVersion": "1.1.7",
-      "sptConstraint": "~4.0.3",
+      "latestVersion": "1.2.0",
+      "sptConstraint": "4.1.6",
       "detailUrl": "https://sp-mod.com/mod/2206/item-preview-qol-screenshots",
       "thumbnail": "https://files.sp-mod.com/mods/2909.jpg"
     },
