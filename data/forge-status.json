@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-21T12:09:10.265Z",
+  "checkedAt": "2026-09-22T11:04:18.159Z",
   "missing": [
     2886
   ],
@@ -912,7 +912,7 @@
     "2909": {
       "name": "Task Search",
       "slug": "task-search",
-      "latestVersion": "2.0.1",
+      "latestVersion": "2.0.2",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2909/task-search",
       "thumbnail": "https://files.sp-mod.com/mods/E6kSkHR6VmOiHy726hGUY4WUdEur4lkhbthRoocM.png"
