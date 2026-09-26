@@ -1,7 +1,8 @@
 {
-  "checkedAt": "2026-09-25T11:17:57.186Z",
+  "checkedAt": "2026-09-26T10:54:22.361Z",
   "missing": [
-    2886
+    2886,
+    2910
   ],
   "missingAddons": [],
   "mods": {
@@ -152,8 +153,8 @@
     "1274": {
       "name": "Healing Autocancel",
       "slug": "healing-autocancel",
-      "latestVersion": "5.0.0",
-      "sptConstraint": "~4.0.0",
+      "latestVersion": "5.0.1",
+      "sptConstraint": "4.1.6",
       "detailUrl": "https://sp-mod.com/mod/1274/healing-autocancel",
       "thumbnail": "https://files.sp-mod.com/mods/1779.webp"
     },
@@ -916,14 +917,6 @@
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/2909/task-search",
       "thumbnail": "https://files.sp-mod.com/mods/E6kSkHR6VmOiHy726hGUY4WUdEur4lkhbthRoocM.png"
-    },
-    "2910": {
-      "name": "PMC Spawn Toggle",
-      "slug": "pmc-spawn-toggle",
-      "latestVersion": "1.0.1",
-      "sptConstraint": "~4.1",
-      "detailUrl": "https://sp-mod.com/mod/2910/pmc-spawn-toggle",
-      "thumbnail": "https://files.sp-mod.com/mods/pScV7bKM2LsKXC7An61H29NFYz80GjGTRsOYIe23.png"
     },
     "2934": {
       "name": "Armor Class Icon",
