@@ -1,8 +1,11 @@
 {
-  "checkedAt": "2026-09-26T10:54:22.361Z",
+  "checkedAt": "2026-09-27T11:30:54.368Z",
   "missing": [
     2886,
-    2910
+    2371,
+    2910,
+    2344,
+    2553
   ],
   "missingAddons": [],
   "mods": {
@@ -550,14 +553,6 @@
       "detailUrl": "https://sp-mod.com/mod/2339/preview-sizer",
       "thumbnail": "https://files.sp-mod.com/mods/Pidu179c2KNZq23FqafCqyoXbHfRQ8XatisK1VZw.png"
     },
-    "2344": {
-      "name": "Dynamic Item Weights",
-      "slug": "dynamic-item-weights",
-      "latestVersion": "1.2.0",
-      "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2344/dynamic-item-weights",
-      "thumbnail": "https://files.sp-mod.com/mods/PLjwUyUmevBYgQMwXLisG0tVuMgjDLR2xXjkoYTN.png"
-    },
     "2357": {
       "name": "Project Fika - Server",
       "slug": "project-fika-server",
@@ -565,14 +560,6 @@
       "sptConstraint": ">=4.1.3",
       "detailUrl": "https://sp-mod.com/mod/2357/project-fika-server",
       "thumbnail": "https://files.sp-mod.com/mods/TyZYkymyyncPYhtym6yzksKglj9ppqaby4VkxGn0.png"
-    },
-    "2371": {
-      "name": "FIR Fence Purchases",
-      "slug": "fir-fence-purchases",
-      "latestVersion": "1.1.0",
-      "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2371/fir-fence-purchases",
-      "thumbnail": "https://files.sp-mod.com/mods/TDO94P3WaJ2xSw8QudPZPYINLY1rkUQShE8LAIjk.png"
     },
     "2405": {
       "name": "LetMeRightClick",
@@ -701,14 +688,6 @@
       "sptConstraint": "~4.",
       "detailUrl": "https://sp-mod.com/mod/2552/no-version-label-in-raid",
       "thumbnail": "https://files.sp-mod.com/mods/j4N7BgKaKicEZSS1twroFXUaaSlC06KOMh4SVFqd.png"
-    },
-    "2553": {
-      "name": "Chamber Ammo Info",
-      "slug": "chamber-ammo-info",
-      "latestVersion": "1.1.0",
-      "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2553/chamber-ammo-info",
-      "thumbnail": "https://files.sp-mod.com/mods/f2tk9Blhbhl8ffcvnoIznlyn6eaXOwDCFj6y42zV.png"
     },
     "2584": {
       "name": "Mortar Strikes",
