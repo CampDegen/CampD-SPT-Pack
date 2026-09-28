@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T11:30:54.368Z",
+  "checkedAt": "2026-09-28T13:04:05.847Z",
   "missing": [
     2886,
     2371,
@@ -188,7 +188,7 @@
     "1342": {
       "name": "UI Fixes",
       "slug": "ui-fixes",
-      "latestVersion": "6.0.2",
+      "latestVersion": "6.0.3",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1342/ui-fixes",
       "thumbnail": "https://files.sp-mod.com/mods/1860.png"
