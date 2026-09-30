@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-29T12:14:37.535Z",
+  "checkedAt": "2026-09-30T12:00:24.211Z",
   "missing": [
     2886,
     2371,
@@ -188,7 +188,7 @@
     "1342": {
       "name": "UI Fixes",
       "slug": "ui-fixes",
-      "latestVersion": "6.0.3",
+      "latestVersion": "6.0.4",
       "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1342/ui-fixes",
       "thumbnail": "https://files.sp-mod.com/mods/1860.png"
@@ -780,7 +780,7 @@
     "2735": {
       "name": "ScopeRangefinder",
       "slug": "scoperangefinder",
-      "latestVersion": "3.4.0",
+      "latestVersion": "3.5.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2735/scoperangefinder",
       "thumbnail": "https://files.sp-mod.com/mods/Nt8bULEEfs4nKB1cM6sFAsRN5YMPtnLxu1kcwdtX.png"
@@ -890,11 +890,11 @@
       "thumbnail": "https://files.sp-mod.com/mods/fns8qFbEJIWaw6dY8NvHatwS8QOUfA14D7zWPv8l.png"
     },
     "2909": {
-      "name": "Task Search",
-      "slug": "task-search",
+      "name": "Hj's Task Search",
+      "slug": "hjs-task-search",
       "latestVersion": "2.0.2",
       "sptConstraint": "~4.1",
-      "detailUrl": "https://sp-mod.com/mod/2909/task-search",
+      "detailUrl": "https://sp-mod.com/mod/2909/hjs-task-search",
       "thumbnail": "https://files.sp-mod.com/mods/E6kSkHR6VmOiHy726hGUY4WUdEur4lkhbthRoocM.png"
     },
     "2934": {
