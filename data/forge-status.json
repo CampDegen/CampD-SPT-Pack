@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-04T11:51:51.802Z",
+  "checkedAt": "2026-10-05T13:46:28.607Z",
   "missing": [
     2886,
     2371,
@@ -628,8 +628,8 @@
     "2512": {
       "name": "WTT - Content Backport",
       "slug": "wtt-content-backport",
-      "latestVersion": "2.0.2",
-      "sptConstraint": "~4.1.1",
+      "latestVersion": "2.0.4",
+      "sptConstraint": "~4.1.6",
       "detailUrl": "https://sp-mod.com/mod/2512/wtt-content-backport",
       "thumbnail": "https://files.sp-mod.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg"
     },
