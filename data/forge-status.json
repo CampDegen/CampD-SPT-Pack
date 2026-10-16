@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-15T10:57:12.963Z",
+  "checkedAt": "2026-10-16T10:49:39.588Z",
   "missing": [
     2886,
     2910
@@ -97,8 +97,8 @@
     "922": {
       "name": "Less Restricting Headwear",
       "slug": "less-restricting-headwear",
-      "latestVersion": "3.0.0",
-      "sptConstraint": "~4.0.0",
+      "latestVersion": "4.0.0",
+      "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/922/less-restricting-headwear",
       "thumbnail": "https://files.sp-mod.com/mods/1247.png"
     },
