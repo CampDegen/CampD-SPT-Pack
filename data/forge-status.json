@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T10:14:11.900Z",
+  "checkedAt": "2026-10-18T10:29:47.333Z",
   "missing": [
     2886,
     2910
@@ -337,8 +337,8 @@
     "1688": {
       "name": "More Energy Drinks",
       "slug": "more-energy-drinks",
-      "latestVersion": "1.3.0",
-      "sptConstraint": "4.1.x",
+      "latestVersion": "1.3.1",
+      "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/1688/more-energy-drinks",
       "thumbnail": "https://files.sp-mod.com/mods/2305.png"
     },
@@ -775,35 +775,35 @@
       "thumbnail": null
     },
     "2729": {
-      "name": "NotificationFilter",
-      "slug": "notificationfilter",
+      "name": "Notification Filter",
+      "slug": "notification-filter",
       "latestVersion": "2.0.0",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2729/notificationfilter",
+      "detailUrl": "https://sp-mod.com/mod/2729/notification-filter",
       "thumbnail": "https://files.sp-mod.com/mods/PScfPns5oVNtKpkK3bf4f36QHQnKwjD27fQ6faks.png"
     },
     "2731": {
-      "name": "LinkedSearchInStash",
-      "slug": "linkedsearchinstash",
+      "name": "Linked Search In Stash",
+      "slug": "linked-search-in-stash",
       "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2731/linkedsearchinstash",
+      "detailUrl": "https://sp-mod.com/mod/2731/linked-search-in-stash",
       "thumbnail": "https://files.sp-mod.com/mods/GDIXdQrkxBKZVssdImA88phk811hRViGLFhpyD9Q.png"
     },
     "2733": {
-      "name": "RaidMenuCleanupFix",
-      "slug": "raidmenucleanupfix",
+      "name": "Raid Menu Cleanup Fix",
+      "slug": "raid-menu-cleanup-fix",
       "latestVersion": "2.0.0",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2733/raidmenucleanupfix",
+      "detailUrl": "https://sp-mod.com/mod/2733/raid-menu-cleanup-fix",
       "thumbnail": "https://files.sp-mod.com/mods/vkAZFGmlpnEVXZcWwOf4OkPLbW8QNcOQwx6Q3Mp9.png"
     },
     "2735": {
-      "name": "ScopeRangefinder",
-      "slug": "scoperangefinder",
+      "name": "Scope Rangefinder",
+      "slug": "scope-rangefinder",
       "latestVersion": "3.5.0",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2735/scoperangefinder",
+      "detailUrl": "https://sp-mod.com/mod/2735/scope-rangefinder",
       "thumbnail": "https://files.sp-mod.com/mods/Nt8bULEEfs4nKB1cM6sFAsRN5YMPtnLxu1kcwdtX.png"
     },
     "2780": {
@@ -815,27 +815,27 @@
       "thumbnail": "https://files.sp-mod.com/mods/h27meExYcmtVbdECnvmerhg3ke1ctQXDuQjH3Lwa.png"
     },
     "2785": {
-      "name": "ReceiveAllChats",
-      "slug": "receiveallchats",
+      "name": "Receive All Chats",
+      "slug": "receive-all-chats",
       "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2785/receiveallchats",
+      "detailUrl": "https://sp-mod.com/mod/2785/receive-all-chats",
       "thumbnail": "https://files.sp-mod.com/mods/6SXklbL1tdomAJ8OUc9uxUgTJYpQCtfVw8ztHbC6.png"
     },
     "2790": {
-      "name": "EasyMounting",
-      "slug": "easymounting",
+      "name": "Easy Mounting",
+      "slug": "easy-mounting",
       "latestVersion": "2.0.1",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2790/easymounting",
+      "detailUrl": "https://sp-mod.com/mod/2790/easy-mounting",
       "thumbnail": "https://files.sp-mod.com/mods/TQOEkZrTaPA0mnpeFK30SCWJQsF6CuQQt1HzF41k.png"
     },
     "2824": {
-      "name": "TraderSearch",
-      "slug": "tradersearch",
+      "name": "Trader Search",
+      "slug": "trader-search",
       "latestVersion": "2.1.0",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2824/tradersearch",
+      "detailUrl": "https://sp-mod.com/mod/2824/trader-search",
       "thumbnail": "https://files.sp-mod.com/mods/5vpy6UASy6VTuiMdTJC0UgBlJyMlwkpGbkeCxEYX.png"
     },
     "2831": {
@@ -895,11 +895,11 @@
       "thumbnail": "https://files.sp-mod.com/mods/P6PIITVsZP58duQiQJvnGZn5Cm1IFxj1cGh2qjkO.png"
     },
     "2907": {
-      "name": "StashFilter",
-      "slug": "stashfilter",
+      "name": "Stash Filter",
+      "slug": "stash-filter",
       "latestVersion": "1.0.0",
       "sptConstraint": "~4.1.0",
-      "detailUrl": "https://sp-mod.com/mod/2907/stashfilter",
+      "detailUrl": "https://sp-mod.com/mod/2907/stash-filter",
       "thumbnail": "https://files.sp-mod.com/mods/IHdZY8FZvydHo1SoHoUxwuKAYivK3op7Clb6Hu5W.png"
     },
     "2908": {
