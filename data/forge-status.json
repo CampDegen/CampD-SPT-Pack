@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-22T11:15:26.576Z",
+  "checkedAt": "2026-10-23T11:06:54.252Z",
   "missing": [
     2886,
     2910
@@ -719,7 +719,7 @@
       "thumbnail": "https://files.sp-mod.com/mods/vN81xaXt55y6KgRcZHPzxCCKwUvhuAmgoi1VJzmL.png"
     },
     "2615": {
-      "name": "Updated collector quest and streamer case (EFT 1.0 Backport)",
+      "name": "Updated collector quest and streamer case (E∗∗ 1.0 Backport)",
       "slug": "updated-collector-quest-and-streamer-case-eft-10-backport",
       "latestVersion": "0.1.1",
       "sptConstraint": "4.0.13",
