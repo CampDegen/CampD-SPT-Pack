@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-31T11:46:30.124Z",
+  "checkedAt": "2026-11-01T12:45:25.628Z",
   "missing": [
     2886,
     2910
@@ -473,7 +473,7 @@
     "2210": {
       "name": "Live Like Boss Spawn Chances",
       "slug": "live-like-boss-spawn-chances",
-      "latestVersion": "2.3.1",
+      "latestVersion": "2.3.2",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2210/live-like-boss-spawn-chances",
       "thumbnail": "https://files.sp-mod.com/mods/2913.jpg"
