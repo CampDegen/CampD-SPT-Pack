@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T14:54:24.961Z",
+  "checkedAt": "2026-11-03T13:42:57.641Z",
   "missing": [
     2886,
     2910
@@ -369,8 +369,8 @@
     "1873": {
       "name": "Bot Callsigns - Reloaded",
       "slug": "bot-callsigns-reloaded",
-      "latestVersion": "2.0.5",
-      "sptConstraint": "~4.1.1",
+      "latestVersion": "2.0.6",
+      "sptConstraint": "~4.1",
       "detailUrl": "https://sp-mod.com/mod/1873/bot-callsigns-reloaded",
       "thumbnail": "https://files.sp-mod.com/mods/lTy8KzPVQRY88L8eK0gGJ8MbGpFhj35jVELAWKYa.png"
     },
@@ -897,7 +897,7 @@
     "2907": {
       "name": "Stash Filter",
       "slug": "stash-filter",
-      "latestVersion": "1.0.0",
+      "latestVersion": "1.1.0",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2907/stash-filter",
       "thumbnail": "https://files.sp-mod.com/mods/IHdZY8FZvydHo1SoHoUxwuKAYivK3op7Clb6Hu5W.png"
