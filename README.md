@@ -73,6 +73,14 @@ Forge also has **addons** (same catalog shape, different URL and API). Set `"kin
 - `description` is required and must be ours, not copied from Forge
 - `settingsNotes` is optional; leave `""` until we document a change
 
+Validate the catalog before committing (Node 20+, no dependencies):
+
+```bash
+node scripts/check-mods.mjs
+```
+
+It lists every problem at once and exits non-zero if any: missing or empty `id` / `name` / `slug` / `side` / `installedVersion`, a `side` outside `both` / `client` / `server` / `special`, a `kind` other than `addon`, or a duplicate `id` within the same kind. An optional path argument checks a different file.
+
 After adding or bumping a version, run the updater (or push `data/mods.json` to `main` and let the Action do it).
 
 Pack-wide notes: `data/pack-settings.json`. Empty SVM groups render as “Not documented yet.”
