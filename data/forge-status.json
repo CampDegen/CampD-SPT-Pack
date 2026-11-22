@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-21T14:17:46.060Z",
+  "checkedAt": "2026-11-22T14:09:11.832Z",
   "missing": [
     2886,
     2910
@@ -905,7 +905,7 @@
     "2908": {
       "name": "Tarkin's Hideout Cat",
       "slug": "tarkins-hideout-cat",
-      "latestVersion": "1.1.1",
+      "latestVersion": "1.1.2",
       "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2908/tarkins-hideout-cat",
       "thumbnail": "https://files.sp-mod.com/mods/fns8qFbEJIWaw6dY8NvHatwS8QOUfA14D7zWPv8l.png"
