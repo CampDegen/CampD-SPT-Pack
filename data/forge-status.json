@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-22T14:09:11.832Z",
+  "checkedAt": "2026-11-23T17:31:03.661Z",
   "missing": [
     2886,
     2910
@@ -593,8 +593,8 @@
     "2438": {
       "name": "Level Endurance and Strength",
       "slug": "level-endurance-and-strength",
-      "latestVersion": "1.0.1",
-      "sptConstraint": "~4.0.13",
+      "latestVersion": "2.0.0",
+      "sptConstraint": "~4.1.0",
       "detailUrl": "https://sp-mod.com/mod/2438/level-endurance-and-strength",
       "thumbnail": "https://files.sp-mod.com/mods/mdclJXbHpKWJAPrq8YhLSwQiasY8TnCE8koek0HD.png"
     },
